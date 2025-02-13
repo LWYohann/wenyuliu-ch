@@ -7,7 +7,9 @@ format: html
 freeze: true
 ---
 
-Welcome to my CV page! Below, you can view or download my most recent curriculum vitæ. 
+Welcome to my CV page! 
+
+Below, you can view or download my most recent curriculum vitæ and my academic records. 
 
 
 <div style="text-align: center; margin: 20px;">
@@ -18,7 +20,43 @@ Welcome to my CV page! Below, you can view or download my most recent curriculum
 
 
 <div style="text-align: center; margin-top: 20px;">
-  <iframe src="CV_Wenyu_LIU.pdf" style="width: 100%; height: 800px; border: 0.5px;">
+  <iframe src="CV_Wenyu_LIU.pdf" style="width: 90%; height: 800px; border: 0.5px;">
+    Your browser does not support embedded PDFs. Please download the file instead.
+  </iframe>
+</div>
+
+<br>
+---
+
+<div style="text-align: center; margin: 20px;">
+  <a class="btn btn-primary btn-lg" href="Master Records_v022025.pdf" target="_blank">
+    <i class="bi bi-file-earmark-arrow-down-fill"></i>&ensp; Download Master Records
+  </a>
+</div>
+
+
+
+<div style="text-align: center; margin-top: 20px;">
+  <iframe src="Master Records_v022025.pdf" style="width: 90%; height: 800px; border: 0.5px;">
+    Your browser does not support embedded PDFs. Please download the file instead.
+  </iframe>
+</div>
+
+
+<br>
+---
+
+
+<div style="text-align: center; margin: 20px;">
+  <a class="btn btn-primary btn-lg" href="Bachelor Records.pdf" target="_blank">
+    <i class="bi bi-file-earmark-arrow-down-fill"></i>&ensp; Download Bachelor Records
+  </a>
+</div>
+
+
+
+<div style="text-align: center; margin-top: 20px;">
+  <iframe src="Bachelor Records.pdf" style="width: 90%; height: 600px; border: 0.5px;">
     Your browser does not support embedded PDFs. Please download the file instead.
   </iframe>
 </div>

@@ -1,5 +1,5 @@
 ---
-title: "Hey there!"
+title: "Hey there! Welcome to my website."
 pagetitle: "Wenyu Liu"
 description-meta: "Wenyu Liu is currently a master student at EPFL."
 main-photo: /files/profiles/profile.png
@@ -33,12 +33,34 @@ format:
 
 ::: {.g-col-12 .g-col-sm-8}
 
-I'm currently a master student in Energy at EPFL. 
+Hello! 😉
 
-I received a Bachelor's degree in Energy Storage from Xi'an Jiaotong Univeristy in 2023.
+I'm Wenyu, a master's student specializing in energy at École Polytechnique Fédérale de Lausanne (EPFL). 
 
+Currently, I am living in Zürich for an internship at Hitachi Energy, having temporarily relocated from St-Sulpice VD, Switzerland.
+
+Before 2023, I lived in Xi'an, China, where I completed my bachelor's degree in energy storage at Xi'an Jiaotong University (XJTU).
+
+I speak Chinese, English and a little French. &ensp; 我说汉语，英语和一点法语。&ensp;Je parle anglais, chinois et un peu français. 
 :::
 
 :::
 
+<br>
 
+<!-- --- -->
+## Education
+
+- **2023 - Present** : Master in Energy Science and Technology, École Polytechnique Fédérale de Lausanne
+
+- **2019 - 2023** : Bachelor in Energy Storage Science and Engineering, Xi’an Jiaotong University
+
+- **2016 - 2019** : High school education, Chang'an No.1 High School
+
+## Work Experience
+
+- **02.2025 - Present** : Market Innovation Internship (100%) @ Hitachi Energy
+
+- **07.2024 - 09.2024** : Summer Internship in Charging System (100%) @ SAIC Motor
+
+- **03.2022 - 09.2022** : Internship in Energy Storage Market (40%) @ China Energy Storage Alliance (CNESA)

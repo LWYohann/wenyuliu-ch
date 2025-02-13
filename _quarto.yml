@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs
 
 website:
   title: "Wenyu Liu"
@@ -7,11 +8,11 @@ website:
     pinned: true
 
     left:
-      - text: "About Me"
+      - text: "My Profile"
         href: "index.qmd"
-      - text: "CV"
-        href:  "CV/index.qmd"
-      - text: "Me and the world"
+      - text: "My CV"
+        href: "CV/index.qmd"
+      - text: "My Journey"
         href: "world/index.qmd"
       # - text: "Blog"
       #   file: blog/index.qmd
