@@ -1,0 +1,104 @@
+---
+title: "Me and the world"
+format: html
+---
+
+
+## My Flight Map
+
+<iframe src="./files/my_flight_log.html" width="100%" height="300px" style="border: none;" scrolling="no"></iframe>
+
+### Records
+```{=html}
+<table border="1" class="center" style="width:90%">  <thead>    <tr style="text-align: right;">      <th></th>      <th>Date</th>      <th>Airlines</th>      <th>Flight Number</th>      <th>Departure</th>      <th>Arrival</th>      <th>Aircraft</th>      <th>Tail Number</th>      <th>Distance</th>    </tr>  </thead>  <tbody>    <tr>      <th>0</th>      <td>2015-07-28</td>      <td>Shenzhen Airlines</td>      <td>ZH9250</td>      <td>XIY</td>      <td>SZX</td>      <td>Airbus A320</td>      <td>B6740</td>      <td>1397 km</td>    </tr>    <tr>      <th>1</th>      <td>2015-08-01</td>      <td>Shenzhen Airlines</td>      <td>ZH9249</td>      <td>SZX</td>      <td>XIY</td>      <td>Airbus A320</td>      <td>B6570</td>      <td>1397 km</td>    </tr>    <tr>      <th>2</th>      <td>2019-07-25</td>      <td>Beijing Capital Airlines</td>      <td>JD5343</td>      <td>XIY</td>      <td>DLC</td>      <td>Airbus A319</td>      <td>B6245</td>      <td>1245 km</td>    </tr>    <tr>      <th>3</th>      <td>2019-07-30</td>      <td>Beijing Capital Airlines</td>      <td>JD5344</td>      <td>DLC</td>      <td>XIY</td>      <td>Airbus A320</td>      <td>B6958</td>      <td>1245 km</td>    </tr>    <tr>      <th>4</th>      <td>2022-11-03</td>      <td>Juneyao Airlines</td>      <td>HO1212</td>      <td>XIY</td>      <td>SHA</td>      <td>Airbus A320</td>      <td>B1681</td>      <td>1229 km</td>    </tr>    <tr>      <th>5</th>      <td>2022-11-09</td>      <td>Spring Airlines</td>      <td>9C8947</td>      <td>SHA</td>      <td>XIY</td>      <td>Airbus A321</td>      <td>B30EU</td>      <td>1229 km</td>    </tr>    <tr>      <th>6</th>      <td>2023-04-13</td>      <td>China Southern Airlines</td>      <td>CZ3762</td>      <td>XIY</td>      <td>ZUH</td>      <td>Boeing 737</td>      <td>B6067</td>      <td>1449 km</td>    </tr>    <tr>      <th>7</th>      <td>2023-04-17</td>      <td>China Southern Airlines</td>      <td>CZ6567</td>      <td>CAN</td>      <td>HGH</td>      <td>Airbus A350</td>      <td>B309W</td>      <td>1038 km</td>    </tr>    <tr>      <th>8</th>      <td>2023-04-24</td>      <td>China Southern Airlines</td>      <td>CZ3548</td>      <td>SHA</td>      <td>CAN</td>      <td>Airbus A350</td>      <td>B32AV</td>      <td>1174 km</td>    </tr>    <tr>      <th>9</th>      <td>2023-04-24</td>      <td>China Southern Airlines</td>      <td>CZ3215</td>      <td>CAN</td>      <td>XIY</td>      <td>Boeing 737</td>      <td>B2695</td>      <td>1301 km</td>    </tr>    <tr>      <th>10</th>      <td>2023-05-09</td>      <td>China Southern Airlines</td>      <td>CZ8830</td>      <td>XIY</td>      <td>PKX</td>      <td>Airbus A320</td>      <td>B6977</td>      <td>882 km</td>    </tr>    <tr>      <th>11</th>      <td>2023-06-19</td>      <td>China Southern Airlines</td>      <td>CZ6938</td>      <td>XIY</td>      <td>DLC</td>      <td>Airbus A321</td>      <td>B2287</td>      <td>1245 km</td>    </tr>    <tr>      <th>12</th>      <td>2023-06-26</td>      <td>China Southern Airlines</td>      <td>CZ6415</td>      <td>SHE</td>      <td>XIY</td>      <td>Airbus A320</td>      <td>B301G</td>      <td>1516 km</td>    </tr>    <tr>      <th>13</th>      <td>2023-07-04</td>      <td>China Southern Airlines</td>      <td>CZ8830</td>      <td>XIY</td>      <td>PKX</td>      <td>Airbus A321</td>      <td>B323F</td>      <td>882 km</td>    </tr>    <tr>      <th>14</th>      <td>2023-07-06</td>      <td>China Southern Airlines</td>      <td>CZ6948</td>      <td>PKX</td>      <td>XIY</td>      <td>Airbus A321</td>      <td>B1843</td>      <td>882 km</td>    </tr>    <tr>      <th>15</th>      <td>2023-08-15</td>      <td>China Southern Airlines</td>      <td>CZ6622</td>      <td>XIY</td>      <td>SZX</td>      <td>Airbus A330</td>      <td>B8360</td>      <td>1397 km</td>    </tr>    <tr>      <th>16</th>      <td>2023-08-17</td>      <td>Turkish Airlines</td>      <td>TK73</td>      <td>CAN</td>      <td>IST</td>      <td>Boeing 777</td>      <td>TCLJG</td>      <td>7897 km</td>    </tr>    <tr>      <th>17</th>      <td>2023-08-18</td>      <td>Turkish Airlines</td>      <td>TK1917</td>      <td>IST</td>      <td>GVA</td>      <td>Airbus A321</td>      <td>TCLSZ</td>      <td>1897 km</td>    </tr>    <tr>      <th>18</th>      <td>2024-02-07</td>      <td>Swiss International Air Lines</td>      <td>LX2092</td>      <td>GVA</td>      <td>LIS</td>      <td>Airbus A220</td>      <td>HBJBE</td>      <td>1497 km</td>    </tr>    <tr>      <th>19</th>      <td>2024-02-09</td>      <td>Air Europa</td>      <td>UX1152</td>      <td>LIS</td>      <td>MAD</td>      <td>Boeing 737</td>      <td>ECMPS</td>      <td>514 km</td>    </tr>    <tr>      <th>20</th>      <td>2024-04-05</td>      <td>EasyJet</td>      <td>U24223</td>      <td>NAP</td>      <td>GVA</td>      <td>Airbus A320</td>      <td>OEIVF</td>      <td>887 km</td>    </tr>    <tr>      <th>21</th>      <td>2024-07-08</td>      <td>Turkish Airlines</td>      <td>TK1920</td>      <td>GVA</td>      <td>IST</td>      <td>Airbus A330</td>      <td>TCLOB</td>      <td>1897 km</td>    </tr>    <tr>      <th>22</th>      <td>2024-07-09</td>      <td>Turkish Airlines</td>      <td>TK88</td>      <td>IST</td>      <td>PEK</td>      <td>Boeing 777</td>      <td>TCLJA</td>      <td>7078 km</td>    </tr>    <tr>      <th>23</th>      <td>2024-07-09</td>      <td>China Eastern Airlines</td>      <td>MU5124</td>      <td>PEK</td>      <td>SHA</td>      <td>Airbus A330</td>      <td>B6097</td>      <td>1074 km</td>    </tr>    <tr>      <th>24</th>      <td>2024-07-26</td>      <td>Juneyao Airlines</td>      <td>HO1235</td>      <td>SHA</td>      <td>XIY</td>      <td>Airbus A321</td>      <td>B8956</td>      <td>1229 km</td>    </tr>    <tr>      <th>25</th>      <td>2024-08-05</td>      <td>China Eastern Airlines</td>      <td>MU2336</td>      <td>XIY</td>      <td>SHA</td>      <td>COMAC C919</td>      <td>B919A</td>      <td>1229 km</td>    </tr>    <tr>      <th>26</th>      <td>2024-08-31</td>      <td>China Eastern Airlines</td>      <td>MU2152</td>      <td>SHA</td>      <td>XIY</td>      <td>COMAC C919</td>      <td>B919A</td>      <td>1229 km</td>    </tr>    <tr>      <th>27</th>      <td>2024-09-04</td>      <td>Air China</td>      <td>CA8326</td>      <td>XIY</td>      <td>PVG</td>      <td>Airbus A321</td>      <td>B8595</td>      <td>1274 km</td>    </tr>    <tr>      <th>28</th>      <td>2024-09-04</td>      <td>Turkish Airlines</td>      <td>TK27</td>      <td>PVG</td>      <td>IST</td>      <td>Boeing 777</td>      <td>TCLJG</td>      <td>8039 km</td>    </tr>    <tr>      <th>29</th>      <td>2024-09-05</td>      <td>Turkish Airlines</td>      <td>TK1921</td>      <td>IST</td>      <td>GVA</td>      <td>Airbus A321</td>      <td>TCLSZ</td>      <td>1897 km</td>    </tr>    <tr>      <th>30</th>      <td>2024-10-22</td>      <td>EasyJet</td>      <td>U21565</td>      <td>GVA</td>      <td>BUD</td>      <td>Airbus A320</td>      <td>HBJYA</td>      <td>1011 km</td>    </tr>    <tr>      <th>31</th>      <td>2024-10-27</td>      <td>Wizz Air</td>      <td>W42849</td>      <td>VIE</td>      <td>NCE</td>      <td>Airbus A321</td>      <td>HALGM</td>      <td>878 km</td>    </tr>    <tr>      <th>32</th>      <td>2024-10-27</td>      <td>EasyJet</td>      <td>U21328</td>      <td>NCE</td>      <td>GVA</td>      <td>Airbus A320</td>      <td>HBJXB</td>      <td>298 km</td>    </tr>  </tbody></table>
+
+<br>
+<br>
+```
+<!-- 
+### Top Airlines
+```{=html}
+<table border="1" class="center" style="width:40%">   <thead>     <tr style="text-align: center;">       <th style="width:10%">Airline</th>       <th></th>       <th style="text-align: center;width:10%">Flights</th>         </tr>   </thead>   <tbody>     <tr>       <th><img src="https://pics.avs.io/200/200/CZ@2x.png" alt="China Southern Airlines Logo" width="40"   height="40"></th>       <td>China Southern Airlines</td>       <td>10</td>     </tr>     <tr>       <th><img src="https://pics.avs.io/200/200/TK@2x.png" alt="Turkish Airlines Logo" width="40"   height="40"></th>       <td>Turkish Airlines</td>       <td>6</td>     </tr>     <tr>       <th><img src="https://pics.avs.io/200/200/MU@2x.png" alt="China Eastern Airlines Logo" width="40"   height="40"></th>       <td>China Eastern Airlines</td>       <td>3</td>     </tr>     <tr>       <th><img src="https://pics.avs.io/200/200/U2@2x.png" alt="EasyJet Logo" width="40"   height="40"></th>       <td>EasyJet</td>       <td>3</td>     </tr>     <tr>       <th><img src="https://pics.avs.io/200/200/JD@2x.png" alt="Beijing Capital Airlines Logo" width="40"   height="40"></th>       <td>Beijing Capital Airlines</td>       <td>2</td>     </tr>     <tr>       <th><img src="https://pics.avs.io/200/200/HO@2x.png" alt="Juneyao Airlines Logo" width="40"   height="40"></th>       <td>Juneyao Airlines</td>       <td>2</td>     </tr>     <tr>       <th><img src="https://pics.avs.io/200/200/ZH@2x.png" alt="Shenzhen Airlines Logo" width="40"   height="40"></th>       <td>Shenzhen Airlines</td>       <td>2</td>     </tr>     <tr>       <th><img src="https://pics.avs.io/200/200/CA@2x.png" alt="Air China Logo" width="40"   height="40"></th>       <td>Air China</td>       <td>1</td>     </tr>     <tr>       <th><img src="https://pics.avs.io/200/200/UX@2x.png" alt="Air Europa Logo" width="40"   height="40"></th>       <td>Air Europa</td>       <td>1</td>     </tr>     <tr>       <th><img src="https://pics.avs.io/200/200/9C@2x.png" alt="Spring Airlines Logo" width="40"   height="40"></th>       <td>Spring Airlines</td>       <td>1</td>     </tr>     <tr>       <th><img src="https://pics.avs.io/200/200/LX@2x.png" alt="Swiss International Air Lines Logo" width="40"   height="40"></th>       <td>Swiss International Air Lines</td>       <td>1</td>     </tr>     <tr>       <th><img src="https://pics.avs.io/200/200/W4@2x.png" alt="Wizz Air Logo" width="40"   height="40"></th>       <td>Wizz Air</td>       <td>1</td>     </tr>   </tbody> </table>
+<br>
+<br>
+``` -->
+<!-- 
+### Top Aircrafts
+
+```{=html}
+<table border="1" class="center" style="width:25%">  <thead>    <tr style="text-align: center;">       <th style="width:5%">Aircraft</th>       <th style="width:20%"></th>       <th style="text-align: center;width:5%">Flights</th>         </tr>   </thead>   <tbody>     <tr>         <th><img src="./assets/images/flagicons/eu.svg" width="30" height="30"></th>      <td>Airbus A320</td>      <td>9</td>    </tr>    <tr>      <th><img src="./assets/images/flagicons/eu.svg" width="30" height="30"></th>      <td>Airbus A321</td>      <td>9</td>    </tr>    <tr>      <th><img src="./assets/images/flagicons/eu.svg" width="30" height="30"></th>      <td>Airbus A330</td>      <td>3</td>    </tr>    <tr>      <th><img src="./assets/images/flagicons/us.svg" width="30" height="30"></th>      <td>Boeing 737</td>      <td>3</td>    </tr>    <tr>      <th><img src="./assets/images/flagicons/us.svg" width="30" height="30"></th>      <td>Boeing 777</td>      <td>3</td>    </tr>    <tr>      <th><img src="./assets/images/flagicons/eu.svg" width="30" height="30"></th>      <td>Airbus A350</td>      <td>2</td>    </tr>    <tr>      <th><img src="./assets/images/flagicons/cn.svg" width="30" height="30"></th>      <td>COMAC C919</td>      <td>2</td>    </tr>    <tr>      <th><img src="./assets/images/flagicons/eu.svg" width="30" height="30"></th>      <td>Airbus A220</td>      <td>1</td>    </tr>    <tr>      <th><img src="./assets/images/flagicons/eu.svg" width="30" height="30"></th>      <td>Airbus A319</td>      <td>1</td>    </tr>  </tbody></table>
+
+```
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Type</th>
+      <th scope="col">Column heading</th>
+      <th scope="col">Column heading</th>
+      <th scope="col">Column heading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-active">
+      <th scope="row">Active</th>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr>
+      <th scope="row">Default</th>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr class="table-primary">
+      <th scope="row">Primary</th>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr class="table-secondary">
+      <th scope="row">Secondary</th>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr class="table-success">
+      <th scope="row">Success</th>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr class="table-danger">
+      <th scope="row">Danger</th>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr class="table-warning">
+      <th scope="row">Warning</th>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr class="table-info">
+      <th scope="row">Info</th>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr class="table-light">
+      <th scope="row">Light</th>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr class="table-dark">
+      <th scope="row">Dark</th>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+  </tbody>
+</table> -->

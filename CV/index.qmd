@@ -1,0 +1,24 @@
+---
+title: Curriculum Vitæ
+description: "last updated: Jan. 2025"
+title-block-banner: "#771C6D"
+format: html
+# page-layout: full
+freeze: true
+---
+
+Welcome to my CV page! Below, you can view or download my most recent curriculum vitæ. 
+
+
+<div style="text-align: center; margin: 20px;">
+  <a class="btn btn-primary btn-lg" href="CV_Wenyu_LIU.pdf" target="_blank">
+    <i class="bi bi-file-earmark-arrow-down-fill"></i>&ensp; Download CV
+  </a>
+</div>
+
+
+<div style="text-align: center; margin-top: 20px;">
+  <iframe src="CV_Wenyu_LIU.pdf" style="width: 100%; height: 800px; border: 0.5px;">
+    Your browser does not support embedded PDFs. Please download the file instead.
+  </iframe>
+</div>

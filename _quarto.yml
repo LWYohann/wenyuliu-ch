@@ -1,0 +1,72 @@
+project:
+  type: website
+
+website:
+  title: "Wenyu Liu"
+  navbar:
+    pinned: true
+
+    left:
+      - text: "About Me"
+        href: "index.qmd"
+      - text: "CV"
+        href:  "CV/index.qmd"
+      - text: "Me and the world"
+        href: "world/index.qmd"
+      # - text: "Blog"
+      #   file: blog/index.qmd
+      # - text: "Research"
+      #   file: research/index.qmd
+      # - text: "Teaching"
+      #   href: "teaching/index.qmd"
+      # - text: "Talks"
+      #   href: "talks/index.qmd"
+      # - text: "Now"
+      #   href: now/index.qmd
+      # - text: "Uses"
+      #   file: uses/index.qmd
+    
+    right:
+      - text: "<i class='bi bi-person-circle' title='EPFL Directory'></i>"
+        href: "https://people.epfl.ch/wenyu.liu/?lang=en"
+        rel: me
+      - text: "<i class='bi-envelope' title='E-mail'></i>"
+        href: "mailto:wenyu.liu@epfl.ch"
+        rel: me
+      - text: "<i class='bi-github' title='GitHub'></i>"
+        href: "https://github.com/LWYohann"
+        rel: me
+      - text: "<i class='bi-linkedin' title='LinkedIn'></i>"
+        href: "https://www.linkedin.com/in/wenyu-liu-epfl"
+        rel: me
+      - text: "<i class='bi-instagram' title='Instagram'></i>"
+        href: "https://www.instagram.com/lwyohann/?igsh=dmU1aTR6dW41MXFq"
+        rel: me
+  
+  # page-footer:
+  #   left: |
+  #     <span class="faux-block">{{< fa brands creative-commons >}} {{< var years >}} Andrew Heiss</span>
+  #     <span class="faux-block">All content licensed under<br>[{{< fa brands creative-commons >}} {{< fa brands creative-commons-by >}} Creative Commons CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)</span>      
+  #   center: |
+  #     <span class="faux-block">{{< fa brands orcid >}} <strong>ORCID</strong> [{{< var orcid >}}](https://orcid.org/{{< var orcid >}})</span>
+  #     <span class="faux-block">{{< fa key >}} [PGP public key]({{< var pgp.key >}}) &emsp; {{< fa fingerprint >}} Fingerprint:</strong><br><span class="fingerprint">{{< var pgp.fingerprint >}}</span></span>
+  #   right: |
+  #     <span class="faux-block">Made with {{< fa brands r-project >}} and [Quarto](https://quarto.org/)</span>
+  #     <span class="faux-block">[View the source at {{< fa brands github >}} GitHub]({{< var github-url >}})</span>
+
+format:
+  html:
+    theme: 
+      - html/ath.scss
+
+    grid: 
+      body-width: 900px
+    toc: false
+    code-link: true
+    anchor-sections: true
+    fig-cap-location: margin
+    reference-location: margin
+    footnotes-hover: true
+    highlight-style: monokai
+
+

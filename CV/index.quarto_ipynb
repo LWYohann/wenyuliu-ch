@@ -1,0 +1,73 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: Curriculum Vitæ\n",
+        "description: \"last updated: Jan. 2025\"\n",
+        "title-block-banner: \"#771C6D\"\n",
+        "format: html\n",
+        "# page-layout: full\n",
+        "freeze: true\n",
+        "---\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "Welcome to my CV page! Below, you can view or download my most recent curriculum vitæ. \n",
+        "\n",
+        "<!-- ```{css}\n",
+        "#title-block-header .description {\n",
+        "    display: none;\n",
+        "}\n",
+        "```\n",
+        "\n",
+        "```{css}\n",
+        ".embed-container {\n",
+        "    position: relative;\n",
+        "    padding-bottom: 129%;\n",
+        "    height: 0;\n",
+        "    overflow: hidden;\n",
+        "    max-width: 100%;\n",
+        "}\n",
+        "\n",
+        ".embed-container iframe,\n",
+        ".embed-container object,\n",
+        ".embed-container embed {\n",
+        "    position: absolute;\n",
+        "    top: 0;\n",
+        "    left: 0;\n",
+        "    width: 100%;\n",
+        "    height: 100%;\n",
+        "}\n",
+        "``` -->\n",
+        "\n",
+        "<div style=\"text-align: center; margin: 20px;\">\n",
+        "  <a class=\"btn btn-primary btn-lg\" href=\"CV_Wenyu_LIU.pdf\" target=\"_blank\">\n",
+        "    <i class=\"bi bi-file-earmark-arrow-down-fill\"></i>&ensp; Download CV\n",
+        "  </a>\n",
+        "</div>\n",
+        "\n",
+        "\n",
+        "<div style=\"text-align: center; margin-top: 20px;\">\n",
+        "  <iframe src=\"CV_Wenyu_LIU.pdf\" style=\"width: 100%; height: 600px; border: none;\">\n",
+        "    Your browser does not support embedded PDFs. Please download the file instead.\n",
+        "  </iframe>\n",
+        "</div>"
+      ],
+      "id": "fdf5472e"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "adaexam",
+      "language": "python",
+      "display_name": "adaexam",
+      "path": "C:\\Users\\lwyoh\\AppData\\Roaming\\jupyter\\kernels\\adaexam"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

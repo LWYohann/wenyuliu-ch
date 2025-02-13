@@ -1,0 +1,44 @@
+---
+title: "Hey there!"
+pagetitle: "Wenyu Liu"
+description-meta: "Wenyu Liu is currently a master student at EPFL."
+main-photo: /files/profiles/profile.png
+main-photo-square: /files/profiles/profile.png
+title-block-banner: "#CF4446"
+format:
+  html:
+    quarto-template-params:
+      banner-header-class: "home"
+---
+
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-sm-4}
+
+```{=html}
+<div class="grid" style="--bs-columns: 5; row-gap: 0;">
+  <div class="g-col-1 g-col-sm-0"></div>
+  <div class="g-col-3 g-col-sm-5">
+    <picture>
+      <img class="img-fluid" src="{{< meta main-photo >}}" alt="Wenyu Liu's Profile Photo">
+    </picture>
+  </div>
+  <div class="g-col-1 g-col-sm-0"></div>
+</div>
+```
+
+:::
+
+
+::: {.g-col-12 .g-col-sm-8}
+
+I'm currently a master student in Energy at EPFL. 
+
+I received a Bachelor's degree in Energy Storage from Xi'an Jiaotong Univeristy in 2023.
+
+:::
+
+:::
+
+
