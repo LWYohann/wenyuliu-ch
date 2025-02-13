@@ -1,7 +1,7 @@
 ---
 title: Curriculum Vitæ
 description: "last updated: Jan. 2025"
-title-block-banner: "#771C6D"
+title-block-banner: "#3093CF"
 format: html
 # page-layout: full
 freeze: true
@@ -13,7 +13,7 @@ Below, you can view or download my most recent curriculum vitæ and my academic 
 
 
 <div style="text-align: center; margin: 20px;">
-  <a class="btn btn-primary btn-lg" href="CV_Wenyu_LIU.pdf" target="_blank">
+  <a class="btn btn-outline-info btn-lg" href="CV_Wenyu_LIU.pdf" target="_blank">
     <i class="bi bi-file-earmark-arrow-down-fill"></i>&ensp; Download CV
   </a>
 </div>
@@ -29,7 +29,7 @@ Below, you can view or download my most recent curriculum vitæ and my academic 
 ---
 
 <div style="text-align: center; margin: 20px;">
-  <a class="btn btn-primary btn-lg" href="Master Records_v022025.pdf" target="_blank">
+  <a class="btn btn-outline-info btn-lg" href="Master Records_v022025.pdf" target="_blank">
     <i class="bi bi-file-earmark-arrow-down-fill"></i>&ensp; Download Master Records
   </a>
 </div>
@@ -48,7 +48,7 @@ Below, you can view or download my most recent curriculum vitæ and my academic 
 
 
 <div style="text-align: center; margin: 20px;">
-  <a class="btn btn-primary btn-lg" href="Bachelor Records.pdf" target="_blank">
+  <a class="btn btn-outline-info btn-lg" href="Bachelor Records.pdf" target="_blank">
     <i class="bi bi-file-earmark-arrow-down-fill"></i>&ensp; Download Bachelor Records
   </a>
 </div>

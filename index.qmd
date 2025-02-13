@@ -4,7 +4,7 @@ pagetitle: "Wenyu Liu"
 description-meta: "Wenyu Liu is currently a master student at EPFL."
 main-photo: /files/profiles/profile.png
 main-photo-square: /files/profiles/profile.png
-title-block-banner: "#CF4446"
+title-block-banner: "#E9634A"
 format:
   html:
     quarto-template-params:
@@ -31,11 +31,11 @@ format:
 :::
 
 
-::: {.g-col-12 .g-col-sm-8}
+::: {.g-col-12 .g-col-sm-8 style="padding-left: 2rem; padding-top: 1rem;"}
 
 Hello! 😉
 
-I'm Wenyu, a master's student specializing in energy at École Polytechnique Fédérale de Lausanne (EPFL). 
+I'm Wenyu, a master student specializing in energy at École Polytechnique Fédérale de Lausanne (EPFL). 
 
 Currently, I am living in Zürich for an internship at Hitachi Energy, having temporarily relocated from St-Sulpice VD, Switzerland.
 
