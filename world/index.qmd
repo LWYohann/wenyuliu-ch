@@ -4,9 +4,14 @@ format: html
 ---
 
 
+
+## My Travel History
+
+<iframe src="./files/my_travel_history.html" width="100%" height="400px" style="border: none;" scrolling="no"></iframe>
+
 ## My Flight Map
 
-<iframe src="./files/my_flight_log.html" width="100%" height="300px" style="border: none;" scrolling="no"></iframe>
+<iframe src="./files/my_flight_log.html" width="100%" height="400px" style="border: none;" scrolling="no"></iframe>
 
 ### Records
 ```{=html}
