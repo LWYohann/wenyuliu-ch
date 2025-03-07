@@ -54,5 +54,103 @@
     "title": "Hey there! Welcome to my website.",
     "section": "Work Experience",
     "text": "Work Experience\n\n02.2025 - Present : Market Innovation Internship (100%) @ Hitachi Energy\n07.2024 - 09.2024 : Summer Internship in Charging System (100%) @ SAIC Motor\n03.2022 - 09.2022 : Internship in Energy Storage Market (40%) @ China Energy Storage Alliance (CNESA)"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "My Blog",
+    "section": "",
+    "text": "news\n\n\n\nThis is the first post for testing. Welcome!\n\n\n\n\n\nDecember 18, 2001\n\n\nWenyu Liu\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/2025/test/index.html",
+    "href": "blog/2025/test/index.html",
+    "title": "Welcome To My 1st art",
+    "section": "",
+    "text": "Text…"
+  },
+  {
+    "objectID": "blog/2025/test/index.html#subsection",
+    "href": "blog/2025/test/index.html#subsection",
+    "title": "My First Article",
+    "section": "",
+    "text": "Test\nSome text."
+  },
+  {
+    "objectID": "blog/2025/welcome/index.html",
+    "href": "blog/2025/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "test/posts/welcome/index.html",
+    "href": "test/posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "test/index.html",
+    "href": "test/index.html",
+    "title": "test",
+    "section": "",
+    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMar 7, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMar 4, 2025\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "test/about.html",
+    "href": "test/about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "test/posts/post-with-code/index.html",
+    "href": "test/posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "blog/2025/test/index.html#subsection-1",
+    "href": "blog/2025/test/index.html#subsection-1",
+    "title": "Welcome To My 1st art",
+    "section": "",
+    "text": "Text…"
+  },
+  {
+    "objectID": "blog/2025/01/index.html",
+    "href": "blog/2025/01/index.html",
+    "title": "Welcome To My 1st art",
+    "section": "",
+    "text": "Text…"
+  },
+  {
+    "objectID": "blog/2025/01/index.html#subsection-1",
+    "href": "blog/2025/01/index.html#subsection-1",
+    "title": "Welcome To My 1st art",
+    "section": "",
+    "text": "Text…"
+  },
+  {
+    "objectID": "blog/2025/02/index.html",
+    "href": "blog/2025/02/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "blog/index.html#section",
+    "href": "blog/index.html#section",
+    "title": "My Blog",
+    "section": "",
+    "text": "news\n\n\n\nThis is the first post for testing. Welcome!\n\n\n\n\n\nDecember 18, 2001\n\n\nWenyu Liu\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/2001/12/index.html",
+    "href": "blog/2001/12/index.html",
+    "title": "Welcome To My First Blog",
+    "section": "",
+    "text": "Hey there!"
   }
 ]
