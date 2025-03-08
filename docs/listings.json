@@ -2,14 +2,8 @@
   {
     "listing": "/blog/index.html",
     "items": [
-      "/blog/2001/12/index.html"
-    ]
-  },
-  {
-    "listing": "/test/index.html",
-    "items": [
-      "/test/posts/post-with-code/index.html",
-      "/test/posts/welcome/index.html"
+      "/blog/2001/12/index.html",
+      "/blog/2023/12/index.html"
     ]
   }
 ]

@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Wenyu Liu">
+<meta name="description" content="Some of my projects.">
 
 <title>My Blog – Wenyu Liu</title>
 <style>
@@ -96,6 +97,34 @@ ul.task-list li input[type="checkbox"] {
       window['quarto-listing-loaded']();
     }
   })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-posts_2023 .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-posts_2023'] = new List('listing-posts_2023', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
   </script>
 <style>
 
@@ -162,7 +191,7 @@ window.Quarto = {
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../world/index.html"> 
+    <a class="nav-link" href="../journey/index.html"> 
 <span class="menu-text">Journey</span></a>
   </li>  
   <li class="nav-item">
@@ -203,7 +232,12 @@ window.Quarto = {
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">My Blog</h1>
-                      </div>
+                  <div>
+        <div class="description">
+          Some of my projects.
+        </div>
+      </div>
+                </div>
   </div>
     
   
@@ -229,10 +263,11 @@ window.Quarto = {
     <h2 id="toc-title">Year</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">2001</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">2023</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">2001</a></li>
   </ul>
 </nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bmV3cw==">news <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Q09WSUQtMTk=">COVID-19 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RGF0YSBBbmFseXNpcw==">Data Analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RGF0YSBWaXN1YWxpemF0aW9u">Data Visualization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RVBGTA==">EPFL <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UGxvdGx5">Plotly <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHl0aG9u">Python <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVuZXdhYmxlIEVuZXJneQ==">Renewable Energy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bmV3cw==">news <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -246,7 +281,68 @@ window.Quarto = {
 }
 ``` -->
 <section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">2001</h2>
+<h2 class="anchored" data-anchor-id="section">2023</h2>
+<div id="listing-posts_2023" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="UmVuZXdhYmxlIEVuZXJneSxEYXRhIEFuYWx5c2lzLEVQRkwsQ09WSUQtMTksUHl0aG9uLFBsb3RseSxEYXRhIFZpc3VhbGl6YXRpb24=" data-listing-date-sort="1703199600000" data-listing-file-modified-sort="1741468477718" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="27" data-listing-word-count-sort="5211">
+<div class="thumbnail">
+<p><a href="../blog/2023/12/index.html" class="no-external"></a></p><a href="../blog/2023/12/index.html" class="no-external">
+<p><img loading="lazy" src="../blog/2023/12/images/logo.png" class="thumbnail-image"></p>
+</a><p><a href="../blog/2023/12/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../blog/2023/12/index.html" class="no-external">COVID-19 Pandemic &amp; Green Energy Transition</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../blog/2023/12/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('UmVuZXdhYmxlIEVuZXJneQ=='); return false;">
+Renewable Energy
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('RGF0YSBBbmFseXNpcw=='); return false;">
+Data Analysis
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('RVBGTA=='); return false;">
+EPFL
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Q09WSUQtMTk='); return false;">
+COVID-19
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">
+Python
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('UGxvdGx5'); return false;">
+Plotly
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('RGF0YSBWaXN1YWxpemF0aW9u'); return false;">
+Data Visualization
+</div>
+</div>
+<div class="listing-description">
+<a href="../blog/2023/12/index.html" class="no-external">A data story about COVID-19 pandemic &amp; green energy transition in Europe countries, delivery of course CS-401 Applied Data Analysis.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../blog/2023/12/index.html" class="no-external">
+<div class="listing-date">
+December 22, 2023
+</div>
+<div class="listing-author">
+Wenyu Liu
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1">2001</h2>
 <div id="listing-posts_2001" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
 <div class="quarto-post image-right" data-index="0" data-categories="bmV3cw==" data-listing-date-sort="1008630000000" data-listing-file-modified-sort="1741386255744" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="2">
@@ -714,6 +810,19 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p><span class="faux-block"> <i class="bi bi-c-circle"></i> 2025 Wenyu Liu </span> <span class="faux-block">All content licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></span></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p><span class="faux-block">Built using resources from <a href="https://www.andrewheiss.com/">Andrew Heiss</a></span> <span class="faux-block">Made with Quarto: <a href="https://github.com/LWYohann/wenyuliu-ch">View Source <i class="bi bi-github"></i></a></span></p>
+</div>
+  </div>
+</footer>
 
 
 
