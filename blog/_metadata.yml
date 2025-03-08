@@ -20,6 +20,6 @@ freeze: true
 
 
 # Default author
-author:
-  - name: Wenyu Liu
-    url: https://wenyuliu.ch/
+# author:
+#   - name: Wenyu Liu
+#     url: https://wenyuliu.ch/

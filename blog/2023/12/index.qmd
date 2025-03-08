@@ -2,6 +2,13 @@
 title: "COVID-19 Pandemic & Green Energy Transition"
 description: "A data story about COVID-19 pandemic & green energy transition in Europe countries, delivery of course CS-401 Applied Data Analysis."
 date: "2023-12-22"
+author: 
+    - name: Wenyu Liu
+      url: https://wenyuliu.ch/
+    - Salima Khabthani
+    - Shaotian Wu
+    - Shiyi Huang
+    - Weiqi Chen
 categories: 
     - Renewable Energy
     - Data Analysis
@@ -15,6 +22,7 @@ format:
   html:
     shift-heading-level-by: 1
     lightbox: true
+citation: true
 ---
 
 

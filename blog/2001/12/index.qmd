@@ -3,6 +3,9 @@ title: "Welcome To My First Blog"
 description: "This is the first post for testing. Welcome!"
 date: "2001-12-18"
 categories: [news]
+author: 
+    - name: Wenyu Liu
+      url: https://wenyuliu.ch/
 ---
 
 

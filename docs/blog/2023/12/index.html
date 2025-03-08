@@ -7,6 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Wenyu Liu">
+<meta name="author" content="Salima Khabthani">
+<meta name="author" content="Shaotian Wu">
+<meta name="author" content="Shiyi Huang">
+<meta name="author" content="Weiqi Chen">
 <meta name="description" content="A data story about COVID-19 pandemic &amp; green energy transition in Europe countries, delivery of course CS-401 Applied Data Analysis.">
 
 <title>COVID-19 Pandemic &amp; Green Energy Transition – Wenyu Liu</title>
@@ -199,9 +203,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="quarto-title-meta">
 
       <div>
-      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-heading">Authors</div>
       <div class="quarto-title-meta-contents">
                <p><a href="https://wenyuliu.ch/">Wenyu Liu</a> </p>
+               <p>Salima Khabthani </p>
+               <p>Shaotian Wu </p>
+               <p>Shiyi Huang </p>
+               <p>Weiqi Chen </p>
             </div>
     </div>
       
@@ -677,7 +685,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{liu2023,
+  author = {Liu, Wenyu and Khabthani, Salima and Wu, Shaotian and Huang,
+    Shiyi and Chen, Weiqi},
+  title = {COVID-19 {Pandemic} \&amp; {Green} {Energy} {Transition}},
+  date = {2023-12-22},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-liu2023" class="csl-entry quarto-appendix-citeas" role="listitem">
+Liu, Wenyu, Salima Khabthani, Shaotian Wu, Shiyi Huang, and Weiqi Chen.
+2023. <span>“COVID-19 Pandemic &amp; Green Energy Transition.”</span>
+December 22, 2023.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1153,515 +1172,523 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "COVID-19 Pandemic &amp; Green Energy Transition"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "A data story about COVID-19 pandemic &amp; green energy transition in Europe countries, delivery of course CS-401 Applied Data Analysis."</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2023-12-22"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> </span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    - Renewable Energy</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">    - Data Analysis</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    - EPFL</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">    - COVID-19</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">    - Python</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">    - Plotly</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">    - Data Visualization</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> "./images/logo.png"</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">    shift-heading-level-by: 1</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">    lightbox: true</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu"># Context</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>Welcome to our data-driven journey through the ebbs and flows of electricity generation in the times of COVID-19. As the world hit the pause button and streets emptied, power plants continued humming—but the tune was a little different. From the bustling cities of France to the serene landscapes of Finland, we saw changes that made us rethink our relationship with energy. Think of this report not just as a collection of stats and graphs but as a story of resilience, adaptation, and the occasional surprise. So grab a cup of your favorite beverage, get comfy, and let's dive into the electrifying narrative of how life's unexpected turns can light up the grid in ways we never imagined.</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>This data story delves into the fascinating interplay between the COVID-19 pandemic and the transition to green energy in Finland, France, Germany Netherlands, Serbia and Spain. By analyzing various datasets, we uncover how the pandemic impacted electricity generation, consumption, and awareness of renewable energy sources. Our exploration also includes machine learning predictions based on historical data and pandemic interventions. Key questions we address include:</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Public Awareness and Interest: How did the pandemic influence public engagement with green energy topics?</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Electricity Patterns: What changes occurred in electricity generation and consumption across different countries and energy sources during the pandemic?</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pandemic Interventions: How did lockdowns and mobility restrictions affect the energy sector?</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Forecasting the Future: Can we predict future electricity generation using past data and pandemic measures?</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> </span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    - name: Wenyu Liu</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">      url: https://wenyuliu.ch/</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    - Salima Khabthani</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">    - Shaotian Wu</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">    - Shiyi Huang</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">    - Weiqi Chen</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> </span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">    - Renewable Energy</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">    - Data Analysis</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">    - EPFL</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">    - COVID-19</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">    - Python</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">    - Plotly</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">    - Data Visualization</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> "./images/logo.png"</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">    shift-heading-level-by: 1</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co">    lightbox: true</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="an">citation:</span><span class="co"> true</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="fu"># Context</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>Welcome to our data-driven journey through the ebbs and flows of electricity generation in the times of COVID-19. As the world hit the pause button and streets emptied, power plants continued humming—but the tune was a little different. From the bustling cities of France to the serene landscapes of Finland, we saw changes that made us rethink our relationship with energy. Think of this report not just as a collection of stats and graphs but as a story of resilience, adaptation, and the occasional surprise. So grab a cup of your favorite beverage, get comfy, and let's dive into the electrifying narrative of how life's unexpected turns can light up the grid in ways we never imagined.</span>
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="fu"># Data Glimpse</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>This data story delves into the fascinating interplay between the COVID-19 pandemic and the transition to green energy in Finland, France, Germany Netherlands, Serbia and Spain. By analyzing various datasets, we uncover how the pandemic impacted electricity generation, consumption, and awareness of renewable energy sources. Our exploration also includes machine learning predictions based on historical data and pandemic interventions. Key questions we address include:</span>
 <span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>Before we analysis further and answer our questions, we first need have a glimpse of our datas.</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Public Awareness and Interest: How did the pandemic influence public engagement with green energy topics?</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Electricity Patterns: What changes occurred in electricity generation and consumption across different countries and energy sources during the pandemic?</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pandemic Interventions: How did lockdowns and mobility restrictions affect the energy sector?</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Forecasting the Future: Can we predict future electricity generation using past data and pandemic measures?</span>
 <span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="fu">## Electricity Generation Dataset</span></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Actual Electricity Generation per Production Type in Europe Countries (2019~2022)</span><span class="co">](https://transparency.entsoe.eu/dashboard/show)</span>: This dataset contains changes in the electricity generated by different energy sources(eg. biomass, nuclear, marine.) in europe countries, which is recorded hourly or every 15-minutes. </span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="fu"># Data Glimpse</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>Before we analysis further and answer our questions, we first need have a glimpse of our datas.</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Generation Mix.html" width="1110" height="500" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>The figure above provides a comprehensive overview of the composition and trends in electricity generation over a period of approximately three and a half years in selected countries. We can discover that: </span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="fu">## Electricity Generation Dataset</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Actual Electricity Generation per Production Type in Europe Countries (2019~2022)</span><span class="co">](https://transparency.entsoe.eu/dashboard/show)</span>: This dataset contains changes in the electricity generated by different energy sources(eg. biomass, nuclear, marine.) in europe countries, which is recorded hourly or every 15-minutes. </span>
 <span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Across countries, there is a seasonal pattern in overall electricity generation data, with less generation in the summer and more in the winter. For solar energy, the opposite is true, with less output in winter and more output in summer. This means that we need to try to filter out this seasonal pattern in subsequent analyses!</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>There are obvious differences in the total power generation and power generation structure of each country. For example, Germany and France have the highest total power generation. France is highly dependent on nuclear power, while Serbia has less energy diversity.</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sources like nuclear and coal provide a consistent baseline level of generation, which doesn't show as much fluctuation as renewables, suggesting they are used as a reliable base-load power. This is obvious for nuclear generation in Finland (almost flat during the period) but it shows different pattern in France.</span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Generation Mix.html" width="1110" height="500" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
 <span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="fu">## Aggragated Topics</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>The figure above provides a comprehensive overview of the composition and trends in electricity generation over a period of approximately three and a half years in selected countries. We can discover that: </span>
 <span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>This is a dataset of the evolution of views aggregated by topic, across a variety of languages. The most relevant topic for our analysis was the Stem Earth and Environment.</span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>In an overall idea, the increase of visiting a certain topic means the increase of awareness for that topic. However, when analyzing this, we will have to take the increase and decrease of the background visit. In other words, if the whole website has an increasing visit, it is hard to say that which topic is gaining more awareness. As a result, it is necessary to consider the overall visit frequency when trying to understand the topic visit frequency.</span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="fu">## Wikipedia Pageviews</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Across countries, there is a seasonal pattern in overall electricity generation data, with less generation in the summer and more in the winter. For solar energy, the opposite is true, with less output in winter and more output in summer. This means that we need to try to filter out this seasonal pattern in subsequent analyses!</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>There are obvious differences in the total power generation and power generation structure of each country. For example, Germany and France have the highest total power generation. France is highly dependent on nuclear power, while Serbia has less energy diversity.</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sources like nuclear and coal provide a consistent baseline level of generation, which doesn't show as much fluctuation as renewables, suggesting they are used as a reliable base-load power. This is obvious for nuclear generation in Finland (almost flat during the period) but it shows different pattern in France.</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>This is the Wikipedia pageviews in different languages.  </span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="fu">## Aggragated Topics</span></span>
 <span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>These additional datasets are pageviews of:</span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Energy Storage</span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Electric Vehicle</span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Electricity Generation</span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Renewable Energy</span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sustainable Energy</span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Wind Turbine</span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Photovoltaics</span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Climate Change</span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="fu">## Intervention</span></span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>This dataset shows the time of six countries to take actions towards COVID, including the time of reporting the first case and the first death due to COVID, the time that school is closed and public events banned and the time that the country is in lockdown. Also, it shows the time of the country taking normalcy. Some countries didn't announce the national lockdown or national normalcy, so some time in this table is missing. When analyzing the trend of energy transition, the time listed in the table will be an important reference to when COVID started attacking and when COVID stopped.</span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Interventions.html" width="1110" height="310" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>This is a dataset of the evolution of views aggregated by topic, across a variety of languages. The most relevant topic for our analysis was the Stem Earth and Environment.</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>In an overall idea, the increase of visiting a certain topic means the increase of awareness for that topic. However, when analyzing this, we will have to take the increase and decrease of the background visit. In other words, if the whole website has an increasing visit, it is hard to say that which topic is gaining more awareness. As a result, it is necessary to consider the overall visit frequency when trying to understand the topic visit frequency.</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="fu">## Wikipedia Pageviews</span></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>This is the Wikipedia pageviews in different languages.  </span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>These additional datasets are pageviews of:</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Energy Storage</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Electric Vehicle</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Electricity Generation</span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Renewable Energy</span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sustainable Energy</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Wind Turbine</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Photovoltaics</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Climate Change</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="fu">## Intervention</span></span>
 <span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a><span class="fu">## Containment Index</span></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>This dataset shows the time of six countries to take actions towards COVID, including the time of reporting the first case and the first death due to COVID, the time that school is closed and public events banned and the time that the country is in lockdown. Also, it shows the time of the country taking normalcy. Some countries didn't announce the national lockdown or national normalcy, so some time in this table is missing. When analyzing the trend of energy transition, the time listed in the table will be an important reference to when COVID started attacking and when COVID stopped.</span>
 <span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>The Oxford COVID-19 Government Response Tracker (<span class="co">[</span><span class="ot">OxCGRT</span><span class="co">](https://github.com/OxCGRT/covid-policy-dataset/tree/main/data)</span>) database : This dataset contains the strictness of lockdown policies for nearly all countries. We focus on eight containment indicators (C1~C8) in the OxCGRT database:</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
 <span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>C1 - School Closures</span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>C2 - Workplace closing</span>
-<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>C3 - Cancel Public Events</span>
-<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>C4 - Restrictions on gatherings</span>
-<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>C5 - Public Transportation</span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>C6 - Stay at Home Order</span>
-<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>C7 - Restrictions on Internal Movement</span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>C8 - International Travel Controls</span>
-<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>According to the <span class="co">[</span><span class="ot">guidelines</span><span class="co">](https://github.com/OxCGRT/covid-policy-dataset/blob/main/documentation_and_codebook.md#calculation-of-policy-indices)</span> of this data set, we calculated the <span class="in">`Containment Index `</span> of six countries using C1 to C8.</span>
-<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>It ranges from 0 to 100, with 100 representing the strictest lockdown intensity. The evolution of lockdown intensity in selected countries is shown in the chart below.</span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
-<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Containment Index.html" width="1110" height="500" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
-<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
-<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Interventions.html" width="1110" height="310" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="fu">## Containment Index</span></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>The Oxford COVID-19 Government Response Tracker (<span class="co">[</span><span class="ot">OxCGRT</span><span class="co">](https://github.com/OxCGRT/covid-policy-dataset/tree/main/data)</span>) database : This dataset contains the strictness of lockdown policies for nearly all countries. We focus on eight containment indicators (C1~C8) in the OxCGRT database:</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>C1 - School Closures</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>C2 - Workplace closing</span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>C3 - Cancel Public Events</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>C4 - Restrictions on gatherings</span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>C5 - Public Transportation</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>C6 - Stay at Home Order</span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>C7 - Restrictions on Internal Movement</span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>C8 - International Travel Controls</span>
 <span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>Thanks to OxCGRT, which furnishes extensive and scientific data about governments' diverse policy responses in 2020, 2021, and 2022. This data assesses the degree of governmental action on a scale. The resulting scores were combined to construct a series of policy indices, summarizing the collective impact of these measures.</span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>According to the <span class="co">[</span><span class="ot">guidelines</span><span class="co">](https://github.com/OxCGRT/covid-policy-dataset/blob/main/documentation_and_codebook.md#calculation-of-policy-indices)</span> of this data set, we calculated the <span class="in">`Containment Index `</span> of six countries using C1 to C8.</span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>It ranges from 0 to 100, with 100 representing the strictest lockdown intensity. The evolution of lockdown intensity in selected countries is shown in the chart below.</span>
 <span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>| Contries | CI (mean) |</span>
-<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>|  :----:  | :----:  |</span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>| Finland | 29.221927  |</span>
-<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>| France  | 35.373300 |</span>
-<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>| Germany  | 40.314003 |</span>
-<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>| Netherlands | 38.458093 |</span>
-<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>| Serbia  | 33.245152 |</span>
-<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>| Spain  | 44.206023 |</span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>The average CI in different countries are listed in the table above, we can discover that:</span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Spain has the highest mean CI at 44.21, suggesting that it implemented the most stringent lockdown measures among these countries. This might reflect a response to a severe outbreak or a proactive approach to prevent the spread of the virus.</span>
-<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Finland displays the lowest mean CI at 29.22, which indicate that it had the least stringent lockdown measures. This could reflect a less restrictive approach to containment or a lower incidence of COVID-19 cases necessitating such measures.</span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a><span class="fu">## Mobility</span></span>
-<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>This data set contains Google Mobility Report and Apple Mobility Trends, these two datasets are extended to 2022.</span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Containment Index.html" width="1110" height="500" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>Thanks to OxCGRT, which furnishes extensive and scientific data about governments' diverse policy responses in 2020, 2021, and 2022. This data assesses the degree of governmental action on a scale. The resulting scores were combined to construct a series of policy indices, summarizing the collective impact of these measures.</span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>| Contries | CI (mean) |</span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>|  :----:  | :----:  |</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>| Finland | 29.221927  |</span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>| France  | 35.373300 |</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>| Germany  | 40.314003 |</span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>| Netherlands | 38.458093 |</span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>| Serbia  | 33.245152 |</span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>| Spain  | 44.206023 |</span>
 <span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>This figure comes from Google Mobility Report. It divides mobility to some different categories according to their goal and shows the trend of mobility. The higher the curve come, the more mobility there is at the time. The overall trend of COVID is that it strikes a lot at winter, but in summer the power of COVID will be reduced. As a result, we can see from the figure that the mobility gets the highest during summer (mainly from late May to early September), but gets the lowest during winter (mainly late November to early March). For different activities, the mobility also varies a lot. The activity that is necessary has less fluctuation from time to time, such as grocery &amp; pharmacy and residential. The mobility of entertaining places and workplaces, on the opposite, has a big fluctuation from time to time. We also find that the mobility of workplaces comes low during Janurary every year.</span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>The average CI in different countries are listed in the table above, we can discover that:</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Spain has the highest mean CI at 44.21, suggesting that it implemented the most stringent lockdown measures among these countries. This might reflect a response to a severe outbreak or a proactive approach to prevent the spread of the virus.</span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Finland displays the lowest mean CI at 29.22, which indicate that it had the least stringent lockdown measures. This could reflect a less restrictive approach to containment or a lower incidence of COVID-19 cases necessitating such measures.</span>
 <span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Google_Mobility.html"  width="100%" height="200px" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
-<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
-<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a><span class="fu">## Mobility</span></span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>This data set contains Google Mobility Report and Apple Mobility Trends, these two datasets are extended to 2022.</span>
 <span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>This figure comes from Google Mobility Report. It divides mobility to some different categories according to their goal and shows the trend of mobility. The higher the curve come, the more mobility there is at the time. The overall trend of COVID is that it strikes a lot at winter, but in summer the power of COVID will be reduced. As a result, we can see from the figure that the mobility gets the highest during summer (mainly from late May to early September), but gets the lowest during winter (mainly late November to early March). For different activities, the mobility also varies a lot. The activity that is necessary has less fluctuation from time to time, such as grocery &amp; pharmacy and residential. The mobility of entertaining places and workplaces, on the opposite, has a big fluctuation from time to time. We also find that the mobility of workplaces comes low during Janurary every year.</span>
 <span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a><span class="fu"># Data Exploration</span></span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
 <span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a><span class="fu">## Energy Transition Awareness and Pageviews</span></span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a><span class="fu">### Aggregated DataSet Analysis</span></span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Google_Mobility.html"  width="100%" height="200px" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>In our exploration of the impact of COVID on the green transition, we first started by the analysis of the aggregated_timeseries dataset. The most relevant topic for our analysis was the Stem Earth and Environment and we focused on it's distributions of pageview counts pre and post COVID periods. </span>
-<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>The histogram help vizualizing the pre and post distributions which doesn't match our expected conclusion, as we see that the mean count of the pre-COVID is higher that the post-COVID one.</span>
-<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
-<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Total Pageviews in StemEarth.html" width="910" height="610" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
-<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a><span class="fu"># Data Exploration</span></span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a><span class="fu">## Energy Transition Awareness and Pageviews</span></span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a><span class="fu">### Aggregated DataSet Analysis</span></span>
 <span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>To statistically validate the observed difference, we use the z-score test. By converting our pageview counts into z-scores, we standardize the data, allowing us to assess the number of standard deviations each data point lies from the mean. This normalization is crucial for unbiased comparisons. </span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>In our exploration of the impact of COVID on the green transition, we first started by the analysis of the aggregated_timeseries dataset. The most relevant topic for our analysis was the Stem Earth and Environment and we focused on it's distributions of pageview counts pre and post COVID periods. </span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>The histogram help vizualizing the pre and post distributions which doesn't match our expected conclusion, as we see that the mean count of the pre-COVID is higher that the post-COVID one.</span>
 <span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>We have obtained a p-value of 0.016 &lt; significance level of 0.05 , which suggests that the difference is statistically significant, the z-score quantify this difference and shows that the post-COVID mean is 2.407 standard deviations below the pre-COVID mean. </span>
-<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a>This is a substantial deviation and suggests that there is a significant decrease in pageviews for Stem Earth and Environment content post-COVID compared to pre-COVID.</span>
-<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>Here, as we have pageview counts for different languages, a **Simpson's Paradox** can occur, where a trend appears in several different groups of data but disappears or reverses when these groups are combined, suggesting that the observed overall decrease in pageviews post-COVID might not apply uniformly across all languages. </span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Total Pageviews in StemEarth.html" width="910" height="610" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
 <span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>Therefore, to fully understand the dynamics and to avoid potentially misleading conclusions, we will proceed with a language-wise analysis. </span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>To statistically validate the observed difference, we use the z-score test. By converting our pageview counts into z-scores, we standardize the data, allowing us to assess the number of standard deviations each data point lies from the mean. This normalization is crucial for unbiased comparisons. </span>
 <span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>Initial visual assessment of differences between pageview counts accross languages</span>
-<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a>We have obtained a p-value of 0.016 &lt; significance level of 0.05 , which suggests that the difference is statistically significant, the z-score quantify this difference and shows that the post-COVID mean is 2.407 standard deviations below the pre-COVID mean. </span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>This is a substantial deviation and suggests that there is a significant decrease in pageviews for Stem Earth and Environment content post-COVID compared to pre-COVID.</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>Here, as we have pageview counts for different languages, a **Simpson's Paradox** can occur, where a trend appears in several different groups of data but disappears or reverses when these groups are combined, suggesting that the observed overall decrease in pageviews post-COVID might not apply uniformly across all languages. </span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Language Distributions.html" width="1010" height="910" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
-<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>Therefore, to fully understand the dynamics and to avoid potentially misleading conclusions, we will proceed with a language-wise analysis. </span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>Our first visual conclusions are for the English (en) and Danish (da) language where the histograms show a pronounced shift towards the left in the post-COVID period. The density of the distributions in the Italian (it) and Finnish (fi) segments, however, shifts right, suggesting an increase in pageviews post-COVID.</span>
-<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>The histogram for Turkish (tr) content shows an extreme skew towards the post-COVID period, with a very high peak.</span>
-<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>Initial visual assessment of differences between pageview counts accross languages</span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
 <span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Language Distributions.html" width="1010" height="910" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
 <span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Z and P for Each Language.html" width="810" height="810" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
-<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
-<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>Our first visual conclusions are for the English (en) and Danish (da) language where the histograms show a pronounced shift towards the left in the post-COVID period. The density of the distributions in the Italian (it) and Finnish (fi) segments, however, shifts right, suggesting an increase in pageviews post-COVID.</span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>The histogram for Turkish (tr) content shows an extreme skew towards the post-COVID period, with a very high peak.</span>
 <span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>Again, we need to statistically validate the observed difference: </span>
-<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>Upon analyzing the z-scores and p-values, we find that:</span>
-<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>       </span>
-<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The English and Danish segments, with high positive z-scores and very low p-values, indicate a significant drop in engagement.</span>
-<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The Italian, Finnish, and Catalan segments show a significant increase in interest post-COVID, with the Turkish segment displaying the most substantial increase.</span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>However, for German (de), Japanese (ja), and Korean (ko) segments, the p-values exceed the significance threshold, indicating that any observed changes in pageviews are not statistically significant.</span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Z and P for Each Language.html" width="810" height="810" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>This detailed breakdown demonstrates the varied impact of COVID-19 on online engagement with the STEM Earth and Environment content across different linguistic audiences. </span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>Again, we need to statistically validate the observed difference: </span>
 <span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a><span class="fu">### Added datasets Analysis</span></span>
-<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a>In the second part of our analysis, we expanded the dataset to include pageview counts from a range of topics directly relevant to our investigation. These additional datasets are:</span>
-<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Energy Storage</span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Electric Vehicle</span>
-<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Electricity Generation</span>
-<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Renewable Energy</span>
-<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sustainable Energy</span>
-<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Wind Turbine</span>
-<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Photovoltaics</span>
-<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Climate Change</span>
-<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>We start by the visualization of the pre and post distribution of page views count for each dataset:</span>
-<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
-<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Distributions for different terms.html" width="910" height="510" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
-<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>Upon analyzing the z-scores and p-values, we find that:</span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>       </span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The English and Danish segments, with high positive z-scores and very low p-values, indicate a significant drop in engagement.</span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The Italian, Finnish, and Catalan segments show a significant increase in interest post-COVID, with the Turkish segment displaying the most substantial increase.</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>However, for German (de), Japanese (ja), and Korean (ko) segments, the p-values exceed the significance threshold, indicating that any observed changes in pageviews are not statistically significant.</span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>This detailed breakdown demonstrates the varied impact of COVID-19 on online engagement with the STEM Earth and Environment content across different linguistic audiences. </span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a><span class="fu">### Added datasets Analysis</span></span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>In the second part of our analysis, we expanded the dataset to include pageview counts from a range of topics directly relevant to our investigation. These additional datasets are:</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Energy Storage</span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Electric Vehicle</span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Electricity Generation</span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Renewable Energy</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sustainable Energy</span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Wind Turbine</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Photovoltaics</span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Climate Change</span>
 <span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Significant Increase in Pageviews:</span>
-<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Electric Vehicle: Experienced a substantial increase, as indicated by a high z-score of -5.3561 and a p-value close to zero 1.009e-7.</span>
-<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Significant Decrease in Pageviews:</span>
-<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Electricity Generation:  Experienced a significant decrease with a z-score of 4.64 and a p-value of 3.76e-6。</span>
-<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Renewable Energy: Significant decrease, with a z-score of 3.80 and a p-value of 1.5e-5.</span>
-<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Photovoltaics: Significant decrease with a z-score of 5.13 and a p-value of 3.22e-7.</span>
-<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Climate Change: Significant moderate decrease with a z-score of 2.08 and a p-value of 0.03.</span>
-<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>No Significant Change in Pageviews: Energy Storage, Sustainable Energy and Wind Turbine.</span>
-<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>We start by the visualization of the pre and post distribution of page views count for each dataset:</span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Distributions for different terms.html" width="910" height="510" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Significant Increase in Pageviews:</span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Electric Vehicle: Experienced a substantial increase, as indicated by a high z-score of -5.3561 and a p-value close to zero 1.009e-7.</span>
 <span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>As we can face again the Simpson Paradox, we will the analysis language wise, we have chosen another set of languages for this analysis that covers a wider range of native speakers. The languages considered in these datasets are: </span>
-<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>zh: Chinese</span>
-<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>en: English</span>
-<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>fr: French</span>
-<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>es: Spanish</span>
-<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>ar: Arabic</span>
-<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>da: Danish</span>
-<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>fa: Persian </span>
-<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>pt: Portuguese</span>
-<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>tr: Turkish</span>
-<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>vi: Vietnamese</span>
-<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
-<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/ZandP for different articles.html" width="810" height="810" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
-<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
-<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Significant Decrease in Pageviews:</span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Electricity Generation:  Experienced a significant decrease with a z-score of 4.64 and a p-value of 3.76e-6。</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Renewable Energy: Significant decrease, with a z-score of 3.80 and a p-value of 1.5e-5.</span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Photovoltaics: Significant decrease with a z-score of 5.13 and a p-value of 3.22e-7.</span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Climate Change: Significant moderate decrease with a z-score of 2.08 and a p-value of 0.03.</span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>No Significant Change in Pageviews: Energy Storage, Sustainable Energy and Wind Turbine.</span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>As we can face again the Simpson Paradox, we will the analysis language wise, we have chosen another set of languages for this analysis that covers a wider range of native speakers. The languages considered in these datasets are: </span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>zh: Chinese</span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>en: English</span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>fr: French</span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>es: Spanish</span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>ar: Arabic</span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>da: Danish</span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>fa: Persian </span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>pt: Portuguese</span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>tr: Turkish</span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>vi: Vietnamese</span>
 <span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Significant Changes Heatmap.html" width="910" height="710" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
-<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
-<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
 <span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>The heatmap illustrates the z-scores associated with changes in pageviews for various environmental topics post-COVID, categorized by language. The shades of red and green represent the magnitude of decrease or increase in engagement, respectively.</span>
-<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>For the upper half, particularly, the topics of "Electricity Generation" and "Energy Storage" exhibit some of the most pronounced decreases across multiple languages.</span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/ZandP for different articles.html" width="810" height="810" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
 <span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>Conversely, the lower half of the heatmap shows significant increases post-COVID. It's especially apparent for "Renewable Energy," "Photovoltaics," and "Electric Vehicle" topics, where certain languages like Portuguese (pt) and Vietnamese (vi) display substantial growth in interest.</span>
-<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>While some areas have seen a surge in public attention, others have experienced a decline. </span>
-<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a>Some of this conclusions can only be validated by other cross analysis. For example, we cannot access that the COVID is responsible of the increase in terms of search in the topic Electric Vehicle. To assess this with certainty, we need to perform a causal analysis taking into account the trend of the later years on this topic, the EU reglementations and the exploding prices of gas.</span>
-<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Significant Changes Heatmap.html" width="910" height="710" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>The heatmap illustrates the z-scores associated with changes in pageviews for various environmental topics post-COVID, categorized by language. The shades of red and green represent the magnitude of decrease or increase in engagement, respectively.</span>
 <span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a><span class="fu">## Time Series Analysis</span></span>
-<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Natural Rhythm of Electricity Use</span></span>
-<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>In the real world, there are obvious cyclical patterns in power generation and consumption.</span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>For the upper half, particularly, the topics of "Electricity Generation" and "Energy Storage" exhibit some of the most pronounced decreases across multiple languages.</span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>Conversely, the lower half of the heatmap shows significant increases post-COVID. It's especially apparent for "Renewable Energy," "Photovoltaics," and "Electric Vehicle" topics, where certain languages like Portuguese (pt) and Vietnamese (vi) display substantial growth in interest.</span>
 <span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>The first figure presents a box plot distribution of electricity generation measured in gigawatt-hours (GWh) across the days of the week. A discernible trend is observed where weekdays exhibit a higher median generation compared to weekends, reflecting the conventional demand cycle influenced by industrial and commercial activities. The presence of outliers, particularly on weekdays, could indicate exceptional demand or supply events.</span>
-<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>While some areas have seen a surge in public attention, others have experienced a decline. </span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>Some of this conclusions can only be validated by other cross analysis. For example, we cannot access that the COVID is responsible of the increase in terms of search in the topic Electric Vehicle. To assess this with certainty, we need to perform a causal analysis taking into account the trend of the later years on this topic, the EU reglementations and the exploding prices of gas.</span>
 <span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
-<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Weekly.html" width="910" height="610" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
-<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
-<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a><span class="fu">## Time Series Analysis</span></span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Natural Rhythm of Electricity Use</span></span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a>In the real world, there are obvious cyclical patterns in power generation and consumption.</span>
 <span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>The second figure shifts the focus to a monthly overview, revealing the seasonality in electricity generation. The box plots indicate a significant variation between months, with the winter months showing elevated levels of generation, which could be attributed to increased heating demand and shorter daylight hours. Notably, December stands out with the highest median generation and the largest interquartile range, suggesting a potential increase in both baseline and peak demand during the holiday season.</span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>The first figure presents a box plot distribution of electricity generation measured in gigawatt-hours (GWh) across the days of the week. A discernible trend is observed where weekdays exhibit a higher median generation compared to weekends, reflecting the conventional demand cycle influenced by industrial and commercial activities. The presence of outliers, particularly on weekdays, could indicate exceptional demand or supply events.</span>
 <span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
-<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Monthly.html" width="910" height="610" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Weekly.html" width="910" height="610" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
 <span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
 <span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>These figures underscore the variability in electricity generation that aligns with human activity patterns and natural cycles. By understanding these trends, we further clarified the need to filter out these differences (cofounders) in subsequent analyses.</span>
-<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a>Before we move on, one thing we need to mention is that nuclear,coal, oil, and gas are non-renewable energy while others(hydro, biomass, wind, and waste) are considered renewable energy sources.</span>
-<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a><span class="fu">### With Different Events, What Happened?</span></span>
-<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>In order to overcome the impact of differences between weekdays and weekends, in our analysis, the total electricity generation and renewable electricity generation are taken as a 7-day average before and after all events. </span>
-<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>It can be seen that in most countries, with the advent of the epidemic, total power generation has declined, and a slowing down trend can be seen after Normalcy.</span>
-<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>In the figure below, figure shows the trend of energy generated and renewable electricity generated in different countries, trying to find out what impact it will have to different energy generation methods. We can see in most countries, with the advent of the epidemic, total power generation has shown a decline pattern, with a slowing down trend after Normalcy.</span>
-<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
-<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/interactive_energy_analysis.html" width="1110" height="610" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
-<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
-<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>Then, A t-test was performed on the average total electricity generation and renewable electricity generation in the 7 days before and after important events. </span>
-<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a>The heatmap for total electricity generation depicts a general pattern of significant change in response to the onset of COVID-19 and the ensuing governmental measures. Most countries registered statistically significant shifts in electricity generation patterns during key events. However, the imposition of mobility restrictions did not correspond with significant changes in electricity generation in countries like France and Spain, as evidenced by p-values of 0.994 and 0.679, respectively.</span>
-<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
-<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Total Electricity Generation Before and After Events.html" width="910" height="510" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
-<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
-<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>The second figure shifts the focus to a monthly overview, revealing the seasonality in electricity generation. The box plots indicate a significant variation between months, with the winter months showing elevated levels of generation, which could be attributed to increased heating demand and shorter daylight hours. Notably, December stands out with the highest median generation and the largest interquartile range, suggesting a potential increase in both baseline and peak demand during the holiday season.</span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Monthly.html" width="910" height="610" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>These figures underscore the variability in electricity generation that aligns with human activity patterns and natural cycles. By understanding these trends, we further clarified the need to filter out these differences (cofounders) in subsequent analyses.</span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>Before we move on, one thing we need to mention is that nuclear,coal, oil, and gas are non-renewable energy while others(hydro, biomass, wind, and waste) are considered renewable energy sources.</span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a><span class="fu">### With Different Events, What Happened?</span></span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>In order to overcome the impact of differences between weekdays and weekends, in our analysis, the total electricity generation and renewable electricity generation are taken as a 7-day average before and after all events. </span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>It can be seen that in most countries, with the advent of the epidemic, total power generation has declined, and a slowing down trend can be seen after Normalcy.</span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a>In the figure below, figure shows the trend of energy generated and renewable electricity generated in different countries, trying to find out what impact it will have to different energy generation methods. We can see in most countries, with the advent of the epidemic, total power generation has shown a decline pattern, with a slowing down trend after Normalcy.</span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/interactive_energy_analysis.html" width="1110" height="610" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>Then, A t-test was performed on the average total electricity generation and renewable electricity generation in the 7 days before and after important events. </span>
 <span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>Similarly, in the heatmap for renewable electricity generation, it appears that renewable sources were impacted by the pandemic measures in most countries. Notable exceptions include Finland and the Netherlands, where '1st case' and 'Normalcy' led to a larger p-value, indicating there is no significant change in renewable electricity generation. This could reflect the inherent variability in renewable sources or potential shifts in energy policy or market dynamics in response to the pandemic.</span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>The heatmap for total electricity generation depicts a general pattern of significant change in response to the onset of COVID-19 and the ensuing governmental measures. Most countries registered statistically significant shifts in electricity generation patterns during key events. However, the imposition of mobility restrictions did not correspond with significant changes in electricity generation in countries like France and Spain, as evidenced by p-values of 0.994 and 0.679, respectively.</span>
 <span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
 <span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Renewable Electricity Generation Before and After Events.html" width="910" height="510" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Total Electricity Generation Before and After Events.html" width="910" height="510" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
 <span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
 <span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>Similarly, in the heatmap for renewable electricity generation, it appears that renewable sources were impacted by the pandemic measures in most countries. Notable exceptions include Finland and the Netherlands, where '1st case' and 'Normalcy' led to a larger p-value, indicating there is no significant change in renewable electricity generation. This could reflect the inherent variability in renewable sources or potential shifts in energy policy or market dynamics in response to the pandemic.</span>
 <span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a><span class="fu">## Electricity generation and Interventions</span></span>
-<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a><span class="fu">### Has the Electricity Generation Structure Changed?</span></span>
-<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a>First, let's take a look at the electricity generation structure amongs six countries before, during and after the pandemic respectively. </span>
-<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>Before we show you the visualization, let me introduce how we define before, during and after.</span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Renewable Electricity Generation Before and After Events.html" width="910" height="510" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>In our analysis, we define the "epidemic period" as the time frame beginning with the first confirmed case and extending until the point of return to normalcy((Spanish normalcy is missing, we took the average to fill it in)). This period encompasses the entire duration of the epidemic's impact, starting from its initial emergence and concluding when conditions have stabilized and daily life has resumed its usual rhythm. This definition allows for a comprehensive understanding of the epidemic's full scope and duration, capturing both the onset and the eventual subsiding of its effects.</span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>To mitigate the impact of natural rhythms or seasonal fluctuations, we adopt a comparative approach in our data analysis. Specifically, for the periods before and after our focal "during" phase, we align the data based on the same months and days, but adjust the years, either by decreasing or increasing them by one year. This method allows us to closely mirror the temporal context of the "during" phase while effectively isolating and minimizing seasonal or cyclical variations. By comparing these analogous time periods across different years, we aim to gain a clearer understanding of any changes or trends that are not merely attributable to regular seasonal patterns.</span>
-<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
-<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Pie.html" width="1110" height="510" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
-<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a><span class="fu">## Electricity generation and Interventions</span></span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a><span class="fu">### Has the Electricity Generation Structure Changed?</span></span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a>First, let's take a look at the electricity generation structure amongs six countries before, during and after the pandemic respectively. </span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>Before we show you the visualization, let me introduce how we define before, during and after.</span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>In our analysis, we define the "epidemic period" as the time frame beginning with the first confirmed case and extending until the point of return to normalcy((Spanish normalcy is missing, we took the average to fill it in)). This period encompasses the entire duration of the epidemic's impact, starting from its initial emergence and concluding when conditions have stabilized and daily life has resumed its usual rhythm. This definition allows for a comprehensive understanding of the epidemic's full scope and duration, capturing both the onset and the eventual subsiding of its effects.</span>
 <span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>Based on pie chart, we can get some basic observations:</span>
-<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The majority sources of most countries are nuclear, hydro, coal and gas.</span>
-<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>In most of countries, transition towards renewable sources increased during the epidemic, with higher hydro and coal and lower nuclear contributions except for the Serbia with higher coal and lower hydro contributions</span>
-<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>After the epidemic, most countries displayed a partial reversion in the renewable trend, notably in hydroelectric and gas power.</span>
-<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Among all the countries, biomass, oil, and waste have made little contributions and remained relatively consistent.</span>
-<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>These observations reflect the dynamic nature of energy consumption and production patterns in response to global events such as an epidemic. They also highlight the varying degrees of adaptability and resilience in different countries' energy sectors.</span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>To mitigate the impact of natural rhythms or seasonal fluctuations, we adopt a comparative approach in our data analysis. Specifically, for the periods before and after our focal "during" phase, we align the data based on the same months and days, but adjust the years, either by decreasing or increasing them by one year. This method allows us to closely mirror the temporal context of the "during" phase while effectively isolating and minimizing seasonal or cyclical variations. By comparing these analogous time periods across different years, we aim to gain a clearer understanding of any changes or trends that are not merely attributable to regular seasonal patterns.</span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Pie.html" width="1110" height="510" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
 <span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>Let's conduct an analysis of variance (ANOVA) for these energy sources to assess whether there are statistically significant differences between them in terms of their effects or contributions. This analysis will help us determine if there are notable variations among these sources and which sources might significantly differ from the rest in their impact or significance.</span>
-<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
-<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/ANOVA.html" width="810" height="610" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
-<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
-<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a>The bar chart visualizes the -log10 transformed p-values from the ANOVA results for each energy source.</span>
-<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>Red Dashed Line: This line represents the -log10 transformed significance level (typically p = 0.05). Bars that extend above this line are considered statistically significant.</span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>Based on pie chart, we can get some basic observations:</span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The majority sources of most countries are nuclear, hydro, coal and gas.</span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>In most of countries, transition towards renewable sources increased during the epidemic, with higher hydro and coal and lower nuclear contributions except for the Serbia with higher coal and lower hydro contributions</span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>After the epidemic, most countries displayed a partial reversion in the renewable trend, notably in hydroelectric and gas power.</span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Among all the countries, biomass, oil, and waste have made little contributions and remained relatively consistent.</span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>These observations reflect the dynamic nature of energy consumption and production patterns in response to global events such as an epidemic. They also highlight the varying degrees of adaptability and resilience in different countries' energy sectors.</span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>Let's conduct an analysis of variance (ANOVA) for these energy sources to assess whether there are statistically significant differences between them in terms of their effects or contributions. This analysis will help us determine if there are notable variations among these sources and which sources might significantly differ from the rest in their impact or significance.</span>
 <span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>Well, it is obvious that the key sources we mentioned previously are all in greater significance. So there might be some main factors that affect the trend of the key sources. </span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
 <span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>Interestingly, for most countries (except France), the p-value of nuclear power is not very high, which is consistent with the fact that nuclear power acts as base load in reality.</span>
-<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Ripple Effect of Interventions: Mobility and Electricity Generation during the Pandemic</span></span>
-<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>In order to answer these questions, we need to explore the mobility data: apple_mobility which contains the intensity score of the region in three transportation types(driving, walking and transit) of each day from 2020-01-13 to 2022-04-12. Please notice that the transit data of Serbia is missing.</span>
-<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>The intensity score refer to relative mobility strength based on first day(2020-01-13, which intensity score is 100). The higher intensity score, the more people choosing the transportation types.</span>
-<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>Review the data we all have now, mobility, intervention and energy generation. It is time to combine then together!</span>
-<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
-<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Total Electricity Generation_Mobility.html" width="1110" height="510" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
-<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
-<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
-<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Renewable Generation Percent_Mobility.html" width="1110" height="510" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
-<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/ANOVA.html" width="810" height="610" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>The bar chart visualizes the -log10 transformed p-values from the ANOVA results for each energy source.</span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>Red Dashed Line: This line represents the -log10 transformed significance level (typically p = 0.05). Bars that extend above this line are considered statistically significant.</span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>Well, it is obvious that the key sources we mentioned previously are all in greater significance. So there might be some main factors that affect the trend of the key sources. </span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>Interestingly, for most countries (except France), the p-value of nuclear power is not very high, which is consistent with the fact that nuclear power acts as base load in reality.</span>
+<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Ripple Effect of Interventions: Mobility and Electricity Generation during the Pandemic</span></span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a>In order to answer these questions, we need to explore the mobility data: apple_mobility which contains the intensity score of the region in three transportation types(driving, walking and transit) of each day from 2020-01-13 to 2022-04-12. Please notice that the transit data of Serbia is missing.</span>
+<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>The intensity score refer to relative mobility strength based on first day(2020-01-13, which intensity score is 100). The higher intensity score, the more people choosing the transportation types.</span>
+<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a>Review the data we all have now, mobility, intervention and energy generation. It is time to combine then together!</span>
 <span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a>At the onset of lockdowns, a sharp decline in mobility was observed across all countries. The once-bustling avenues of movement—captured in metrics of driving, walking, and transit—saw a sudden plunge. This drop in human activity was mirrored by a corresponding decrease in energy consumption. The graphs show a synchrony between the fall in mobility and a dip in energy usage, suggesting a direct correlation between the two.</span>
-<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a>While the reduction in mobility was somewhat uniform, the impact on energy consumption varied. In Finland, energy generation closely tracked reductions in mobility, indicating a direct dependency of energy usage on population movement. In contrast, countries like Germany displayed resilience in energy consumption despite decreased mobility, hinting at a robust energy infrastructure possibly catering to essential services that remained operational.</span>
-<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a>Gradually, as restrictions lifted, there was a cautious uptick in mobility. This return to movement, however, was not always matched by a proportional increase in energy consumption, suggesting a lasting change in energy use patterns, perhaps due to a sustained shift towards remote work and more conscious energy utilization.</span>
-<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a>While we've established a foundational perspective on how interventions influence mobility and energy consumption, to truly grasp the depth of these impacts, we require a more systematic assessment of the intervention strictness implemented by these countries. By quantifying the degrees of lockdown measures, we can disentangle the nuanced effects they have had on the day-to-day activities and energy usage patterns. This will enable us to paint a clearer picture of the relationship between policy strictness and its real-world repercussions</span>
+<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
+<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Total Electricity Generation_Mobility.html" width="1110" height="510" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
+<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
+<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Renewable Generation Percent_Mobility.html" width="1110" height="510" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
+<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a><span class="fu">### Spearman Correlation</span></span>
-<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>Acknowledging the myriad of elements that could potentially affect energy consumption and its distribution, it becomes crucial to dissect and understand these intricacies. To achieve this, we are set to embark on a correlation analysis, complemented by an examination of p-values. This statistical approach will assist us in uncovering the degree to which these factors are related to energy consumption—whether they move in tandem or in opposition to each other. By deciphering the significance, directionality of these correlations, and the p-values, we can gauge the statistical significance of our findings. The inclusion of p-value analysis ensures that our conclusions are not just based on observed trends but are also statistically robust. This comprehensive analysis will illuminate how various influences interplay to shape energy usage patterns, particularly during the unique circumstances brought by the pandemic.</span>
+<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a>At the onset of lockdowns, a sharp decline in mobility was observed across all countries. The once-bustling avenues of movement—captured in metrics of driving, walking, and transit—saw a sudden plunge. This drop in human activity was mirrored by a corresponding decrease in energy consumption. The graphs show a synchrony between the fall in mobility and a dip in energy usage, suggesting a direct correlation between the two.</span>
+<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>While the reduction in mobility was somewhat uniform, the impact on energy consumption varied. In Finland, energy generation closely tracked reductions in mobility, indicating a direct dependency of energy usage on population movement. In contrast, countries like Germany displayed resilience in energy consumption despite decreased mobility, hinting at a robust energy infrastructure possibly catering to essential services that remained operational.</span>
 <span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
-<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Total_corr.html" width="910" height="610" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
-<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
-<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
-<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Total_p-value.html" width="910" height="610" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
-<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
-<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
-<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Resource Use_corr.html" width="910" height="610" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
-<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
-<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
-<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Resource Use_p.html" width="910" height="610" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
-<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
-<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a>Let's analyze the result one by one:</span>
-<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Finland: A notable observation is the strong negative correlation between walking and total energy generation (-0.611). However, the p-value (0.935) suggests that this correlation is not statistically significant, which means we cannot confidently attribute changes in energy generation to changes in walking activity.</span>
-<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>France: The negative correlation between renewable energy percentage and total energy generation (-0.351) is not statistically significant either, given its p-value (0.306). Thus, while there is an observed association, we cannot reliably infer a causal link between these variables.</span>
-<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Germany: The correlation between parks and total energy generation is slightly negative (-0.507), and the p-value (0.040) indicates that this correlation could be statistically significant. This suggests a potential inverse relationship between leisure activity and energy production, possibly worth further investigation.</span>
-<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The Netherlands: There's a strong negative correlation with the day of the week (-0.431), with a significant p-value (0.030), implying a consistent pattern where the day within the week might be influencing energy generation significantly, potentially reflecting operational cycles in energy usage.</span>
+<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a>Gradually, as restrictions lifted, there was a cautious uptick in mobility. This return to movement, however, was not always matched by a proportional increase in energy consumption, suggesting a lasting change in energy use patterns, perhaps due to a sustained shift towards remote work and more conscious energy utilization.</span>
+<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a>While we've established a foundational perspective on how interventions influence mobility and energy consumption, to truly grasp the depth of these impacts, we require a more systematic assessment of the intervention strictness implemented by these countries. By quantifying the degrees of lockdown measures, we can disentangle the nuanced effects they have had on the day-to-day activities and energy usage patterns. This will enable us to paint a clearer picture of the relationship between policy strictness and its real-world repercussions</span>
+<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a><span class="fu">### Spearman Correlation</span></span>
+<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a>Acknowledging the myriad of elements that could potentially affect energy consumption and its distribution, it becomes crucial to dissect and understand these intricacies. To achieve this, we are set to embark on a correlation analysis, complemented by an examination of p-values. This statistical approach will assist us in uncovering the degree to which these factors are related to energy consumption—whether they move in tandem or in opposition to each other. By deciphering the significance, directionality of these correlations, and the p-values, we can gauge the statistical significance of our findings. The inclusion of p-value analysis ensures that our conclusions are not just based on observed trends but are also statistically robust. This comprehensive analysis will illuminate how various influences interplay to shape energy usage patterns, particularly during the unique circumstances brought by the pandemic.</span>
+<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
+<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Total_corr.html" width="910" height="610" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
+<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
+<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Total_p-value.html" width="910" height="610" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
+<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
+<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Resource Use_corr.html" width="910" height="610" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
+<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
+<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Resource Use_p.html" width="910" height="610" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
+<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a>Let's analyze the result one by one:</span>
 <span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Serbia: While there is a moderate negative correlation between grocery/pharmacy activity and energy generation (-0.362), the p-value (0.689) suggests that this correlation is not statistically significant.</span>
+<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Finland: A notable observation is the strong negative correlation between walking and total energy generation (-0.611). However, the p-value (0.935) suggests that this correlation is not statistically significant, which means we cannot confidently attribute changes in energy generation to changes in walking activity.</span>
 <span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Spain: A positive correlation with the year (0.379) suggests an increasing trend in energy generation over time, but the p-value (0.349) indicates that this trend is not statistically significant.</span>
+<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>France: The negative correlation between renewable energy percentage and total energy generation (-0.351) is not statistically significant either, given its p-value (0.306). Thus, while there is an observed association, we cannot reliably infer a causal link between these variables.</span>
 <span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a>Across all countries, correlations vary in strength, but many lack statistical significance based on their p-values. This suggests that while some factors may appear to influence energy generation, these influences are not consistently strong enough to exclude the possibility that they are due to random chance.</span>
+<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Germany: The correlation between parks and total energy generation is slightly negative (-0.507), and the p-value (0.040) indicates that this correlation could be statistically significant. This suggests a potential inverse relationship between leisure activity and energy production, possibly worth further investigation.</span>
 <span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a>With the insights from the correlation and significance analysis, we can now transition to predictive modeling using machine learning. The goal is to use the identified relationships that are both strong and statistically significant as features in our model. </span>
+<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The Netherlands: There's a strong negative correlation with the day of the week (-0.431), with a significant p-value (0.030), implying a consistent pattern where the day within the week might be influencing energy generation significantly, potentially reflecting operational cycles in energy usage.</span>
 <span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a><span class="fu">### So How about Forecast by Machine Learning?</span></span>
-<span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a>From the Spearman correlation analysis above, we excluded the features of 'DayofMonth' , 'transit' and 'Workplaces', which shows a relatively high p-value in most countries.</span>
-<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a>Before we start, let us first introduce the datasets we use to do analysis and forecasting. Based on the correlation and p-value analysis </span>
-<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a><span class="in">`Total`</span> representing the total electricity consumption as the label.</span>
-<span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a>Based on the correlation and p-value analysis, we select out the following features:</span>
-<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a><span class="in">`DayOfWeek`</span> If this factor has consistently low p-values across multiple countries, it indicates a significant weekly pattern in energy generation that could be predictive regardless of the country. Energy consumption patterns can significantly differ between weekdays and weekends.</span>
+<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Serbia: While there is a moderate negative correlation between grocery/pharmacy activity and energy generation (-0.362), the p-value (0.689) suggests that this correlation is not statistically significant.</span>
+<span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Spain: A positive correlation with the year (0.379) suggests an increasing trend in energy generation over time, but the p-value (0.349) indicates that this trend is not statistically significant.</span>
+<span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a>Across all countries, correlations vary in strength, but many lack statistical significance based on their p-values. This suggests that while some factors may appear to influence energy generation, these influences are not consistently strong enough to exclude the possibility that they are due to random chance.</span>
+<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a>With the insights from the correlation and significance analysis, we can now transition to predictive modeling using machine learning. The goal is to use the identified relationships that are both strong and statistically significant as features in our model. </span>
+<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a><span class="fu">### So How about Forecast by Machine Learning?</span></span>
+<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a>From the Spearman correlation analysis above, we excluded the features of 'DayofMonth' , 'transit' and 'Workplaces', which shows a relatively high p-value in most countries.</span>
 <span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a><span class="in">`Renewable_percent`</span>: Even though the p-values vary, if the correlation is consistently strong across countries, this feature may capture the influence of renewable energy production on the total energy generation, which is a crucial aspect of modern energy systems.</span>
+<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a>Before we start, let us first introduce the datasets we use to do analysis and forecasting. Based on the correlation and p-value analysis </span>
 <span id="cb1-431"><a href="#cb1-431" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a><span class="in">`Parks`</span>: If the recreational activity, as represented by the usage of parks, shows consistent correlations with energy generation, it might reflect broader societal behavior patterns that affect energy usage, such as reduced industrial activity on days with higher recreational activity.</span>
+<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a><span class="in">`Total`</span> representing the total electricity consumption as the label.</span>
 <span id="cb1-433"><a href="#cb1-433" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-434"><a href="#cb1-434" aria-hidden="true" tabindex="-1"></a><span class="in">`Transit Stations`</span>: The use of transit stations could be a proxy for overall economic activity, including commuting patterns and industrial activity. If it correlates with energy generation across several countries, it could be a relevant predictor.</span>
+<span id="cb1-434"><a href="#cb1-434" aria-hidden="true" tabindex="-1"></a>Based on the correlation and p-value analysis, we select out the following features:</span>
 <span id="cb1-435"><a href="#cb1-435" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-436"><a href="#cb1-436" aria-hidden="true" tabindex="-1"></a><span class="in">`CI (Containment Index)`</span>: This could be a particularly relevant feature if the lockdown measures significantly impacted energy consumption patterns. The CI might capture the effects of reduced industrial, commercial, and personal activity on energy demand.</span>
+<span id="cb1-436"><a href="#cb1-436" aria-hidden="true" tabindex="-1"></a><span class="in">`DayOfWeek`</span> If this factor has consistently low p-values across multiple countries, it indicates a significant weekly pattern in energy generation that could be predictive regardless of the country. Energy consumption patterns can significantly differ between weekdays and weekends.</span>
 <span id="cb1-437"><a href="#cb1-437" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-438"><a href="#cb1-438" aria-hidden="true" tabindex="-1"></a><span class="in">`Walking`</span>: The activity level of the population, as indicated by walking, if correlated with energy generation, might reflect changes in daily routines that could impact energy consumption, such as increased remote work or shifts in commercial activity.</span>
+<span id="cb1-438"><a href="#cb1-438" aria-hidden="true" tabindex="-1"></a><span class="in">`Renewable_percent`</span>: Even though the p-values vary, if the correlation is consistently strong across countries, this feature may capture the influence of renewable energy production on the total energy generation, which is a crucial aspect of modern energy systems.</span>
 <span id="cb1-439"><a href="#cb1-439" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-440"><a href="#cb1-440" aria-hidden="true" tabindex="-1"></a><span class="in">`Month`</span>, <span class="in">`Year`</span>, <span class="in">`driving`</span>, <span class="in">`Retail &amp; Recreation`</span>, <span class="in">`Residential`</span> are included as well.</span>
+<span id="cb1-440"><a href="#cb1-440" aria-hidden="true" tabindex="-1"></a><span class="in">`Parks`</span>: If the recreational activity, as represented by the usage of parks, shows consistent correlations with energy generation, it might reflect broader societal behavior patterns that affect energy usage, such as reduced industrial activity on days with higher recreational activity.</span>
 <span id="cb1-441"><a href="#cb1-441" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-442"><a href="#cb1-442" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-442"><a href="#cb1-442" aria-hidden="true" tabindex="-1"></a><span class="in">`Transit Stations`</span>: The use of transit stations could be a proxy for overall economic activity, including commuting patterns and industrial activity. If it correlates with energy generation across several countries, it could be a relevant predictor.</span>
 <span id="cb1-443"><a href="#cb1-443" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-444"><a href="#cb1-444" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
-<span id="cb1-445"><a href="#cb1-445" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Feature Importance.html" width="810" height="610" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
-<span id="cb1-446"><a href="#cb1-446" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-444"><a href="#cb1-444" aria-hidden="true" tabindex="-1"></a><span class="in">`CI (Containment Index)`</span>: This could be a particularly relevant feature if the lockdown measures significantly impacted energy consumption patterns. The CI might capture the effects of reduced industrial, commercial, and personal activity on energy demand.</span>
+<span id="cb1-445"><a href="#cb1-445" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-446"><a href="#cb1-446" aria-hidden="true" tabindex="-1"></a><span class="in">`Walking`</span>: The activity level of the population, as indicated by walking, if correlated with energy generation, might reflect changes in daily routines that could impact energy consumption, such as increased remote work or shifts in commercial activity.</span>
 <span id="cb1-447"><a href="#cb1-447" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-448"><a href="#cb1-448" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Split the train and test datasets</span></span>
-<span id="cb1-449"><a href="#cb1-449" aria-hidden="true" tabindex="-1"></a>To ensure our model's reliability, we'll split the dataset into training and test sets. This division enables us to train the model on historical data and then assess its performance on unseen data, a crucial step before proceeding with analysis and forecasting.</span>
+<span id="cb1-448"><a href="#cb1-448" aria-hidden="true" tabindex="-1"></a><span class="in">`Month`</span>, <span class="in">`Year`</span>, <span class="in">`driving`</span>, <span class="in">`Retail &amp; Recreation`</span>, <span class="in">`Residential`</span> are included as well.</span>
+<span id="cb1-449"><a href="#cb1-449" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-450"><a href="#cb1-450" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-451"><a href="#cb1-451" aria-hidden="true" tabindex="-1"></a>Specifically, we select all the data from 2020 to 2021 as the training set while the test set contains data from ‘2022’ onwards. </span>
-<span id="cb1-452"><a href="#cb1-452" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-453"><a href="#cb1-453" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-454"><a href="#cb1-454" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Model setup</span></span>
-<span id="cb1-455"><a href="#cb1-455" aria-hidden="true" tabindex="-1"></a>Now that we've completed the preparatory work, let's proceed to train the model</span>
-<span id="cb1-456"><a href="#cb1-456" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>base_score=0.5: The initial prediction score of the model.</span>
-<span id="cb1-457"><a href="#cb1-457" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>booster='gbtree': Specifies the type of booster used, which in this case is a tree-based model.</span>
-<span id="cb1-458"><a href="#cb1-458" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>n_estimators=1500: The number of trees (estimators) to build in the boosting process.</span>
-<span id="cb1-459"><a href="#cb1-459" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>early_stopping_rounds=50: Determines the number of rounds (iterations) without improvement on the validation metric before stopping training.</span>
-<span id="cb1-460"><a href="#cb1-460" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>objective='reg:linear': The objective function set to linear regression, indicating the model will predict continuous numeric values.</span>
-<span id="cb1-461"><a href="#cb1-461" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>max_depth=4: Sets the maximum depth of the trees in the boosting process.</span>
-<span id="cb1-462"><a href="#cb1-462" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>learning_rate=0.01: Controls the step size at each iteration during training, preventing overfitting by making the model learning slower.</span>
-<span id="cb1-463"><a href="#cb1-463" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-464"><a href="#cb1-464" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-465"><a href="#cb1-465" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-466"><a href="#cb1-466" aria-hidden="true" tabindex="-1"></a>Utilizing the XGBoost library, we construct an XGBoostRegressor model, a highly regarded gradient boosting algorithm recognized for its proficiency in time series forecasting. Fitting the model involves training it on the provided dataset. Subsequently, we assess its performance on both the training and test sets by employing the root mean squared error (RMSE) metric.</span>
-<span id="cb1-467"><a href="#cb1-467" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-468"><a href="#cb1-468" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Predictions</span></span>
-<span id="cb1-469"><a href="#cb1-469" aria-hidden="true" tabindex="-1"></a>Now, it is time to utilize our trained model to make predictions on the test set and then create visualizations to represent the results.</span>
-<span id="cb1-470"><a href="#cb1-470" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-471"><a href="#cb1-471" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
-<span id="cb1-472"><a href="#cb1-472" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Total Electricity Generation.html" width="1110" height="610" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
-<span id="cb1-473"><a href="#cb1-473" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
-<span id="cb1-474"><a href="#cb1-474" aria-hidden="true" tabindex="-1"></a>Well, from a direct visual standpoint, it hard to point out which country the model fits well since the y-axis scale is different, we need further information.</span>
+<span id="cb1-451"><a href="#cb1-451" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-452"><a href="#cb1-452" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
+<span id="cb1-453"><a href="#cb1-453" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Feature Importance.html" width="810" height="610" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
+<span id="cb1-454"><a href="#cb1-454" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-455"><a href="#cb1-455" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-456"><a href="#cb1-456" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Split the train and test datasets</span></span>
+<span id="cb1-457"><a href="#cb1-457" aria-hidden="true" tabindex="-1"></a>To ensure our model's reliability, we'll split the dataset into training and test sets. This division enables us to train the model on historical data and then assess its performance on unseen data, a crucial step before proceeding with analysis and forecasting.</span>
+<span id="cb1-458"><a href="#cb1-458" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-459"><a href="#cb1-459" aria-hidden="true" tabindex="-1"></a>Specifically, we select all the data from 2020 to 2021 as the training set while the test set contains data from ‘2022’ onwards. </span>
+<span id="cb1-460"><a href="#cb1-460" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-461"><a href="#cb1-461" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-462"><a href="#cb1-462" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Model setup</span></span>
+<span id="cb1-463"><a href="#cb1-463" aria-hidden="true" tabindex="-1"></a>Now that we've completed the preparatory work, let's proceed to train the model</span>
+<span id="cb1-464"><a href="#cb1-464" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>base_score=0.5: The initial prediction score of the model.</span>
+<span id="cb1-465"><a href="#cb1-465" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>booster='gbtree': Specifies the type of booster used, which in this case is a tree-based model.</span>
+<span id="cb1-466"><a href="#cb1-466" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>n_estimators=1500: The number of trees (estimators) to build in the boosting process.</span>
+<span id="cb1-467"><a href="#cb1-467" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>early_stopping_rounds=50: Determines the number of rounds (iterations) without improvement on the validation metric before stopping training.</span>
+<span id="cb1-468"><a href="#cb1-468" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>objective='reg:linear': The objective function set to linear regression, indicating the model will predict continuous numeric values.</span>
+<span id="cb1-469"><a href="#cb1-469" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>max_depth=4: Sets the maximum depth of the trees in the boosting process.</span>
+<span id="cb1-470"><a href="#cb1-470" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>learning_rate=0.01: Controls the step size at each iteration during training, preventing overfitting by making the model learning slower.</span>
+<span id="cb1-471"><a href="#cb1-471" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-472"><a href="#cb1-472" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-473"><a href="#cb1-473" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-474"><a href="#cb1-474" aria-hidden="true" tabindex="-1"></a>Utilizing the XGBoost library, we construct an XGBoostRegressor model, a highly regarded gradient boosting algorithm recognized for its proficiency in time series forecasting. Fitting the model involves training it on the provided dataset. Subsequently, we assess its performance on both the training and test sets by employing the root mean squared error (RMSE) metric.</span>
 <span id="cb1-475"><a href="#cb1-475" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-476"><a href="#cb1-476" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Evaluation</span></span>
-<span id="cb1-477"><a href="#cb1-477" aria-hidden="true" tabindex="-1"></a>As data analysts, we can not rely solely on intuition. So let's take a look at their root mean squared error scores(RMSE) and relative error(RE). </span>
-<span id="cb1-478"><a href="#cb1-478" aria-hidden="true" tabindex="-1"></a>We can find that the model performs better in France and Spain while the model doesn't fit Serbia well.</span>
-<span id="cb1-479"><a href="#cb1-479" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-480"><a href="#cb1-480" aria-hidden="true" tabindex="-1"></a>| Countries | RMSE <span class="co">[</span><span class="ot">GWh</span><span class="co">]</span> | RE |</span>
-<span id="cb1-481"><a href="#cb1-481" aria-hidden="true" tabindex="-1"></a>|  :----:  | :----:  | :----:  |</span>
-<span id="cb1-482"><a href="#cb1-482" aria-hidden="true" tabindex="-1"></a>| Finland | 15.81  | 0.081 |</span>
-<span id="cb1-483"><a href="#cb1-483" aria-hidden="true" tabindex="-1"></a>| France  | 113.36 | 0.076 |</span>
-<span id="cb1-484"><a href="#cb1-484" aria-hidden="true" tabindex="-1"></a>| Germany  | 125.05 | 0.081 |</span>
-<span id="cb1-485"><a href="#cb1-485" aria-hidden="true" tabindex="-1"></a>| Netherlands | 31.78 | 0.097 |</span>
-<span id="cb1-486"><a href="#cb1-486" aria-hidden="true" tabindex="-1"></a>| Serbia  | 11.52 | 0.121 |</span>
-<span id="cb1-487"><a href="#cb1-487" aria-hidden="true" tabindex="-1"></a>| Spain  | 57.00 | 0.079 |</span>
-<span id="cb1-488"><a href="#cb1-488" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-489"><a href="#cb1-489" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-490"><a href="#cb1-490" aria-hidden="true" tabindex="-1"></a> As we see, their RE are about 10% , which indicates the model is performing good.</span>
-<span id="cb1-491"><a href="#cb1-491" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-492"><a href="#cb1-492" aria-hidden="true" tabindex="-1"></a>Within this section, we conducted an analysis of total energy consumption utilizing the integrated dataset. This comprehensive analysis not only offers valuable insights into the patterns of total energy consumption but also facilitates precise forecasting. By comprehending the trends in total energy consumption, informed decisions can be made concerning energy management and resource allocation in the future public health issues.</span>
-<span id="cb1-493"><a href="#cb1-493" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-494"><a href="#cb1-494" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-495"><a href="#cb1-495" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-496"><a href="#cb1-496" aria-hidden="true" tabindex="-1"></a><span class="fu"># Conclusion</span></span>
-<span id="cb1-497"><a href="#cb1-497" aria-hidden="true" tabindex="-1"></a>Our findings shed light on the pandemic’s impact on green energy transition:</span>
-<span id="cb1-498"><a href="#cb1-498" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-499"><a href="#cb1-499" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Varied Awareness: Public interest in green energy topics fluctuated during the pandemic. While some languages and topics experienced increased pageviews on environmental content, others remained stable or declined. This suggests a nuanced response across linguistic and cultural contexts.</span>
-<span id="cb1-500"><a href="#cb1-500" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mixed Electricity Trends: Total electricity generation decreased globally due to lockdowns and economic slowdowns. However, renewable energy generation showed diverse patterns—some countries increased their share, while others remained unchanged. National policies, markets, and infrastructure played a crucial role.</span>
-<span id="cb1-501"><a href="#cb1-501" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Direct Pandemic Influence: Mobility data revealed reduced movement during lockdowns, directly impacting energy consumption. The strictness of pandemic interventions correlated with energy usage. Yet, outcomes varied by country, reflecting unique contexts.</span>
-<span id="cb1-502"><a href="#cb1-502" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Machine Learning Predictions: Our XGBoost-based model accurately forecasted future energy generation, capturing seasonal trends and pandemic effects. This tool can inform energy planning and management decisions.</span>
+<span id="cb1-476"><a href="#cb1-476" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Predictions</span></span>
+<span id="cb1-477"><a href="#cb1-477" aria-hidden="true" tabindex="-1"></a>Now, it is time to utilize our trained model to make predictions on the test set and then create visualizations to represent the results.</span>
+<span id="cb1-478"><a href="#cb1-478" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-479"><a href="#cb1-479" aria-hidden="true" tabindex="-1"></a>&lt;div style="text-align: center;"&gt;</span>
+<span id="cb1-480"><a href="#cb1-480" aria-hidden="true" tabindex="-1"></a>&lt;iframe src="./images/Total Electricity Generation.html" width="1110" height="610" style="border: none;" scrolling="no"&gt;&lt;/iframe&gt;</span>
+<span id="cb1-481"><a href="#cb1-481" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
+<span id="cb1-482"><a href="#cb1-482" aria-hidden="true" tabindex="-1"></a>Well, from a direct visual standpoint, it hard to point out which country the model fits well since the y-axis scale is different, we need further information.</span>
+<span id="cb1-483"><a href="#cb1-483" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-484"><a href="#cb1-484" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Evaluation</span></span>
+<span id="cb1-485"><a href="#cb1-485" aria-hidden="true" tabindex="-1"></a>As data analysts, we can not rely solely on intuition. So let's take a look at their root mean squared error scores(RMSE) and relative error(RE). </span>
+<span id="cb1-486"><a href="#cb1-486" aria-hidden="true" tabindex="-1"></a>We can find that the model performs better in France and Spain while the model doesn't fit Serbia well.</span>
+<span id="cb1-487"><a href="#cb1-487" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-488"><a href="#cb1-488" aria-hidden="true" tabindex="-1"></a>| Countries | RMSE <span class="co">[</span><span class="ot">GWh</span><span class="co">]</span> | RE |</span>
+<span id="cb1-489"><a href="#cb1-489" aria-hidden="true" tabindex="-1"></a>|  :----:  | :----:  | :----:  |</span>
+<span id="cb1-490"><a href="#cb1-490" aria-hidden="true" tabindex="-1"></a>| Finland | 15.81  | 0.081 |</span>
+<span id="cb1-491"><a href="#cb1-491" aria-hidden="true" tabindex="-1"></a>| France  | 113.36 | 0.076 |</span>
+<span id="cb1-492"><a href="#cb1-492" aria-hidden="true" tabindex="-1"></a>| Germany  | 125.05 | 0.081 |</span>
+<span id="cb1-493"><a href="#cb1-493" aria-hidden="true" tabindex="-1"></a>| Netherlands | 31.78 | 0.097 |</span>
+<span id="cb1-494"><a href="#cb1-494" aria-hidden="true" tabindex="-1"></a>| Serbia  | 11.52 | 0.121 |</span>
+<span id="cb1-495"><a href="#cb1-495" aria-hidden="true" tabindex="-1"></a>| Spain  | 57.00 | 0.079 |</span>
+<span id="cb1-496"><a href="#cb1-496" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-497"><a href="#cb1-497" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-498"><a href="#cb1-498" aria-hidden="true" tabindex="-1"></a> As we see, their RE are about 10% , which indicates the model is performing good.</span>
+<span id="cb1-499"><a href="#cb1-499" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-500"><a href="#cb1-500" aria-hidden="true" tabindex="-1"></a>Within this section, we conducted an analysis of total energy consumption utilizing the integrated dataset. This comprehensive analysis not only offers valuable insights into the patterns of total energy consumption but also facilitates precise forecasting. By comprehending the trends in total energy consumption, informed decisions can be made concerning energy management and resource allocation in the future public health issues.</span>
+<span id="cb1-501"><a href="#cb1-501" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-502"><a href="#cb1-502" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-503"><a href="#cb1-503" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-504"><a href="#cb1-504" aria-hidden="true" tabindex="-1"></a>In summary, this data story underscores the pandemic’s complex implications for green energy transition and calls for further research and action in these critical areas.</span>
-<span id="cb1-505"><a href="#cb1-505" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-504"><a href="#cb1-504" aria-hidden="true" tabindex="-1"></a><span class="fu"># Conclusion</span></span>
+<span id="cb1-505"><a href="#cb1-505" aria-hidden="true" tabindex="-1"></a>Our findings shed light on the pandemic’s impact on green energy transition:</span>
 <span id="cb1-506"><a href="#cb1-506" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-507"><a href="#cb1-507" aria-hidden="true" tabindex="-1"></a><span class="fu"># Power Off</span></span>
-<span id="cb1-508"><a href="#cb1-508" aria-hidden="true" tabindex="-1"></a>As we wrap up our storytelling session, let's flick the switch off with some reflections. We've surfed through peaks and troughs of watts and volts, uncovering how each country danced to the pandemic's peculiar rhythm. While traditional power generation often took a siesta, renewables kept the party going, showing us that they're not just about green living but also about keeping the lights on when life throws a curveball.</span>
-<span id="cb1-509"><a href="#cb1-509" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-510"><a href="#cb1-510" aria-hidden="true" tabindex="-1"></a>It's been quite the ride—like a rollercoaster for electrons. As we move forward, this tale of energy in the time of a pandemic leaves us with a few nuggets of wisdom: diversity is key in our energy mix, and a bit of green can help keep the grid serene. So let's toast to the power of data in shedding light on our world and helping us chart a course to a brighter, more sustainable future. Here's to more stories, more data, and more insights. </span>
+<span id="cb1-507"><a href="#cb1-507" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Varied Awareness: Public interest in green energy topics fluctuated during the pandemic. While some languages and topics experienced increased pageviews on environmental content, others remained stable or declined. This suggests a nuanced response across linguistic and cultural contexts.</span>
+<span id="cb1-508"><a href="#cb1-508" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mixed Electricity Trends: Total electricity generation decreased globally due to lockdowns and economic slowdowns. However, renewable energy generation showed diverse patterns—some countries increased their share, while others remained unchanged. National policies, markets, and infrastructure played a crucial role.</span>
+<span id="cb1-509"><a href="#cb1-509" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Direct Pandemic Influence: Mobility data revealed reduced movement during lockdowns, directly impacting energy consumption. The strictness of pandemic interventions correlated with energy usage. Yet, outcomes varied by country, reflecting unique contexts.</span>
+<span id="cb1-510"><a href="#cb1-510" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Machine Learning Predictions: Our XGBoost-based model accurately forecasted future energy generation, capturing seasonal trends and pandemic effects. This tool can inform energy planning and management decisions.</span>
 <span id="cb1-511"><a href="#cb1-511" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-512"><a href="#cb1-512" aria-hidden="true" tabindex="-1"></a>It's NOW, Power offffffff !</span>
-<span id="cb1-513"><a href="#cb1-513" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-512"><a href="#cb1-512" aria-hidden="true" tabindex="-1"></a>In summary, this data story underscores the pandemic’s complex implications for green energy transition and calls for further research and action in these critical areas.</span>
+<span id="cb1-513"><a href="#cb1-513" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-514"><a href="#cb1-514" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-515"><a href="#cb1-515" aria-hidden="true" tabindex="-1"></a><span class="fu"># Power Off</span></span>
+<span id="cb1-516"><a href="#cb1-516" aria-hidden="true" tabindex="-1"></a>As we wrap up our storytelling session, let's flick the switch off with some reflections. We've surfed through peaks and troughs of watts and volts, uncovering how each country danced to the pandemic's peculiar rhythm. While traditional power generation often took a siesta, renewables kept the party going, showing us that they're not just about green living but also about keeping the lights on when life throws a curveball.</span>
+<span id="cb1-517"><a href="#cb1-517" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-518"><a href="#cb1-518" aria-hidden="true" tabindex="-1"></a>It's been quite the ride—like a rollercoaster for electrons. As we move forward, this tale of energy in the time of a pandemic leaves us with a few nuggets of wisdom: diversity is key in our energy mix, and a bit of green can help keep the grid serene. So let's toast to the power of data in shedding light on our world and helping us chart a course to a brighter, more sustainable future. Here's to more stories, more data, and more insights. </span>
+<span id="cb1-519"><a href="#cb1-519" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-520"><a href="#cb1-520" aria-hidden="true" tabindex="-1"></a>It's NOW, Power offffffff !</span>
+<span id="cb1-521"><a href="#cb1-521" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
