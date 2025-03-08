@@ -1,0 +1,37 @@
+---
+title: "My Blog"
+description: "Some of my projects."
+listing:
+  - id: posts_2001
+    contents: "2001"
+    sort: "date desc"
+    categories: true
+  - id: posts_2023
+    contents: "2023"
+    sort: "date desc"
+    categories: true
+# page-layout: full
+toc-title: Year
+toc-location: right
+date-format: "MMMM D, YYYY"
+code-tools: false
+# comments: false
+freeze: false 
+---
+
+<!-- ```{css, echo=FALSE}
+#title-block-header .description {
+    display: none;
+}
+``` -->
+
+
+## 2023
+
+:::{#posts_2023}
+:::
+
+## 2001
+
+:::{#posts_2001}
+:::

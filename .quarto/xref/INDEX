@@ -13,5 +13,41 @@
   },
   "CV/index.qmd": {
     "index.html": "9e14a7ce"
+  },
+  "blog/index.qmd": {
+    "index.html": "63756632"
+  },
+  "blog/2025/test/index.qmd": {
+    "index.html": "92a97531"
+  },
+  "blog/2025/welcome/index.qmd": {
+    "index.html": "fa2d6d80"
+  },
+  "test/about.qmd": {
+    "about.html": "174751b7"
+  },
+  "test/index.qmd": {
+    "index.html": "05bd33d2"
+  },
+  "test/posts/post-with-code/index.qmd": {
+    "index.html": "f54b4c65"
+  },
+  "test/posts/welcome/index.qmd": {
+    "index.html": "79231751"
+  },
+  "blog/2025/01/index.qmd": {
+    "index.html": "43a98445"
+  },
+  "blog/2025/02/index.qmd": {
+    "index.html": "2b55a1ee"
+  },
+  "blog/2001/12/index.qmd": {
+    "index.html": "4147dd3d"
+  },
+  "blog/2023/12/index.qmd": {
+    "index.html": "e5508a15"
+  },
+  "journey/index.qmd": {
+    "index.html": "d1677028"
   }
 }

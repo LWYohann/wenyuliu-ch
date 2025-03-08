@@ -1,11 +1,15 @@
 ---
 title: "Me and the world"
 format: html
+title-block-banner: "#DD633F"
+description: "Last updated: Mar. 2025"
 ---
 
 
 
 ## My Travel History
+
+Click country shapes to see more information.
 
 <iframe src="./files/my_travel_history.html" width="100%" height="400px" style="border: none;" scrolling="no"></iframe>
 
