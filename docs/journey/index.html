@@ -81,6 +81,8 @@ gtag('config', 'G-MT7VY85R43', { 'anonymize_ip': true});
         background: #DD633F;
       }
 </style>
+<script src="https://unpkg.com/maplibre-gl@5.2.0/dist/maplibre-gl.js"></script>
+<link href="https://unpkg.com/maplibre-gl@5.2.0/dist/maplibre-gl.css" rel="stylesheet">
 
 
 </head>
@@ -188,8 +190,94 @@ gtag('config', 'G-MT7VY85R43', { 'anonymize_ip': true});
 </section>
 <section id="my-flight-map" class="level2">
 <h2 class="anchored" data-anchor-id="my-flight-map">My Flight Map</h2>
-<iframe src="./files/my_flight_log.html" width="100%" height="400px" style="border: none;" scrolling="no">
-</iframe>
+<div id="map" style="width: 100%; height: 400px;"></div>
+
+
+  <script>
+
+    const map = new maplibregl.Map({
+      container: "map", // the id of the div element
+      style: `https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json`,
+      zoom: 1, // starting zoom
+      center: [50, 40] // starting location [longitude, latitude]
+    });
+
+    map.on('load', () => {
+        map.addSource('airports', {
+            type: 'geojson',
+            data: './files/my_airports_gdf.geojson'
+        });
+
+        map.addLayer({
+            id: 'airports',
+            type: 'circle',
+            source: 'airports',
+            paint: {
+                'circle-radius': ["+",["get", "No. visit"], 3],
+                'circle-color': 'orange',
+                'circle-opacity': 0.6,
+                'circle-stroke-color': 'black',
+                'circle-stroke-width': 1
+            }
+        });
+
+        map.on('click', 'airports', (e) => {
+            const coordinates = e.features[0].geometry.coordinates.slice();
+            const { Name, 'No. visit': noVisit } = e.features[0].properties;
+            
+            new maplibregl.Popup()
+                .setLngLat(coordinates)
+                .setHTML(`<strong>${Name}</strong><br>No. visit: ${noVisit}`)
+                .addTo(map);
+        });
+
+        map.on("mouseenter", "airports", () => {
+            map.getCanvas().style.cursor = "pointer";
+        });
+        map.on("mouseleave", "airports", () => {
+            map.getCanvas().style.cursor = "";
+        });
+
+        map.addSource('flights', {
+            type: 'geojson',
+            data: './files/my_flights_gdf.geojson'
+        });
+
+        map.addLayer({
+            id: 'flights',
+            type: 'line',
+            source: 'flights',
+            layout: {
+                'line-join': 'round',
+                'line-cap': 'round'
+            },
+            paint: {
+                'line-color': 'black',
+                'line-width': ["*", ["get", "No. flight"], 1.5]
+            }
+        });
+
+        map.on('click', 'flights', (e) => {
+            const coordinates = e.features[0].geometry.coordinates[0];
+            const { Route, 'No. flight': noFlight } = e.features[0].properties;
+
+            new maplibregl.Popup()
+                .setLngLat(coordinates)
+                .setHTML(`<strong>${Route}</strong><br>No. flight: ${noFlight}`)
+                .addTo(map);
+        });
+        map.on("mouseenter", "flights", () => {
+            map.getCanvas().style.cursor = "pointer";
+        });
+        map.on("mouseleave", "flights", () => {
+            map.getCanvas().style.cursor = "";
+        });
+    });
+
+  </script>
+
+<!-- <iframe src="./files/my_flight_log.html" width="100%" height="400px" style="border: none;" scrolling="no"></iframe> -->
+<!-- <iframe src="./files/mpl_test_flight.html" width="100%" height="400px" style="border: none;" scrolling="no"></iframe> -->
 <section id="records" class="level3">
 <h3 class="anchored" data-anchor-id="records">Records</h3>
 <table class="center caption-top table" data-quarto-postprocess="true" data-border="1">
@@ -581,6 +669,7 @@ gtag('config', 'G-MT7VY85R43', { 'anonymize_ip': true});
 
 
 
+
 ```{=html}
 
 <table class="center caption-top" data-quarto-postprocess="true" data-border="1" style="width:40%">
@@ -722,6 +811,7 @@ gtag('config', 'G-MT7VY85R43', { 'anonymize_ip': true});
 
 
 ```
+
 
 
 
