@@ -186,7 +186,7 @@
     "href": "blog/index.html#section-2",
     "title": "My Blog",
     "section": "2001",
-    "text": "2001\n\n\n    \n    \n                  \n            December 18, 2001\n        \n        \n            Welcome To My First Blog\n\n            \n            \n                \n                \n                    news\n                \n                \n            \n            \n\n            This is the first post for testing. Welcome!\n            \n            \n        \n        \n    \n    \n\n\nNo matching items"
+    "text": "2001\n\n\n    \n    \n                  \n            December 18, 2001\n        \n        \n            Welcome To My First Blog\n\n            \n            \n                \n                \n                    News\n                \n                \n            \n            \n\n            This is the first post for testing. Welcome!\n            \n            \n        \n        \n    \n    \n\n\nNo matching items"
   },
   {
     "objectID": "blog/2024/05/Sushi City Girl Becomes a Global Pop Star/index.html",
@@ -544,5 +544,12 @@
     "title": "本科毕设",
     "section": "摘要",
     "text": "摘要"
+  },
+  {
+    "objectID": "journey/index.html#my-grand-tour-of-switzerland",
+    "href": "journey/index.html#my-grand-tour-of-switzerland",
+    "title": "Me and the world",
+    "section": "My Grand Tour of Switzerland",
+    "text": "My Grand Tour of Switzerland"
   }
 ]
