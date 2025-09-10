@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://wenyuliu.ch/journey/index.html</loc>
-    <lastmod>2025-09-04T15:02:50.209Z</lastmod>
+    <lastmod>2025-09-10T17:54:35.600Z</lastmod>
   </url>
   <url>
     <loc>http://wenyuliu.ch/CV/index.html</loc>
@@ -18,11 +18,11 @@
   </url>
   <url>
     <loc>http://wenyuliu.ch/blog/2023/06/本科毕设/index.html</loc>
-    <lastmod>2025-09-03T21:23:33.197Z</lastmod>
+    <lastmod>2025-09-07T11:53:38.624Z</lastmod>
   </url>
   <url>
     <loc>http://wenyuliu.ch/about.html</loc>
-    <lastmod>2025-09-02T20:59:50.924Z</lastmod>
+    <lastmod>2025-09-10T12:08:43.558Z</lastmod>
   </url>
   <url>
     <loc>http://wenyuliu.ch/blog/2001/12/index.html</loc>
@@ -34,7 +34,7 @@
   </url>
   <url>
     <loc>http://wenyuliu.ch/blog/2024/06/Li-Ion-Cell-Equivalent-Circuit-Model-Parameters-Estimation-From-Time-Domain-Measurements/index.html</loc>
-    <lastmod>2025-09-05T18:53:43.131Z</lastmod>
+    <lastmod>2025-09-10T19:15:40.255Z</lastmod>
   </url>
   <url>
     <loc>http://wenyuliu.ch/blog/index.html</loc>
@@ -43,5 +43,9 @@
   <url>
     <loc>http://wenyuliu.ch/index.html</loc>
     <lastmod>2025-09-04T12:22:01.504Z</lastmod>
+  </url>
+  <url>
+    <loc>http://wenyuliu.ch/blog/2023/06/钛酸铋钠基弛豫铁电陶瓷储能性能研究/index.html</loc>
+    <lastmod>2025-09-10T21:11:36.976Z</lastmod>
   </url>
 </urlset>
