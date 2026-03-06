@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Last updated: Sept.&nbsp;2025">
+<meta name="description" content="Last updated: Mar.&nbsp;2026">
 
 <title>Wenyu Liu</title>
 <style>
@@ -131,7 +131,7 @@ gtag('config', 'G-MT7VY85R43', { 'anonymize_ip': true});
 <span class="menu-text"><i class="bi bi-person-circle" title="EPFL Directory"></i></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="mailto:wenyu.liu@epfl.ch" rel="me"> 
+    <a class="nav-link" href="./#" rel="me"> 
 <span class="menu-text"><i class="bi-envelope" title="E-mail"></i></span></a>
   </li>  
   <li class="nav-item">
@@ -160,7 +160,7 @@ gtag('config', 'G-MT7VY85R43', { 'anonymize_ip': true});
       <h1 class="title">Hey! Welcome to my website.</h1>
                   <div>
         <div class="description">
-          Last updated: Sept.&nbsp;2025
+          Last updated: Mar.&nbsp;2026
         </div>
       </div>
                 </div>
@@ -211,7 +211,7 @@ gtag('config', 'G-MT7VY85R43', { 'anonymize_ip': true});
 <section id="education" class="level2">
 <h2 class="anchored" data-anchor-id="education">Education</h2>
 <ul>
-<li><p><strong>2023 - Present</strong> : Master in Energy Science and Technology @ <a href="https://www.epfl.ch/en/">École Polytechnique Fédérale de Lausanne</a></p></li>
+<li><p><strong>2023 - 2026</strong> : Master in Energy Science and Technology @ <a href="https://www.epfl.ch/en/">École Polytechnique Fédérale de Lausanne</a></p></li>
 <li><p><strong>2019 - 2023</strong> : Bachelor in Energy Storage Science and Engineering @ <a href="https://www.xjtu.edu.cn/">Xi’an Jiaotong University</a></p></li>
 <li><p><strong>2016 - 2019</strong> : High school education @ Chang’an No.1 High School</p></li>
 </ul>
@@ -228,6 +228,57 @@ gtag('config', 'G-MT7VY85R43', { 'anonymize_ip': true});
 </section>
 
 </main> <!-- /main -->
+<script type="text/javascript">
+
+  document.addEventListener("DOMContentLoaded", function() {
+
+    // 1. Find the icon that has the title "E-mail"
+
+    const emailIcon = document.querySelector('i[title="E-mail"]');
+
+    
+
+    if (emailIcon) {
+
+      // 2. Climb up the DOM tree to find the nearest <a> parent
+
+      const emailLink = emailIcon.closest('a');
+
+      
+
+      if (emailLink) {
+
+        // 3. Assemble the email (split to stay hidden from simple bots)
+
+        const user = "wenyu.liu";
+
+        const domain = "epfl.ch";
+
+        const addr = user + "@" + domain;
+
+        
+
+        // 4. Set the href
+
+        emailLink.setAttribute("href", "mailto:" + addr);
+
+        
+
+        // Optional: Remove the "#" from the status bar on hover
+
+        emailLink.addEventListener('mouseenter', function() {
+
+          this.href = "mailto:" + addr;
+
+        });
+
+      }
+
+    }
+
+  });
+
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

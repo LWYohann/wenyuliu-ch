@@ -125,7 +125,10 @@ gtag('config', 'G-MT7VY85R43', { 'anonymize_ip': true});
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
+
+
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
 
 
 </head>
@@ -174,7 +177,7 @@ gtag('config', 'G-MT7VY85R43', { 'anonymize_ip': true});
 <span class="menu-text"><i class="bi bi-person-circle" title="EPFL Directory"></i></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="mailto:wenyu.liu@epfl.ch" rel="me"> 
+    <a class="nav-link" href="../#" rel="me"> 
 <span class="menu-text"><i class="bi-envelope" title="E-mail"></i></span></a>
   </li>  
   <li class="nav-item">
@@ -1683,6 +1686,57 @@ Loading ITables v2.3.0 from the internet...
 </section>
 
 </main> <!-- /main -->
+<script type="text/javascript">
+
+  document.addEventListener("DOMContentLoaded", function() {
+
+    // 1. Find the icon that has the title "E-mail"
+
+    const emailIcon = document.querySelector('i[title="E-mail"]');
+
+    
+
+    if (emailIcon) {
+
+      // 2. Climb up the DOM tree to find the nearest <a> parent
+
+      const emailLink = emailIcon.closest('a');
+
+      
+
+      if (emailLink) {
+
+        // 3. Assemble the email (split to stay hidden from simple bots)
+
+        const user = "wenyu.liu";
+
+        const domain = "epfl.ch";
+
+        const addr = user + "@" + domain;
+
+        
+
+        // 4. Set the href
+
+        emailLink.setAttribute("href", "mailto:" + addr);
+
+        
+
+        // Optional: Remove the "#" from the status bar on hover
+
+        emailLink.addEventListener('mouseenter', function() {
+
+          this.href = "mailto:" + addr;
+
+        });
+
+      }
+
+    }
+
+  });
+
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Last updated: Nov.&nbsp;2025">
+<meta name="description" content="Last updated: Mar.&nbsp;2026">
 
 <title>Curriculum Vitæ – Wenyu Liu</title>
 <style>
@@ -131,7 +131,7 @@ gtag('config', 'G-MT7VY85R43', { 'anonymize_ip': true});
 <span class="menu-text"><i class="bi bi-person-circle" title="EPFL Directory"></i></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="mailto:wenyu.liu@epfl.ch" rel="me"> 
+    <a class="nav-link" href="../#" rel="me"> 
 <span class="menu-text"><i class="bi-envelope" title="E-mail"></i></span></a>
   </li>  
   <li class="nav-item">
@@ -160,7 +160,7 @@ gtag('config', 'G-MT7VY85R43', { 'anonymize_ip': true});
       <h1 class="title">Curriculum Vitæ</h1>
                   <div>
         <div class="description">
-          Last updated: Nov.&nbsp;2025
+          Last updated: Mar.&nbsp;2026
         </div>
       </div>
                 </div>
@@ -197,10 +197,10 @@ gtag('config', 'G-MT7VY85R43', { 'anonymize_ip': true});
 <p><br></p>
 <hr>
 <div style="text-align: center; margin: 20px;">
-<p><a class="btn btn-outline-info btn-lg" href="Master Records_v082025.pdf" target="_blank"> <i class="bi bi-file-earmark-arrow-down-fill"></i>  Download Master Records </a></p>
+<p><a class="btn btn-outline-info btn-lg" href="Master Records_v022026.pdf" target="_blank"> <i class="bi bi-file-earmark-arrow-down-fill"></i>  Download Master Records </a></p>
 </div>
 <div style="text-align: center; margin-top: 20px;">
-<p><iframe src="Master Records_v082025.pdf" style="width: 90%; height: 800px; border: 0.5px;"> Your browser does not support embedded PDFs. Please download the file instead. </iframe></p>
+<p><iframe src="Master Records_v022026.pdf" style="width: 90%; height: 800px; border: 0.5px;"> Your browser does not support embedded PDFs. Please download the file instead. </iframe></p>
 </div>
 <p><br></p>
 <hr>
@@ -214,6 +214,57 @@ gtag('config', 'G-MT7VY85R43', { 'anonymize_ip': true});
 
 
 </main> <!-- /main -->
+<script type="text/javascript">
+
+  document.addEventListener("DOMContentLoaded", function() {
+
+    // 1. Find the icon that has the title "E-mail"
+
+    const emailIcon = document.querySelector('i[title="E-mail"]');
+
+    
+
+    if (emailIcon) {
+
+      // 2. Climb up the DOM tree to find the nearest <a> parent
+
+      const emailLink = emailIcon.closest('a');
+
+      
+
+      if (emailLink) {
+
+        // 3. Assemble the email (split to stay hidden from simple bots)
+
+        const user = "wenyu.liu";
+
+        const domain = "epfl.ch";
+
+        const addr = user + "@" + domain;
+
+        
+
+        // 4. Set the href
+
+        emailLink.setAttribute("href", "mailto:" + addr);
+
+        
+
+        // Optional: Remove the "#" from the status bar on hover
+
+        emailLink.addEventListener('mouseenter', function() {
+
+          this.href = "mailto:" + addr;
+
+        });
+
+      }
+
+    }
+
+  });
+
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
