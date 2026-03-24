@@ -233,7 +233,7 @@ function setupLayers(map, countriesGeoJSON) {
             layers: ['adm-0-fill']
         });
 
-        if (features.length === 0) {
+        if (features.length === 0 && hoveredSubdivisionId === null) {
             resetMap();
         }
     });
