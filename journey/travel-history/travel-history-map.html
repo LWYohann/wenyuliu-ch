@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js"></script>
+    <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css"/>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-light: #ecf0f1;
+        }
+
+        body { margin: 0; padding: 0; font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        .map-container {
+            position: relative; /* CRITICAL: Pins children to this box */
+            width: 100%;        /* Fills the width of its parent column */
+            max-width: 900px;   /* Prevents it from getting too huge */
+            height: 700px;      /* Set your desired height here */
+            margin: 20px auto;  /* Centers the widget in your article */
+            border-radius: 12px;
+            overflow: hidden;   /* Keeps the map corners rounded */
+            border: 1px solid #ddd;
+        }
+        #map-travel { position: absolute; top: 0; bottom: 0; width: 100%; }
+
+        /* The Info Card Container */
+        .info-card {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            bottom: auto; /* Changed for mobile via media query */
+            width: 300px;
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(10px); /* Glassmorphism effect */
+            -webkit-backdrop-filter: blur(10px);
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+            z-index: 10;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
+            transform: translateX(400px); /* Start hidden to the right */
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .info-card.active {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        #card-title {
+            margin: 0 0 8px 0;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-weight: 800;
+        }
+
+        #card-stats {
+            margin: 0 0 20px 0;
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* Modern Reset Button */
+        .btn-reset {
+            cursor: pointer;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .btn-reset:hover {
+            background: #000;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .btn-reset:active {
+            transform: translateY(0);
+        }
+
+        .fi-container {
+            width: auto;
+            height: 1em;
+            vertical-align: middle;
+            /* Adjusting by a small percentage of the height 
+            usually centers it perfectly with the cap-height */
+            position: relative;
+            top: -0.1em; 
+            margin-left: 0.05em;
+            margin-right: 0.05em;
+            
+        }
+
+        /* MOBILE RESPONSIVENESS */
+        @media (max-width: 600px) {
+            /* Adjust the info card to be a bottom sheet on mobile */
+            /* align to center bottom*/
+
+            .map-container {
+                height: 600px; /* Smaller height for mobile screens */
+            }
+            .info-card {
+                position: fixed;
+                top: auto;
+                right: 20px;
+                left: 20px;
+                bottom: 40px;
+                width: auto;
+                transform: translate(0%, 100%); /* Slide up from bottom */
+                border-radius: 24px 24px; /* Bottom sheet style */
+                padding-bottom: 40px; /* Extra space for thumbs */
+            }
+            .info-card.active {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="map-container">
+<div id="map-travel"></div>
+</div>
+
+<div id="info-card" class="info-card">
+    <h3 id="card-title">Country </h3>
+    <div id="card-stats"></div>
+    <button class="btn-reset" onclick="resetMap()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to World View
+    </button>
+</div>
+
+<script src="travel-history-map.js"></script>
+</body>
+</html>

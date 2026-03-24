@@ -1,5 +1,40 @@
 ---
-title: "About"
+title: "More About"
+
+format:
+    html:
+        grid: 
+            body-width: 800px
 ---
 
-About this site
+
+## Behind the Site
+
+- This website is inspired by the clean aesthetics of [Andrew Heiss's website](https://www.andrewheiss.com/).
+- This website is build with [Quarto](https://quarto.org/) and hosted by [GitHub Pages](https://pages.github.com/).
+- I use [Google Analytics](https://analytics.google.com/) to keep an eye on how visitors interact with the site and to improve the experience over time.
+
+
+## Typography
+
+- The fonts in this website are open source fonts from [Google Fonts](https://fonts.google.com/):
+    - Heading & footer: `Ubuntu`
+    - Navbar: `Raleway`
+    - Body: `Open Sans`
+    - Code: `Google Sans Code` (the same one I use in my code editor)
+    - Grandtour card title: `Style Script`
+
+
+## Beyond the Screen
+
+### The Name
+
+My first name is `Wenyu`(<img class="inline-svg filter-color-to-body" src="./files/wenyu.svg" alt="wenyu Logo"/>, 文宇)， and my family name is `Liu`(<img class="inline-svg filter-color-to-body" src="./files/liu.svg" alt="liu Logo"/>, 刘).
+
+### Passions & Curiosities
+
+- I appreciate and believe in the power of clear and beautiful visual expressions.
+- I like to explore new and interesting ideas.
+- I have a deep appreciation for classical music. While [Johann Sebastian Bach](https://en.wikipedia.org/wiki/Johann_Sebastian_Bach) remains my "all-time" favorite, [Gustav Mahler](https://en.wikipedia.org/wiki/Gustav_Mahler) has profoundly influenced my perspective in recent years.
+- I am a dedicated fan of football. I support Shaanxi Union FC <img class="inline-svg filter-color-to-body" src="./files/sufc-opt.svg" alt="sufc OPT Logo"/><img class="inline-svg filter-color-to-body" src="./files/sufc-wolf.svg" alt="sufc Logo"/> and China national team <img class="inline-svg filter-color-to-body" src="./files/cfa-no-margin.svg" alt="CFA Logo"/>.
+- Sometimes I’ve turned "sleeping too much" into an art form.

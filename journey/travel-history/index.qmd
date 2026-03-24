@@ -1,0 +1,47 @@
+---
+title: "My Travel History"
+title-block-banner: "#dd643fd3"
+description: "Last updated: Mar. 2026"
+resources: 
+  - geoBoundaries/
+  - geoJSONs/
+include-in-header:
+- text: |
+    <script src="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js"></script>
+    <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css" rel="stylesheet" />
+
+---
+
+
+::: {.callout-tip}
+Click boundaries shapes to see more information.
+:::
+
+
+
+```{=html}
+
+<div class="map-container">
+<div id="map-travel"></div>
+
+
+<div id="info-card" class="info-card">
+    <h3 id="card-title">Country</h3>
+    <div id="card-stats"></div>
+    <button class="btn-reset" onclick="resetMap()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to World View
+    </button>
+</div>
+</div>
+
+<script src="./travel-history-map.js"></script>
+
+
+```
+
+----------
+
+
+The political administrative boundaries are provided by the open database [geoBoundaries](https://www.geoboundaries.org/) under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license. The use of the boundary data does not represent any political stance of the author.

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js"></script>
+    <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css"/>
+
+    <style>
+
+        .map-container {
+                position: relative; /* CRITICAL: Pins children to this box */
+                width: 100%;        /* Fills the width of its parent column */
+                max-width: 900px;   /* Prevents it from getting too huge */
+                height: 550px;      /* Set your desired height here */
+                margin: 20px auto;  /* Centers the widget in your article */
+                border-radius: 12px;
+                overflow: hidden;   /* Keeps the map corners rounded */
+                border: 1px solid #ddd;
+        }
+        
+
+        #map-flight-log { position: absolute; top: 0; bottom: 0; width: 100%; }
+
+        .maplibregl-popup {
+            z-index: 20;
+        }
+
+        
+
+        .map-flight-popup-title {
+            font-weight: 600;
+            /* font-family: $headings-font-family; */
+            /* color: var(--gray-900); */
+            margin: 0;
+            font-size: 1.2em;
+
+            padding: 12px;
+            /* display: flex; */
+            align-items: center;
+            gap: 5px;
+        }
+
+
+        .map-popup-stats {
+            display: flex;
+            justify-content: space-around;
+            padding: 14px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .maplibregl-popup-content {
+            background: rgba(255, 255, 255, 0.85) !important;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-radius: 12px !important;
+            /* padding: 12px 16px !important; */
+            padding: 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            /* font-family: $font-family-sans-serif; */
+
+            overflow: hidden;
+            min-width: 320px;
+        }
+
+
+        .map-stat-item {
+            text-align: center;
+        }
+
+        .map-stat-value {
+            display: block;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #212529;
+        }
+
+        .map-stat-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #6c757d;
+        }
+
+        .map-popup-table-container {
+            margin-top: 10px;
+            padding: 0 10px 10px ;
+            max-height: 250px;
+            overflow-y: auto;
+        }
+
+        .map-popup-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+
+        .map-popup-table-header {
+            text-align: center;
+            padding: 8px;
+            background: #ffffff;
+            border-bottom: 2px solid #dee2e6;
+            color: #212529;
+            position: sticky;
+            top: 0;
+        }
+
+        .map-popup-table-cell {
+            padding: 6px;
+            border-bottom: 1px solid #eee;
+            text-align: center;
+        }
+
+        .map-popup-table-row:nth-child(even) {
+            background-color: #e9ecef;
+        }
+
+        /* Scrollbar for the table */
+        .map-popup-table-container::-webkit-scrollbar {
+            width: 6px;
+        }
+        .map-popup-table-container::-webkit-scrollbar-thumb {
+            background: #ced4da;
+            border-radius: 10px;
+        }
+
+        .airline-logo {
+            width: auto;
+            height: 1em;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        .dt-buttons {
+            width: 100%;
+            text-align: center;
+            float: center !important;
+        }
+
+        .dt-info, .dt-paging {
+            padding: 5px;
+            width: 100%;
+            text-align: center;
+            float: none !important;
+        }
+
+        #flight-records thead th, #top-airlines thead th, #top-aircrafts thead th {
+            text-align: center;
+        }
+
+        #flight-records tbody td, #top-airlines tbody td, #top-aircrafts tbody td {
+
+            text-align: center;
+        }
+
+        #flight-records  tbody tr, #top-airlines tbody tr, #top-aircrafts tbody tr {
+            text-align: center;
+        } 
+
+        .flight-records-container {
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .top-airlines-container {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 400px;
+        }
+        .top-aircrafts-container {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 350px;
+        }
+
+        /* MOBILE RESPONSIVENESS */
+        @media (max-width: 600px) {
+            /* Adjust the info card to be a bottom sheet on mobile */
+            /* align to center bottom*/
+
+            .map-container {
+                height: 500px; /* Smaller height for mobile screens */
+            }
+            .map-popup-table-container {
+                max-height: 200px; /* Reduce table height on mobile */
+            }
+            .map-popup-stats {
+                padding: 5px;
+            }
+            .map-popup-table-container {
+                margin-top: 5px;
+                padding: 0 5px 5px ;
+                max-height: 160px;
+                overflow-y: auto;
+            }
+
+            .flight-records-container {
+                overflow-x: auto;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+<script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/2.3.7/css/dataTables.dataTables.css" />
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/3.2.6/css/buttons.dataTables.min.css">
+<script src="https://cdn.datatables.net/2.3.7/js/dataTables.js"></script>
+
+<script src="https://cdn.datatables.net/buttons/3.2.6/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/3.2.6/js/buttons.html5.min.js"></script>
+
+<style>
+@keyframes popupFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.maplibregl-popup {
+    z-index: 20;
+    animation: popupFadeIn 0.2s ease-out;
+}
+</style>
+
+
+<div class="map-container">
+<div id="map-flight-log"></div>
+</div>
+
+
+<div class="flight-records-container">
+    <table id="flight-records" class="stripe hover"></table>
+</div>
+
+<div class="top-airlines-container">
+    <table id="top-airlines" class="stripe hover"> </table>
+</div>
+
+
+<div class="top-aircrafts-container">
+    <table id="top-aircrafts" class="stripe hover"></table>
+</div>
+
+<script src="flight-log-map.js"></script>
+
+
+
+</body>
+</html>

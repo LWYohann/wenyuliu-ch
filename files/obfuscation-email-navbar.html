@@ -1,0 +1,26 @@
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function() {
+    // 1. Find the icon that has the title "E-mail"
+    const emailIcon = document.querySelector('i[title="E-mail"]');
+    
+    if (emailIcon) {
+      // 2. Climb up the DOM tree to find the nearest <a> parent
+      const emailLink = emailIcon.closest('a');
+      
+      if (emailLink) {
+        // 3. Assemble the email (split to stay hidden from simple bots)
+        const user = "wenyu.liu";
+        const domain = "epfl.ch";
+        const addr = user + "@" + domain;
+        
+        // 4. Set the href
+        emailLink.setAttribute("href", "mailto:" + addr);
+        
+        // Optional: Remove the "#" from the status bar on hover
+        emailLink.addEventListener('mouseenter', function() {
+          this.href = "mailto:" + addr;
+        });
+      }
+    }
+  });
+</script>

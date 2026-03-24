@@ -1,47 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://wenyuliu.ch/journey/index.html</loc>
-    <lastmod>2025-09-10T17:54:35.600Z</lastmod>
+    <loc>http://wenyuliu.ch/index.html</loc>
+    <lastmod>2026-03-24T19:08:08.949Z</lastmod>
   </url>
   <url>
-    <loc>http://wenyuliu.ch/CV/index.html</loc>
-    <lastmod>2026-03-06T22:07:49.448Z</lastmod>
+    <loc>http://wenyuliu.ch/journey/travel-history/index.html</loc>
+    <lastmod>2026-03-24T20:24:54.612Z</lastmod>
   </url>
   <url>
-    <loc>http://wenyuliu.ch/blog/2024/12/Assessing-the-impact-of-autoclaving-versus-purchasing-new-plastic-flasks/index.html</loc>
-    <lastmod>2025-09-11T20:33:29.513Z</lastmod>
-  </url>
-  <url>
-    <loc>http://wenyuliu.ch/blog/2024/05/Sushi-City-Girl-Becomes-a-Global-Pop-Star/index.html</loc>
-    <lastmod>2025-09-11T20:29:48.745Z</lastmod>
-  </url>
-  <url>
-    <loc>http://wenyuliu.ch/blog/2023/06/钛酸铋钠基弛豫铁电陶瓷储能性能研究/index.html</loc>
-    <lastmod>2025-09-11T20:29:18.606Z</lastmod>
-  </url>
-  <url>
-    <loc>http://wenyuliu.ch/about.html</loc>
-    <lastmod>2025-10-10T19:56:52.799Z</lastmod>
-  </url>
-  <url>
-    <loc>http://wenyuliu.ch/blog/2001/12/index.html</loc>
-    <lastmod>2025-10-10T20:42:54.212Z</lastmod>
-  </url>
-  <url>
-    <loc>http://wenyuliu.ch/blog/2023/12/COVID-19-Pandemic-Green-Energy-Transition/index.html</loc>
-    <lastmod>2025-09-11T20:29:41.393Z</lastmod>
+    <loc>http://wenyuliu.ch/journey/grandtour/index.html</loc>
+    <lastmod>2026-03-24T20:01:43.022Z</lastmod>
   </url>
   <url>
     <loc>http://wenyuliu.ch/blog/2024/06/Li-Ion-Cell-Equivalent-Circuit-Model-Parameters-Estimation-From-Time-Domain-Measurements/index.html</loc>
     <lastmod>2025-09-11T20:30:02.443Z</lastmod>
   </url>
   <url>
+    <loc>http://wenyuliu.ch/blog/2024/12/Assessing-the-impact-of-autoclaving-versus-purchasing-new-plastic-flasks/index.html</loc>
+    <lastmod>2025-09-11T20:33:29.513Z</lastmod>
+  </url>
+  <url>
+    <loc>http://wenyuliu.ch/blog/2023/06/钛酸铋钠基弛豫铁电陶瓷储能性能研究/index.html</loc>
+    <lastmod>2025-09-11T20:29:18.606Z</lastmod>
+  </url>
+  <url>
+    <loc>http://wenyuliu.ch/CV/index.html</loc>
+    <lastmod>2026-03-06T22:07:49.448Z</lastmod>
+  </url>
+  <url>
+    <loc>http://wenyuliu.ch/about.html</loc>
+    <lastmod>2026-03-24T21:28:36.380Z</lastmod>
+  </url>
+  <url>
+    <loc>http://wenyuliu.ch/blog/2023/12/COVID-19 Pandemic &amp; Green Energy Transition/index.html</loc>
+    <lastmod>2026-03-15T14:56:42.381Z</lastmod>
+  </url>
+  <url>
+    <loc>http://wenyuliu.ch/blog/2001/12/index.html</loc>
+    <lastmod>2025-10-10T20:42:54.212Z</lastmod>
+  </url>
+  <url>
+    <loc>http://wenyuliu.ch/blog/2024/05/Sushi-City-Girl-Becomes-a-Global-Pop-Star/index.html</loc>
+    <lastmod>2025-09-11T20:29:48.745Z</lastmod>
+  </url>
+  <url>
     <loc>http://wenyuliu.ch/blog/index.html</loc>
     <lastmod>2025-09-04T12:34:10.993Z</lastmod>
   </url>
   <url>
-    <loc>http://wenyuliu.ch/index.html</loc>
-    <lastmod>2026-03-06T22:31:37.473Z</lastmod>
+    <loc>http://wenyuliu.ch/journey/flight-log/index.html</loc>
+    <lastmod>2026-03-20T21:05:28.396Z</lastmod>
+  </url>
+  <url>
+    <loc>http://wenyuliu.ch/journey/index.html</loc>
+    <lastmod>2026-03-24T19:53:24.929Z</lastmod>
   </url>
 </urlset>

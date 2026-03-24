@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "MAC_ADM0",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "shapeName": "Macau Special Administrative Region", "shapeISO": "MAC", "shapeID": "43563684B97104103456250", "shapeGroup": "CHN", "shapeType": "ADM1" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 113.622113824000053, 22.204453236000063 ], [ 113.574683458000095, 22.227362490000075 ], [ 113.497132623000084, 22.189988398000025 ], [ 113.562463705000027, 22.091324835000023 ], [ 113.622113824000053, 22.204453236000063 ] ] ] } }
+]
+}

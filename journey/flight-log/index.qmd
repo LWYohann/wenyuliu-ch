@@ -1,0 +1,119 @@
+---
+title: "My Flight Log"
+title-block-banner: "#dd643fd3"
+description: "Last updated: Mar. 2026"
+resources: 
+  - geoJSONs/
+include-in-header:
+- text: |
+    <script src="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js"></script>
+    <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css" rel="stylesheet" />
+
+---
+
+
+
+## My Flight Map
+
+```{=html}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css"/>
+<script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/2.3.7/css/dataTables.dataTables.css" />
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/3.2.6/css/buttons.dataTables.min.css">
+<script src="https://cdn.datatables.net/2.3.7/js/dataTables.js"></script>
+
+<script src="https://cdn.datatables.net/buttons/3.2.6/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/3.2.6/js/buttons.html5.min.js"></script>
+
+
+<style>
+@keyframes popupFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.maplibregl-popup {
+    z-index: 20;
+    animation: popupFadeIn 0.2s ease-out;
+}
+
+.dt-buttons {
+    width: 100%;
+    text-align: left;
+    float: left !important;
+}
+
+.dt-info, .dt-paging {
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    float: none !important;
+}
+
+
+#flight-records thead th, #top-airlines thead th, #top-aircrafts thead th {
+    text-align: center;
+}
+
+#flight-records tbody td, #top-airlines tbody td, #top-aircrafts tbody td {
+
+    text-align: center;
+}
+
+#flight-records  tbody tr, #top-airlines tbody tr, #top-aircrafts tbody tr {
+    text-align: center;
+} 
+
+.flight-records-container {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.top-airlines-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+}
+.top-aircrafts-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 350px;
+}
+
+</style>
+
+<div class="map-container">
+<div id="map-flight-log"></div>
+</div>
+
+
+
+<h2> Records </h2>
+
+<div class="flight-records-container">
+    <table id="flight-records" class="stripe hover"></table>
+</div>
+
+<h2> Top Airlines </h2>
+
+<div class="top-airlines-container">
+    <table id="top-airlines" class="stripe hover"> </table>
+</div>
+
+
+<h2> Top Aircrafts </h2>
+
+
+<div class="top-aircrafts-container">
+    <table id="top-aircrafts" class="stripe hover"></table>
+</div>
+
+<script src="./flight-log-map.js"></script>
+
+```

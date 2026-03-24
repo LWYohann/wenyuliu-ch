@@ -1,6 +1,6 @@
 ---
 title: Curriculum Vitæ
-description: "Last updated: Feb. 2025"
+description: "Last updated: Mar. 2026"
 title-block-banner: "#3093CF"
 format: html
 # page-layout: full
@@ -29,7 +29,7 @@ Below, you can view or download my most recent curriculum vitæ and my academic 
 ---
 
 <div style="text-align: center; margin: 20px;">
-  <a class="btn btn-outline-info btn-lg" href="Master Records_v022025.pdf" target="_blank">
+  <a class="btn btn-outline-info btn-lg" href="Master Records_v022026.pdf" target="_blank">
     <i class="bi bi-file-earmark-arrow-down-fill"></i>&ensp; Download Master Records
   </a>
 </div>
@@ -37,7 +37,7 @@ Below, you can view or download my most recent curriculum vitæ and my academic 
 
 
 <div style="text-align: center; margin-top: 20px;">
-  <iframe src="Master Records_v022025.pdf" style="width: 90%; height: 800px; border: 0.5px;">
+  <iframe src="Master Records_v022026.pdf" style="width: 90%; height: 800px; border: 0.5px;">
     Your browser does not support embedded PDFs. Please download the file instead.
   </iframe>
 </div>
