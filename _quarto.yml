@@ -23,6 +23,8 @@ website:
         href: "journey/index.qmd"
       - text: "Blog"
         href: blog/index.qmd
+      - text: "Toolkit"
+        href: toolkit/index.qmd
       - text: "About"
         href: about.qmd
     

@@ -1,0 +1,43 @@
+---
+title: "My Toolkit"
+listing: default
+description: "Some web-based mimi tools developed by me."
+
+title-block-banner: "#373a3c"
+
+# Add blog-post class to the banner header area
+format: 
+  html:
+    code-tools: false
+    quarto-template-params:
+      banner-header-class: "blog-post"
+      
+---
+
+
+<style>
+  /* Reset the container to take up the full width */
+header#title-block-header .quarto-title.column-page-left {
+  grid-column: screen-start / screen-end !important;
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers items horizontally */
+  justify-content: center;
+}
+
+/* Ensure the banner itself allows for centering */
+.quarto-title-banner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Force text alignment just in case */
+.quarto-title h1.title, 
+.quarto-title .description {
+  text-align: center;
+}
+
+</style>

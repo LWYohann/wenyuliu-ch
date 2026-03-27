@@ -1,0 +1,81 @@
+---
+title: "SVG to PDF Converter"
+description: "This is a SVG to PDF converter!"
+date: "2026-03-26"
+author: 
+    - name: Wenyu Liu
+      url: https://wenyuliu.ch/
+      orcid: 0009-0008-8368-4685
+
+format: 
+  html:
+    page-layout: full
+
+---
+
+
+
+
+```{=html}
+
+<script src="./svg-to-pdf.js"> </script>
+
+<div id="svg-to-pdf-converter">
+    <div class="upload-container" id="drop-zone">
+        <label for="svgFile" class="drop-area">
+            <div id="icon-svg-file">
+                <i class="bi bi-filetype-svg"></i>
+            </div>
+            <p class="main-text">Click to upload or drag and drop</p>
+            <p class="sub-text">SVG file only</p>
+            <input type="file" id="svgFile" accept=".svg">
+        </label>
+    </div>
+    
+    <div id="file-info" class="hidden">
+        <span id="file-name"></span>
+        <button onclick="convertToPDF()" class="convert-btn">Convert to PDF</button>
+    </div>
+</div>
+
+
+<script>
+  const dropZone = document.getElementById('drop-zone');
+  const fileInput = document.getElementById('svgFile');
+  const fileInfo = document.getElementById('file-info');
+  const fileNameDisplay = document.getElementById('file-name');
+
+  // Highlight drop zone when item is dragged over it
+  ['dragenter', 'dragover'].forEach(eventName => {
+      dropZone.addEventListener(eventName, (e) => {
+          e.preventDefault();
+          dropZone.firstElementChild.classList.add('drag-over');
+      }, false);
+  });
+
+  // Remove highlight when item is dragged away
+  ['dragleave', 'drop'].forEach(eventName => {
+      dropZone.addEventListener(eventName, (e) => {
+          e.preventDefault();
+          dropZone.firstElementChild.classList.remove('drag-over');
+      }, false);
+  });
+
+  // Handle dropped files
+  dropZone.addEventListener('drop', (e) => {
+      const files = e.dataTransfer.files;
+      if (files.length) {
+          fileInput.files = files; // Sync the dropped file to the hidden input
+          updateFileInfo(files[0].name);
+      }
+  });
+
+  // Handle click-to-upload files
+  fileInput.addEventListener('change', (e) => {
+      if (fileInput.files.length) {
+          updateFileInfo(fileInput.files[0].name);
+      }
+  });
+</script>
+
+```

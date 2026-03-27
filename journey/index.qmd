@@ -19,7 +19,7 @@ resources:
 ```{=html}
 
 <div class="journey-gallery">
-  <a href="./travel-history/index.html" class="journey-card">
+  <a href="./travel-history/" class="journey-card">
     <div class="card-image" style="background-image: url('./files/travel-history-card.png');"></div>
     <div class="card-overlay">
       <h3> <i class="bi bi-suitcase-fill"></i> Travel</h3>
@@ -27,7 +27,7 @@ resources:
     </div>
   </a>
 
-  <a href="./flight-log/index.html" class="journey-card">
+  <a href="./flight-log/" class="journey-card">
     <div class="card-image" style="background-image: url('./files/flight-log-card.jpg');"></div>
     <div class="card-overlay">
       <h3> <i class="bi bi-airplane-fill"></i> Flight</h3>
@@ -36,7 +36,7 @@ resources:
   </a>
 
 
-  <a href="./grandtour/index.html" class="journey-card">
+  <a href="./grandtour/" class="journey-card">
     <div class="card-image" style="background-image: url('./files/grandtour-card.jpg');"></div>
     <div class="card-overlay">
       <h3> <i class="bi bi-pin-map-fill"></i>  Grandtour</h3>

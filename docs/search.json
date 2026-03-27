@@ -238,25 +238,18 @@
     "text": "结论与展望\n\n\n\n\n\n\n重要\n\n\n\nComing soon."
   },
   {
-    "objectID": "CV/index.html",
-    "href": "CV/index.html",
-    "title": "Curriculum Vitæ",
+    "objectID": "toolkit/index.html",
+    "href": "toolkit/index.html",
+    "title": "My Toolkit",
     "section": "",
-    "text": "Welcome to my CV page!\nBelow, you can view or download my most recent curriculum vitæ and my academic records."
+    "text": "Plotly Renderer\n\n\nThis is a plotly JSON renderer!\n\n\n\n\n\nMar 26, 2026\n\n\nWenyu Liu\n\n\n\n\n\n\n\n\n\n\n\n\nSVG to PDF Converter\n\n\nThis is a SVG to PDF converter!\n\n\n\n\n\nMar 26, 2026\n\n\nWenyu Liu\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "CV/index.html#section",
-    "href": "CV/index.html#section",
-    "title": "Curriculum Vitæ",
+    "objectID": "toolkit/svg-to-pdf/index.html",
+    "href": "toolkit/svg-to-pdf/index.html",
+    "title": "SVG to PDF Converter",
     "section": "",
-    "text": "Download Master Records \n\n\n Your browser does not support embedded PDFs. Please download the file instead."
-  },
-  {
-    "objectID": "CV/index.html#section-1",
-    "href": "CV/index.html#section-1",
-    "title": "Curriculum Vitæ",
-    "section": "",
-    "text": "Download Bachelor Records \n\n\n Your browser does not support embedded PDFs. Please download the file instead."
+    "text": "Click to upload or drag and drop\n            SVG file only\n            \n        \n    \n    \n    \n        \n        Convert to PDF"
   },
   {
     "objectID": "about.html",
@@ -285,6 +278,34 @@
     "title": "More About",
     "section": "Beyond the Screen",
     "text": "Beyond the Screen\n\nThe Name\nMy first name is Wenyu(, 文宇)， and my family name is Liu(, 刘).\n\n\nPassions & Curiosities\n\nI appreciate and believe in the power of clear and beautiful visual expressions.\nI like to explore new and interesting ideas.\nI have a deep appreciation for classical music. While Johann Sebastian Bach remains my “all-time” favorite, Gustav Mahler has profoundly influenced my perspective in recent years.\nI am a dedicated fan of football. I support Shaanxi Union FC  and China national team .\nSometimes I’ve turned “sleeping too much” into an art form."
+  },
+  {
+    "objectID": "CV/index.html",
+    "href": "CV/index.html",
+    "title": "Curriculum Vitæ",
+    "section": "",
+    "text": "Welcome to my CV page!\nBelow, you can view or download my most recent curriculum vitæ and my academic records."
+  },
+  {
+    "objectID": "CV/index.html#section",
+    "href": "CV/index.html#section",
+    "title": "Curriculum Vitæ",
+    "section": "",
+    "text": "Download Master Records \n\n\n Your browser does not support embedded PDFs. Please download the file instead."
+  },
+  {
+    "objectID": "CV/index.html#section-1",
+    "href": "CV/index.html#section-1",
+    "title": "Curriculum Vitæ",
+    "section": "",
+    "text": "Download Bachelor Records \n\n\n Your browser does not support embedded PDFs. Please download the file instead."
+  },
+  {
+    "objectID": "toolkit/plotly-renderer/index.html",
+    "href": "toolkit/plotly-renderer/index.html",
+    "title": "Plotly Renderer",
+    "section": "",
+    "text": "Upload Plotly JSON\n        \n    \n\n    \n\n    \n        Background Color\n        \n\n        \n            \n            Color\n        \n\n        \n            \n            Opacity\n        \n\n        \n    \n\n    \n        Dimensions (px)\n        \n            \n                \n                Width\n            \n\n            \n                \n                Height\n            \n        \n        \n    \n\n    \n        Font Family\n        \n            Arial\n            Courier New\n            Times New Roman\n            Verdana\n            Georgia\n            Trebuchet MS\n        \n    \n\n\n    Apply Change\n\n    \n    \n\n    \n          Export SVG\n\n          Export PDF"
   },
   {
     "objectID": "blog/2023/12/COVID-19 Pandemic & Green Energy Transition/index.html",

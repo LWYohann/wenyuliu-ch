@@ -1,5 +1,12 @@
 [
   {
+    "listing": "/toolkit/index.html",
+    "items": [
+      "/toolkit/plotly-renderer/index.html",
+      "/toolkit/svg-to-pdf/index.html"
+    ]
+  },
+  {
     "listing": "/blog/index.html",
     "items": [
       "/blog/2001/12/index.html",

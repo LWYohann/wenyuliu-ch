@@ -28,7 +28,7 @@ $light-orange:  #FB9E07 !default;
 $yellow:  #F6D645 !default;
 $green:   #118230 !default;
 $teal:    #0FA4AF !default;
-$light-teal:#8CF1E3;
+$light-teal:#8CF1E3 !default;
 $cyan:    #3093CF !default;
 $blue_2:  #052659 !default;
 $orange_1:#E9634A !default;
@@ -877,4 +877,293 @@ span.op {
 .filter-color-to-body {
     /* filter to body color gray-900 */
     filter: brightness(0) invert(9%) sepia(3%) saturate(3376%) hue-rotate(169deg) brightness(97%) contrast(88%) !important;
+}
+
+// plotly-renderer styles
+
+#plotly-renderer, #plotly-renderer::before, #plotly-renderer::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+#plotly-renderer {
+    margin: 0;
+    display: flex;
+    height: 85vh;
+    min-height: 600px;
+    background-color: $gray-100;
+}
+
+#plotly-renderer hr {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    width:100%;
+    border:0;
+    border-top:1px solid $gray-600;
+}
+
+#plotly-renderer .form {
+    position: relative;
+    width: 100%;
+    max-width: 20rem;
+
+}
+#plotly-renderer .form__input {
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0.5em 1em;
+    background: none;
+    color: $gray-900;
+    border: 1.5px solid $gray-400;
+    border-radius: 0.5rem;
+    outline: none;
+
+}
+
+#plotly-renderer .form__input:focus {
+    border-color: $teal;
+}
+
+#plotly-renderer .form__input:hover {
+    border-color: $teal;
+}
+
+
+#plotly-renderer .form__label {
+    color: $gray-900;
+    position: absolute;
+    top:0.5em;
+    left: 1em;
+    cursor: text;
+    user-select: none;
+    background-color: $gray-100;
+    padding: 0 0.25em;
+    transition: transform 0.2s ease-in;
+    transform-origin: top left;
+}
+
+#plotly-renderer .form__input:focus ~ .form__label,
+#plotly-renderer .form__input:not(:placeholder-shown) ~ .form__label {
+    /* transform: translateY(-100%) scale(0.75); */
+    transform: translateY(-1em) scale(0.75);
+}
+/* Sidebar Styles */
+#plotly-renderer #sidebar {
+    width: 300px;
+    min-width: 250px;
+    background: $gray-100;
+    border-right: 1px solid $gray-400;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+}
+#plotly-renderer .control-group { display: flex; flex-direction: column; gap: 5px; }
+#plotly-renderer .group-label { 
+    font-size: 1em;
+    font-family: $headings-font-family;
+    font-weight: 500;
+    color: $gray-900;
+    padding: 2px 0 1px;
+}
+#plotly-renderer select, #plotly-renderer .plotly-renderer-button {
+    padding: 8px;
+    border: 1px solid $gray-400;
+    width: auto;
+}
+#plotly-renderer .plotly-renderer-button {
+    background-color: $teal;
+    color: $white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: opacity 0.2s;
+    padding: 1em;
+    border-radius: 8px;
+}
+#plotly-renderer .plotly-renderer-button:hover { opacity: 0.8; }
+
+/* Main Area Styles */
+#plotly-renderer #main-content {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow: auto;
+}
+#plotly-renderer #plot-container {
+    background: rgba(0, 0, 0, 0);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+#plotly-renderer input[type="file"] {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+#plotly-renderer input[type="file"]::file-selector-button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: $teal;
+    color: $white;
+    cursor: pointer;
+}
+
+#plotly-renderer input[type="file"]::file-selector-button:hover {
+    background-color: $teal;
+    opacity: 0.9;
+}
+
+#plotly-renderer select {
+    background-color: $gray-100;
+    color: $gray-900;
+    border: 1.5px solid $gray-400;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    padding: 0.5em 1em;
+}
+
+
+
+#plotly-renderer .file-export-button {
+    width: 100%;
+    font-size: 1em;
+    padding: 0.4em;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    border: $gray-800 solid 2px;
+    border-radius: 8px;
+}
+
+#plotly-renderer .file-export-button:hover {
+    background-color: $gray-200;
+    opacity: 0.8;
+    transform: scale(1.05) ;
+}
+
+// SVG to PDF styles
+#svg-to-pdf-converter {
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: $gray-100;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+
+    .upload-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .file-input {
+        display: none;
+    }
+
+    .upload-label {
+        position: relative;
+        width: 100%;
+    }
+
+    .drop-area {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+        border: 2px dashed $teal;
+        border-radius: 12px;
+        background-color: rgba($teal, 0.1);
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .drop-area:hover {
+        background-color: rgba($teal, 0.15);
+        border-color: $teal;
+    }
+
+    .drop-area.drag-over {
+        background-color: rgba($teal, 0.2);
+        border-color: $teal;
+        transform: scale(1.03);
+    }
+
+    #svgFile {
+        display: none;
+    }
+
+    .bi {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        color: $teal;
+    }
+
+    .main-text {
+        font-size: 1.2em;
+        font-weight: 500;
+        color: $gray-900;
+        font-family: $headings-font-family;
+    }
+
+    .sub-text {
+        font-size: 1em;
+        color: $gray-600;
+        font-family: $font-family-sans-serif;
+    }
+
+    .convert-btn {
+        width: 100%;
+        margin-top: 20px;
+        padding: 12px 24px;
+        background-color: $teal;
+        color: $white;
+        border: none;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    .convert-btn:hover {
+        background-color: $teal;
+        opacity: 0.9;
+    }
+
+    #file-info {
+        margin-top: 15px;
+        text-align: center;
+        font-size: 14px;
+        color: $gray-900;
+    }
+
+    .hidden { display: none; }
+}
+
+.quarto-title-author-orcid img {
+    margin-bottom: -3px;
+    display: none;
+}
+
+.quarto-title-author-orcid {
+display: inline-block;
+width: 1.1em;
+height: 1.1em;
+vertical-align: middle;
+background: url("https://orcid.org/assets/vectors/orcid.logo.icon.svg") no-repeat center center;
+background-size: contain;
 }

@@ -1,0 +1,100 @@
+---
+title: "Plotly Renderer"
+description: "This is a plotly JSON renderer!"
+date: "2026-03-26"
+author: 
+    - name: Wenyu Liu
+      url: https://wenyuliu.ch/
+      orcid: 0009-0008-8368-4685
+
+format: 
+  html:
+    page-layout: full
+
+include-in-header:
+- text: |
+    <script src="https://cdn.plot.ly/plotly-3.3.1.min.js"></script>
+---
+
+
+```{=html}
+
+<div id="plotly-renderer">
+<div id="sidebar">
+   
+    <div class="control-group">
+        <label for="fileInput" class="group-label">Upload Plotly JSON</label>
+        <input type="file" id="fileInput" accept=".json">
+    </div>
+
+    <hr>
+
+    <div class="control-group">
+        <label class="group-label">Background Color</label>
+        <div style="display:flex; gap:5px; align-items: center;">
+
+        <form class="form">
+            <input type="text" id="bgColor" class="form__input" placeholder="" value="#FFFFFF">
+            <label for="bgColor" class="form__label">Color</label>
+        </form>
+
+        <form class="form">
+            <input type="number" id="bgOpacity" class="form__input" placeholder="" step="0.1" min="0" max="1" value="0.0">
+            <label for="bgOpacity" class="form__label">Opacity</label>
+        </form>
+
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="group-label">Dimensions (px)</label>
+        <div style="display:flex; gap:5px;">
+            <form class="form">
+                <input type="number" id="plotWidth" class="form__input" placeholder="" step="100">
+                <label for="plotWidth" class="form__label">Width</label>
+            </form>
+
+            <form class="form">
+                <input type="number" id="plotHeight" class="form__input" placeholder="" step="100">
+                <label for="plotHeight" class="form__label">Height</label>
+            </form>
+        </div>
+        
+    </div>
+
+    <div class="control-group">
+        <label for="fontFamily" class="group-label">Font Family</label>
+        <select id="fontFamily" onchange="updateLayout()">
+            <option value="Arial">Arial</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Trebuchet MS">Trebuchet MS</option>
+        </select>
+    </div>
+
+
+    <button onclick="updateLayout()" class="plotly-renderer-button">Apply Change</button>
+
+    
+    <hr>
+
+    <div style="display:flex; gap:5px; flex-direction: column">
+        <button onclick="exportSVG()" class="file-export-button"> <i class="bi bi-filetype-svg"></i> Export SVG</button>
+
+        <button onclick="exportPDF()" class="file-export-button"> <i class="bi bi-file-pdf"></i> Export PDF</button>
+
+    </div>
+</div>
+
+<div id="main-content">
+    <div id="plot-container"></div>
+</div>
+
+<script src="../svg-to-pdf/svg-to-pdf.js"> </script>
+<script src="./plotly-renderer.js"> </script>
+
+
+</div>
+```
