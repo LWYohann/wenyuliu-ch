@@ -1,6 +1,6 @@
 ---
 title: "Plotly Renderer"
-description: "This is a plotly JSON renderer!"
+description: "This is a plotly JSON chart schema renderer!"
 date: "2026-03-26"
 author: 
     - name: Wenyu Liu
@@ -9,7 +9,8 @@ author:
 
 format: 
   html:
-    page-layout: full
+    grid:
+      body-width: 1000px
 
 include-in-header:
 - text: |
@@ -98,3 +99,48 @@ include-in-header:
 
 </div>
 ```
+
+---
+
+### Welcome to the Plotly JSON Renderer
+
+Have you ever found yourself with a Plotly `.json` schema, perhaps exported from a `Python` notebook, and wished you could quickly tweak the font, change the background transparency, or resize it for a presentation/paper/report without diving back into the code? [Learn more about Plotly JSON chart schema](https://plotly.com/chart-studio-help/json-chart-schema)
+
+I built this tool to bridge that gap. It is a lightweight, pure-frontend playground for rendering and refining Plotly visualizations on the fly.
+
+
+#### Features:
+
+- **Live Rendering:** Drop a Plotly JSON and see it instantly.
+- **Typography Control:** Select from standard web fonts.
+- **Layout Tweaking:** Adjust dimensions and background opacity (perfect for creating transparent overlays).
+- **Vector Export:** One-click download to SVG and PDF (PDF export is based on [SVG to PDF converter](../svg-to-pdf/index.qmd)) for high-fidelity use.
+
+---
+
+#### Why JSON?
+
+While an image is a finished product, the JSON contains the raw instructions. By manipulating the schema directly in the browser, we maintain the ability to re-render the plot perfectly at any resolution.
+
+When exporting visualizations, we usually choose between several formats. Here is how the Plotly JSON approach stacks up:
+
+| Format | Pros | Cons |
+| :---: | :---: | :---: |
+| **JSON (Schema)** | Extremely lightweight and flexible. Can be re-rendered and modified programmatically. | Requires a renderer (like this tool) to actually "see" the image. |
+| **SVG** | Lossless scaling. Perfect for web application and high-res printing. Sharp at any size. Supported and editable in Microsoft Office.   | Can be difficult to edit "data points" once exported. Large files for complex plots. Not elegantly supported by LaTeX. |
+| **PNG / JPG** | Universal compatibility. Easy to share with anyone. | Raster-based, becomes blurry (pixelated) when resized or printed. |
+| **PDF** | Great for document embedding in LaTeX. Supports vector graphics. | Hard to edit without professional design software. |
+| **HTML** | Full interactivity. Keeps tooltips, zooming, and panning active. | Large file size; essentially embedded the entire [Plotly.js](https://plotly.com/javascript/) library. |
+
+#### Privacy & Security: Your Data Stays Yours
+
+This tool is built entirely using **client-side JavaScript**. 
+
+> **How it works:** When you "upload" a file, it is read directly by your browser. No data is ever sent to a server, and this website does not (and cannot) save or view the charts you render. Your data never leaves your machine. 
+
+
+::: {.callout-caution}
+
+This tool is developed and tested with Chrome <i class="bi bi-browser-chrome"></i>, other browsers <i class="bi bi-browser-edge"></i> <i class="bi bi-browser-firefox"></i> <i class="bi bi-browser-safari"></i> may not work properly.
+
+:::

@@ -8,7 +8,7 @@
 
 <meta name="author" content="Wenyu Liu">
 <meta name="dcterms.date" content="2026-03-26">
-<meta name="description" content="This is a SVG to PDF converter!">
+<meta name="description" content="This is a LaTeX-friendly SVG to PDF converter!">
 
 <title>SVG to PDF Converter</title>
 <style>
@@ -43,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-4c7b890cc350be7067044af900615741.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-68d81aae4c701bb21756f033e86e4f09.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-352d611bd05f98d7f6599a2a62aa3576.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -86,7 +86,7 @@ gtag('config', 'G-MT7VY85R43', { 'anonymize_ip': true});
 
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -158,12 +158,12 @@ gtag('config', 'G-MT7VY85R43', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -172,12 +172,12 @@ gtag('config', 'G-MT7VY85R43', { 'anonymize_ip': true});
 
 <div>
   <div class="description">
-    This is a SVG to PDF converter!
+    This is a LaTeX-friendly SVG to PDF converter!
   </div>
 </div>
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta">
 
     <div>
     <div class="quarto-title-meta-heading">Author</div>
@@ -262,8 +262,42 @@ gtag('config', 'G-MT7VY85R43', { 'anonymize_ip': true});
   });
 </script>
 
+<hr>
+<section id="welcome-to-the-svg-to-pdf-converter-a-latex-friendly-converter" class="level3">
+<h3 class="anchored" data-anchor-id="welcome-to-the-svg-to-pdf-converter-a-latex-friendly-converter">Welcome to the SVG to PDF Converter (A LaTeX-Friendly Converter)</h3>
+<p>If you’ve ever tried to include an SVG in a LaTeX document, you’ve likely run into the “Margin Trap.” Standard converters often wrap your beautiful vector graphic in a default A4 or Letter-sized page, leaving massive white gaps that ruin your document’s layout.</p>
+<p>I built this tool to provide a perfectly tight crop. It converts SVGs to PDFs with zero external dependencies: no heavy libraries, no servers, just your browser.</p>
+<section id="why-do-i-do-this" class="level4">
+<h4 class="anchored" data-anchor-id="why-do-i-do-this">Why do I do this?</h4>
+<ul>
+<li><p>Zero white margins: The PDF dimensions are dynamically calculated to match your SVG’s exact bounding box. No more viewport or trim hacks in your LaTeX code.</p></li>
+<li><p>Zero-library “flex”: Most converters rely on massive JavaScript libraries or backend APIs. This tool uses pure vanilla JS and the browser’s native print engine to keep the page lightning-fast.</p></li>
+<li><p>Vector fidelity: Since it uses the browser’s internal rendering engine, your paths, gradients, and fonts remain crisp and scalable.</p></li>
+</ul>
+</section>
+<section id="privacy-security-your-data-stays-yours" class="level4">
+<h4 class="anchored" data-anchor-id="privacy-security-your-data-stays-yours">Privacy &amp; Security: Your Data Stays Yours</h4>
+<p>This tool is built entirely using <strong>client-side JavaScript</strong>.</p>
+<blockquote class="blockquote">
+<p><strong>How it works:</strong> When you “upload” a file, it is read directly by your browser. No data is ever sent to a server, and this website does not (and cannot) save or view the charts you render. Your data never leaves your machine.</p>
+</blockquote>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This tool utilizes the advanced Print-to-PDF capabilities of the Chromium engine. It is optimized for Chrome <i class="bi bi-browser-chrome"></i>. Users on other browsers <i class="bi bi-browser-edge"></i> <i class="bi bi-browser-firefox"></i> <i class="bi bi-browser-safari"></i> may experience inconsistent margin rendering.</p>
+</div>
+</div>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script type="text/javascript">

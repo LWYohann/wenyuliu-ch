@@ -8,7 +8,7 @@
 
 <meta name="author" content="Wenyu Liu">
 <meta name="dcterms.date" content="2026-03-26">
-<meta name="description" content="This is a plotly JSON renderer!">
+<meta name="description" content="This is a plotly JSON chart schema renderer!">
 
 <title>Plotly Renderer</title>
 <style>
@@ -43,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-4c7b890cc350be7067044af900615741.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-68d81aae4c701bb21756f033e86e4f09.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-352d611bd05f98d7f6599a2a62aa3576.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -87,7 +87,7 @@ gtag('config', 'G-MT7VY85R43', { 'anonymize_ip': true});
 
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -159,12 +159,12 @@ gtag('config', 'G-MT7VY85R43', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -173,12 +173,12 @@ gtag('config', 'G-MT7VY85R43', { 'anonymize_ip': true});
 
 <div>
   <div class="description">
-    This is a plotly JSON renderer!
+    This is a plotly JSON chart schema renderer!
   </div>
 </div>
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta">
 
     <div>
     <div class="quarto-title-meta-heading">Author</div>
@@ -281,8 +281,85 @@ gtag('config', 'G-MT7VY85R43', { 'anonymize_ip': true});
 
 
 </div>
+<hr>
+<section id="welcome-to-the-plotly-json-renderer" class="level3">
+<h3 class="anchored" data-anchor-id="welcome-to-the-plotly-json-renderer">Welcome to the Plotly JSON Renderer</h3>
+<p>Have you ever found yourself with a Plotly <code>.json</code> schema, perhaps exported from a <code>Python</code> notebook, and wished you could quickly tweak the font, change the background transparency, or resize it for a presentation/paper/report without diving back into the code? <a href="https://plotly.com/chart-studio-help/json-chart-schema">Learn more about Plotly JSON chart schema</a></p>
+<p>I built this tool to bridge that gap. It is a lightweight, pure-frontend playground for rendering and refining Plotly visualizations on the fly.</p>
+<section id="features" class="level4">
+<h4 class="anchored" data-anchor-id="features">Features:</h4>
+<ul>
+<li><strong>Live Rendering:</strong> Drop a Plotly JSON and see it instantly.</li>
+<li><strong>Typography Control:</strong> Select from standard web fonts.</li>
+<li><strong>Layout Tweaking:</strong> Adjust dimensions and background opacity (perfect for creating transparent overlays).</li>
+<li><strong>Vector Export:</strong> One-click download to SVG and PDF (PDF export is based on <a href="../../toolkit/svg-to-pdf/index.html">SVG to PDF converter</a>) for high-fidelity use.</li>
+</ul>
+<hr>
+</section>
+<section id="why-json" class="level4">
+<h4 class="anchored" data-anchor-id="why-json">Why JSON?</h4>
+<p>While an image is a finished product, the JSON contains the raw instructions. By manipulating the schema directly in the browser, we maintain the ability to re-render the plot perfectly at any resolution.</p>
+<p>When exporting visualizations, we usually choose between several formats. Here is how the Plotly JSON approach stacks up:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Format</th>
+<th style="text-align: center;">Pros</th>
+<th style="text-align: center;">Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>JSON (Schema)</strong></td>
+<td style="text-align: center;">Extremely lightweight and flexible. Can be re-rendered and modified programmatically.</td>
+<td style="text-align: center;">Requires a renderer (like this tool) to actually “see” the image.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>SVG</strong></td>
+<td style="text-align: center;">Lossless scaling. Perfect for web application and high-res printing. Sharp at any size. Supported and editable in Microsoft Office.</td>
+<td style="text-align: center;">Can be difficult to edit “data points” once exported. Large files for complex plots. Not elegantly supported by LaTeX.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>PNG / JPG</strong></td>
+<td style="text-align: center;">Universal compatibility. Easy to share with anyone.</td>
+<td style="text-align: center;">Raster-based, becomes blurry (pixelated) when resized or printed.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>PDF</strong></td>
+<td style="text-align: center;">Great for document embedding in LaTeX. Supports vector graphics.</td>
+<td style="text-align: center;">Hard to edit without professional design software.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>HTML</strong></td>
+<td style="text-align: center;">Full interactivity. Keeps tooltips, zooming, and panning active.</td>
+<td style="text-align: center;">Large file size; essentially embedded the entire <a href="https://plotly.com/javascript/">Plotly.js</a> library.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="privacy-security-your-data-stays-yours" class="level4">
+<h4 class="anchored" data-anchor-id="privacy-security-your-data-stays-yours">Privacy &amp; Security: Your Data Stays Yours</h4>
+<p>This tool is built entirely using <strong>client-side JavaScript</strong>.</p>
+<blockquote class="blockquote">
+<p><strong>How it works:</strong> When you “upload” a file, it is read directly by your browser. No data is ever sent to a server, and this website does not (and cannot) save or view the charts you render. Your data never leaves your machine.</p>
+</blockquote>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This tool is developed and tested with Chrome <i class="bi bi-browser-chrome"></i>, other browsers <i class="bi bi-browser-edge"></i> <i class="bi bi-browser-firefox"></i> <i class="bi bi-browser-safari"></i> may not work properly.</p>
+</div>
+</div>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script type="text/javascript">

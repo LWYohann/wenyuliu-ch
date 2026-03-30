@@ -1,6 +1,6 @@
 ---
 title: "SVG to PDF Converter"
-description: "This is a SVG to PDF converter!"
+description: "This is a LaTeX-friendly SVG to PDF converter!"
 date: "2026-03-26"
 author: 
     - name: Wenyu Liu
@@ -9,7 +9,8 @@ author:
 
 format: 
   html:
-    page-layout: full
+    grid:
+      body-width: 1000px
 
 ---
 
@@ -79,3 +80,33 @@ format:
 </script>
 
 ```
+
+---
+
+### Welcome to the SVG to PDF Converter (A LaTeX-Friendly Converter)
+
+If you've ever tried to include an SVG in a LaTeX document, you’ve likely run into the "Margin Trap." Standard converters often wrap your beautiful vector graphic in a default A4 or Letter-sized page, leaving massive white gaps that ruin your document's layout.
+
+I built this tool to provide a perfectly tight crop. It converts SVGs to PDFs with zero external dependencies: no heavy libraries, no servers, just your browser.
+
+
+#### Why do I do this?
+
+- Zero white margins: The PDF dimensions are dynamically calculated to match your SVG’s exact bounding box. No more viewport or trim hacks in your LaTeX code.
+
+- Zero-library "flex": Most converters rely on massive JavaScript libraries or backend APIs. This tool uses pure vanilla JS and the browser's native print engine to keep the page lightning-fast.
+
+- Vector fidelity: Since it uses the browser's internal rendering engine, your paths, gradients, and fonts remain crisp and scalable.
+
+#### Privacy & Security: Your Data Stays Yours
+
+This tool is built entirely using **client-side JavaScript**. 
+
+> **How it works:** When you "upload" a file, it is read directly by your browser. No data is ever sent to a server, and this website does not (and cannot) save or view the charts you render. Your data never leaves your machine. 
+
+
+::: {.callout-caution}
+
+This tool utilizes the advanced Print-to-PDF capabilities of the Chromium engine. It is optimized for Chrome <i class="bi bi-browser-chrome"></i>. Users on other browsers <i class="bi bi-browser-edge"></i> <i class="bi bi-browser-firefox"></i> <i class="bi bi-browser-safari"></i> may experience inconsistent margin rendering.
+
+:::

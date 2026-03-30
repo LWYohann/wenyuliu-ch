@@ -1,7 +1,7 @@
 ---
 title: "My Toolkit"
 listing: default
-description: "Some web-based mimi tools developed by me."
+description: "Some web-based mini tools developed by me."
 
 title-block-banner: "#373a3c"
 
