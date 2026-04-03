@@ -35,7 +35,7 @@ format:
 
 Hello! 😉
 
-I'm Wenyu Liu (<img class="inline-svg filter-color-to-body" src="./files/wenyu.svg" alt="wenyu Logo"/> <img class="inline-svg filter-color-to-body" src="./files/liu.svg" alt="liu Logo" style="margin-right: 0em"/>), a master student in energy at <img class="inline-svg filter-color-to-body" src="./files/epfl-logo.svg" alt="EPFL Logo" style="height: 0.9em"/> École Polytechnique Fédérale de Lausanne (EPFL). 
+I'm Wenyu Liu (<img class="inline-svg filter-color-to-body" src="./files/wenyu.svg" alt="wenyu Logo"/> <img class="inline-svg filter-color-to-body" src="./files/liu.svg" alt="liu Logo" style="margin-right: 0em"/>), a PhD student in energy at <img class="inline-svg filter-color-to-body" src="./files/epfl-logo.svg" alt="EPFL Logo" style="height: 0.9em"/> École Polytechnique Fédérale de Lausanne (EPFL). 
 
 Currently, I am living in <img class="inline-svg" src="./files/CHE_Saint-Sulpice_VD_COA.svg" alt="Saint-Sulpice VD COA"> St-Sulpice, Switzerland.
 
@@ -51,6 +51,8 @@ I speak Chinese, English and a little French. &ensp; 我说汉语，英语和一
 <!-- --- -->
 ## Education
 
+- **2026 - Present** : Doctoral Student in Energy @ [École Polytechnique Fédérale de Lausanne](https://www.epfl.ch/en/)
+
 - **2023 - 2026** : Master in Energy Science and Technology @ [École Polytechnique Fédérale de Lausanne](https://www.epfl.ch/en/)
 
 - **2019 - 2023** : Bachelor in Energy Storage Science and Engineering @ [Xi’an Jiaotong University](https://www.xjtu.edu.cn/)
@@ -58,6 +60,8 @@ I speak Chinese, English and a little French. &ensp; 我说汉语，英语和一
 - **2016 - 2019** : High school education @ Chang'an No.1 High School
 
 ## Work Experience
+
+- **04.2026 - Present** : Doctoral Assistant (100%) @ [Distributed Electrical Systems Laboratory](https://www.epfl.ch/labs/desl/)
 
 - **02.2025 - 08.2025** : Internship in Power Systems of the Future (100%) @ [Hitachi Energy](https://www.hitachienergy.com/)
 
