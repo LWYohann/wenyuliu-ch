@@ -38,3 +38,41 @@ My first name is `Wenyu`(<img class="inline-svg filter-color-to-body" src="./fil
 - I have a deep appreciation for classical music. While [Johann Sebastian Bach](https://en.wikipedia.org/wiki/Johann_Sebastian_Bach) remains my "all-time" favorite, [Gustav Mahler](https://en.wikipedia.org/wiki/Gustav_Mahler) has profoundly influenced my perspective in recent years.
 - I am a dedicated fan of football. I support Shaanxi Union FC <img class="inline-svg filter-color-to-body" src="./files/sufc-opt.svg" alt="sufc OPT Logo"/><img class="inline-svg filter-color-to-body" src="./files/sufc-wolf.svg" alt="sufc Logo"/> and China national team <img class="inline-svg filter-color-to-body" src="./files/cfa-no-margin.svg" alt="CFA Logo"/>.
 - Sometimes I’ve turned "sleeping too much" into an art form.
+
+
+## And Then
+
+```{=html}
+
+<style>
+
+@font-face {
+    font-family: "yanti";
+    src: url("./files/yanti.woff2") format("woff2");
+}
+
+#poem-container {
+    font-family: 'yanti', 'SimSun', '宋体', serif;
+}
+</style>
+
+<br>
+
+<div id="poem-container">
+<div id="poem">
+天雖長 地雖久
+金玉滿堂應不守
+富貴百年能幾何
+死生一度人皆有
+孤猿坐啼墳上月
+且須一盡杯中酒
+
+</div>
+
+<div id="poem-author">
+李白《悲歌行》| Das Lied von der Erde von Gustav Mahler
+</div>
+
+</div>
+
+```

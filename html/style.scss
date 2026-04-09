@@ -1167,3 +1167,38 @@ vertical-align: middle;
 background: url("https://orcid.org/assets/vectors/orcid.logo.icon.svg") no-repeat center center;
 background-size: contain;
 }
+
+#poem-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px;
+}
+
+#poem {
+    font-size: 1.4rem;
+    line-height: 1.5em;
+    text-align: center;
+    margin-bottom: .5rem;
+    white-space: pre-line;
+    position: relative;
+}
+
+#poem::before, #poem::after {
+    content: "";
+    display: block;
+    width: 80%;
+    height: 1px;
+    background-color: $gray-500;
+    margin: 1rem auto;
+}
+
+#poem-author {
+    font-size: 0.9rem;
+    color: $gray-600;
+    border-top: 1px solid $gray-200;
+    padding-top: 1rem;
+    text-align: center;
+    max-width: 80%;
+}
