@@ -54,6 +54,7 @@ website:
       <span class="faux-block">All content licensed under [ CC BY 4.0 {{< fa brands creative-commons >}}](https://creativecommons.org/licenses/by/4.0/)</span>
     center: |
       <span class="faux-block">{{< fa brands orcid >}} <strong>ORCID</strong> [{{< var orcid >}}](https://orcid.org/{{< var orcid >}})</span>
+      <span class="faux-block" id="local-weather"></span>
     right: |
       <span class="faux-block"> "Swiss made website 
       <svg fill="currentColor" class="icon-swiss" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
@@ -88,6 +89,8 @@ format:
     highlight-style: monokai
     email-obfuscation: javascript
     include-after-body: ./files/obfuscation-email-navbar.html
+    include-before-body: html/weather/get-weather.html
+
       
 
 

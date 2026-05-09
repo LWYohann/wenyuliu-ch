@@ -29,7 +29,7 @@ format:
 
 ### The Name
 
-My first name is `Wenyu`(<img class="inline-svg filter-color-to-body" src="./files/wenyu.svg" alt="wenyu Logo"/>, 文宇)， and my family name is `Liu`(<img class="inline-svg filter-color-to-body" src="./files/liu.svg" alt="liu Logo"/>, 刘).
+My first name is `Wenyu`(<img class="inline-svg filter-color-to-body" src="./files/wenyu.svg" alt="wenyu Logo"/>, 文宇), and my family name is `Liu`(<img class="inline-svg filter-color-to-body" src="./files/liu.svg" alt="liu Logo"/>, 刘).
 
 ### Passions & Curiosities
 

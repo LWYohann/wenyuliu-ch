@@ -15,9 +15,14 @@ function getWindIcon(windspeed) {
 async function getWeather() {
     // Get approximate location from IP
     // Example
-    const lat = 46.515848;
-    const lon = 6.563157;
-    const city = "Ecublens";
+    // const lat = 46.515848;
+    // const lon = 6.563157;
+    // const city = "Ecublens";
+
+    const locRes = await fetch("http://ip-api.com/json/");
+    const locData = await locRes.json();
+
+    const { lat, lon, city } = locData;
 
 
 
@@ -35,7 +40,7 @@ async function getWeather() {
 
         
 
-        const weatherCodeSheet = await fetch("./html/descriptions.json");
+        const weatherCodeSheet = await fetch("/html/descriptions.json");
         const weatherCodeData = await weatherCodeSheet.json();
 
 
