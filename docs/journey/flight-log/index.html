@@ -214,16 +214,15 @@ gtag('config', 'G-MT7VY85R43', { 'anonymize_ip': true});
         // const lon = 6.563157;
         // const city = "Ecublens";
 
-        const locRes = await fetch("http://ip-api.com/json/");
+        const locRes = await fetch("https://ip-check-perf.radar.cloudflare.com/api/info");
         const locData = await locRes.json();
 
-        const { lat, lon, city } = locData;
-
+        const { latitude, longitude, city } = locData;
 
 
         // Fetch weather
         const weatherRes = await fetch(
-            `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`
+            `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`
         );
 
 
@@ -235,7 +234,7 @@ gtag('config', 'G-MT7VY85R43', { 'anonymize_ip': true});
 
             
 
-            const weatherCodeSheet = await fetch("/html/descriptions.json");
+            const weatherCodeSheet = await fetch("/html/weather/descriptions.json");
             const weatherCodeData = await weatherCodeSheet.json();
 
 
