@@ -256,28 +256,28 @@
     "href": "about.html",
     "title": "More About",
     "section": "",
-    "text": "This website is inspired by the clean aesthetics of Andrew Heiss’s website.\nThis website is build with Quarto and hosted by GitHub Pages.\nI use Google Analytics to keep an eye on how visitors interact with the site and to improve the experience over time."
+    "text": "This website is inspired by the clean aesthetics of Andrew Heiss’s website.\nThis website is build with Quarto and hosted by GitHub Pages.\nI use Google Analytics to keep an eye on how visitors interact with the site and to improve the experience over time.\nThe live weather widget in the footer is designed with the workflow:\n\nGet the user’s approximate location of the IP address geo-location by this API, the location may be inaccurate while it doesn’t need to request the user for permission to access the precise location.\nGet the current weather information for the location by Open-Meteo API.\nDisplay the weather information, the pretty, animated weather icons are from Meteocons licensed under MIT."
   },
   {
     "objectID": "about.html#behind-the-site",
     "href": "about.html#behind-the-site",
     "title": "More About",
     "section": "",
-    "text": "This website is inspired by the clean aesthetics of Andrew Heiss’s website.\nThis website is build with Quarto and hosted by GitHub Pages.\nI use Google Analytics to keep an eye on how visitors interact with the site and to improve the experience over time."
+    "text": "This website is inspired by the clean aesthetics of Andrew Heiss’s website.\nThis website is build with Quarto and hosted by GitHub Pages.\nI use Google Analytics to keep an eye on how visitors interact with the site and to improve the experience over time.\nThe live weather widget in the footer is designed with the workflow:\n\nGet the user’s approximate location of the IP address geo-location by this API, the location may be inaccurate while it doesn’t need to request the user for permission to access the precise location.\nGet the current weather information for the location by Open-Meteo API.\nDisplay the weather information, the pretty, animated weather icons are from Meteocons licensed under MIT."
   },
   {
     "objectID": "about.html#typography",
     "href": "about.html#typography",
     "title": "More About",
     "section": "Typography",
-    "text": "Typography\n\nThe fonts in this website are open source fonts from Google Fonts:\n\nHeading & footer: Ubuntu\nNavbar: Raleway\nBody: Open Sans\nCode: Google Sans Code (the same one I use in my code editor)\nGrandtour card title: Style Script"
+    "text": "Typography\n\nThe fonts below used in this website are open source fonts from Google Fonts:\n\nHeading & footer: Ubuntu\nNavbar: Raleway\nBody: Open Sans\nCode: Google Sans Code (the same one I use in my code editor)\nGrandtour card title: Style Script\n\nPoem, my name and favicon: 一点颜体 licensed under GPL-2.0 from Yanti."
   },
   {
     "objectID": "about.html#beyond-the-screen",
     "href": "about.html#beyond-the-screen",
     "title": "More About",
     "section": "Beyond the Screen",
-    "text": "Beyond the Screen\n\nThe Name\nMy first name is Wenyu(, 文宇), and my family name is Liu(, 刘).\n\n\nPassions & Curiosities\n\nI appreciate and believe in the power of clear and beautiful visual expressions.\nI like to explore new and interesting ideas.\nI have a deep appreciation for classical music. While Johann Sebastian Bach remains my “all-time” favorite, Gustav Mahler has profoundly influenced my perspective in recent years.\nI am a dedicated fan of football. I support Shaanxi Union FC  and China national team .\nSometimes I’ve turned “sleeping too much” into an art form."
+    "text": "Beyond the Screen\n\nThe Name\nMy first name is Wenyu(, 文宇), and my family name is Liu(, 刘).\n\n\nPassions & Curiosities\n\nI appreciate and believe in the power of clear and beautiful visual expressions.\nI like to explore new and interesting ideas.\nI have a deep appreciation for classical music. While Johann Sebastian Bach remains my “all-time” favorite, Gustav Mahler has profoundly influenced my perspective in recent years.\nI am a dedicated fan of football. I support Shaanxi Union FC  and China national team .\nSometimes I’ve turned “sleeping too much” into an art form.\nI really like coriander."
   },
   {
     "objectID": "CV/index.html",

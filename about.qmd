@@ -13,16 +13,22 @@ format:
 - This website is inspired by the clean aesthetics of [Andrew Heiss's website](https://www.andrewheiss.com/).
 - This website is build with [Quarto](https://quarto.org/) and hosted by [GitHub Pages](https://pages.github.com/).
 - I use [Google Analytics](https://analytics.google.com/) to keep an eye on how visitors interact with the site and to improve the experience over time.
+- The live weather widget in the footer is designed with the workflow:
+    - Get the user's approximate location of the IP address geo-location by this [API](https://ip-check-perf.radar.cloudflare.com/api/info), the location may be inaccurate while it doesn't need to request the user for permission to access the precise location.
+    - Get the current weather information for the location by [Open-Meteo API](https://open-meteo.com/).
+    - Display the weather information, the pretty, animated weather icons are from [Meteocons](https://meteocons.com/) licensed under [MIT](https://opensource.org/license/mit).
+
 
 
 ## Typography
 
-- The fonts in this website are open source fonts from [Google Fonts](https://fonts.google.com/):
+- The fonts below used in this website are open source fonts from [Google Fonts](https://fonts.google.com/):
     - Heading & footer: `Ubuntu`
     - Navbar: `Raleway`
     - Body: `Open Sans`
     - Code: `Google Sans Code` (the same one I use in my code editor)
     - Grandtour card title: `Style Script`
+- Poem, my name and favicon: `一点颜体` licensed under [GPL-2.0](https://opensource.org/license/gpl-2.0) from [Yanti](https://github.com/wordshub/free-font#%E4%B8%80%E7%82%B9%E9%A2%9C%E4%BD%93).
 
 
 ## Beyond the Screen
@@ -38,6 +44,7 @@ My first name is `Wenyu`(<img class="inline-svg filter-color-to-body" src="./fil
 - I have a deep appreciation for classical music. While [Johann Sebastian Bach](https://en.wikipedia.org/wiki/Johann_Sebastian_Bach) remains my "all-time" favorite, [Gustav Mahler](https://en.wikipedia.org/wiki/Gustav_Mahler) has profoundly influenced my perspective in recent years.
 - I am a dedicated fan of football. I support Shaanxi Union FC <img class="inline-svg filter-color-to-body" src="./files/sufc-opt.svg" alt="sufc OPT Logo"/><img class="inline-svg filter-color-to-body" src="./files/sufc-wolf.svg" alt="sufc Logo"/> and China national team <img class="inline-svg filter-color-to-body" src="./files/cfa-no-margin.svg" alt="CFA Logo"/>.
 - Sometimes I’ve turned "sleeping too much" into an art form.
+- I really like coriander.
 
 
 ## And Then

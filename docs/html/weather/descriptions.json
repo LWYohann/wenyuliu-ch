@@ -22,11 +22,11 @@
 	"2":{
 		"day":{
 			"description":"Partly Cloudy",
-			"image":"https://cdn.meteocons.com/3.0.0-next.10/svg/flat/partly-clear-day.svg"
+			"image":"https://cdn.meteocons.com/3.0.0-next.10/svg/flat/partly-cloudy-day.svg"
 		},
 		"night":{
 			"description":"Partly Cloudy",
-			"image":"https://cdn.meteocons.com/3.0.0-next.10/svg/flat/partly-clear-night.svg"
+			"image":"https://cdn.meteocons.com/3.0.0-next.10/svg/flat/partly-cloudy-night.svg"
 		}
 	},
 	"3":{
