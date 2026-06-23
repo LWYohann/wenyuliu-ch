@@ -7,7 +7,7 @@ format:
 
 
 title-block-banner: "#dd643fd3"
-description: "Last updated: Mar. 2026"
+description: "Last updated: Jun. 2026"
 resources: 
   - files/
   - frames/

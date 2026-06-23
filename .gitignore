@@ -1,6 +1,6 @@
 *.quarto/
 /_site/
-**./.DS_Store
+.DS_Store
 *.venv
 **__pycache__
 

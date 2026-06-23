@@ -29,7 +29,7 @@ async function initMap() {
         const [historyRes, admRes, countriesRes] = await Promise.all([
             fetch('./geoJSONs/travel-history.json'),
             fetch('./geoJSONs/adm-level.json'),
-            fetch('./geoJSONs/visited_countries.json') // Fetch early for the bbox
+            fetch('./geoJSONs/visited_countries.geojson') // Fetch early for the bbox
         ]);
 
         const historyData = await historyRes.json();
@@ -96,8 +96,7 @@ function setupLayers(map, countriesGeoJSON) {
         const iso2 = feature.properties.iso2;
         console.log('Clicked country ISO2:', iso2);
         const countryName = feature.properties.name;
-        const geoPoint = JSON.parse(feature.properties.geo_point_2d);
-
+0
         // Get ADM level from the pre-loaded dictionary
         const levels = admDict[iso] || [0];
         const admLevel = Math.max(...levels);

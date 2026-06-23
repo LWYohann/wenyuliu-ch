@@ -25,7 +25,7 @@ def get_geoboundaries(iso3: str, admin_level: int) -> dict:
 def save_geojson(iso3: str, admin_level: int, geojson_link: str):
     response = requests.get(geojson_link)
     if response.status_code == 200:
-        with open(f"./geoBoundaries/{iso3}_ADM{admin_level}.geojson", 'w') as f:
+        with open(f"../geoBoundaries/{iso3}_ADM{admin_level}.geojson", 'w') as f:
             json.dump(response.json(), f)
     else:
         raise Exception(f"Error fetching geojson for {iso3} at admin level {admin_level}: {response.status_code}")
@@ -38,7 +38,7 @@ for c_iso in travel_df['iso3'].unique():
     for adm_level in adm_dict[c_iso]:
         if len(adm_dict[c_iso])>1 and adm_level > 0:
             try:
-                with open(f"./geoBoundaries/{c_iso}_ADM{adm_level}.geojson", 'r') as f:
+                with open(f"../geoBoundaries/{c_iso}_ADM{adm_level}.geojson", 'r') as f:
                     print(f"{c_iso}_ADM{adm_level}.geojson already exists.")
             except FileNotFoundError:
                 print(f"{c_iso}_ADM{adm_level}.geojson not found. Fetching from geoboundaries...")
@@ -57,23 +57,23 @@ for c_iso in travel_df['iso3'].unique():
 # %% 
 # For HKG, MAC, TWN, we split the data from CHN
 import geopandas as gpd
-gdf_CHN = gpd.read_file('./geoBoundaries/CHN_ADM1.geojson')
+gdf_CHN = gpd.read_file('../geoBoundaries/CHN_ADM1.geojson')
 # %%
 for iso3, name in special_iso3_2_name.items():
     gdf_iso3 = gdf_CHN[gdf_CHN['shapeName'].str.contains(name)].copy(deep=True)
     if not gdf_iso3.empty:
         print(f"Found {name} in CHN ADM1 geojson, extracting and saving as {iso3}_ADM0.geojson")
         gdf_iso3['shapeISO'] = iso3
-        gdf_iso3.to_file(f"./geoBoundaries/{iso3}_ADM0.geojson", driver='GeoJSON')
+        gdf_iso3.to_file(f"../geoBoundaries/{iso3}_ADM0.geojson", driver='GeoJSON')
         # delete the item from CHN geojson
         gdf_CHN = gdf_CHN[~gdf_CHN['shapeName'].str.contains(name)]
     else:
         print(f"{name} not found in CHN ADM1 geojson, please check the name and try again.")
 # %%
-gdf_CHN.to_file('./geoBoundaries/CHN_ADM1.geojson', driver='GeoJSON')
+gdf_CHN.to_file('../geoBoundaries/CHN_ADM1.geojson', driver='GeoJSON')
 # %%
 
-with open('./geoBoundaries/CHN_ADM1.geojson', 'r') as f:
+with open('../geoBoundaries/CHN_ADM1.geojson', 'r') as f:
     geojson_CHN = json.load(f)
 
 for iso3, name in special_iso3_2_name.items():
@@ -81,12 +81,12 @@ for iso3, name in special_iso3_2_name.items():
         if name in feature['properties']['shapeName']:
             print(f"Found {name} in CHN ADM1 geojson, extracting and saving as {iso3}_ADM0.geojson")
             feature['properties']['shapeISO'] = iso3
-            with open(f"./geoBoundaries/{iso3}_ADM0.geojson", 'w') as f:
+            with open(f"../geoBoundaries/{iso3}_ADM0.geojson", 'w') as f:
                 json.dump(feature, f)
             # delete the item from CHN geojson
             geojson_CHN['features'].remove(feature)
 # %%
-with open('./geoBoundaries/CHN_ADM1.geojson', 'w') as f:
+with open('../geoBoundaries/CHN_ADM1.geojson', 'w') as f:
     json.dump(geojson_CHN, f)
 
 # %%

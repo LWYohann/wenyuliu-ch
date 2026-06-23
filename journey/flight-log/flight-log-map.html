@@ -42,6 +42,23 @@
         }
 
 
+        .map-flight-popup-title > div {
+            display: flex;
+            align-items: center; /* Vertically centers the flag and text */
+            gap: 8px;            /* Even spacing between the flag and the text */
+            margin-bottom: 4px;  /* Optional: spacing between rows */
+        }
+
+        /* Enforce a uniform width for all flags so the text aligns perfectly */
+        .map-flight-popup-title .fi {
+            width: 24px;         /* Adjust this width to fit your design nicely */
+            flex-shrink: 0;      /* Prevents the flag from squeezing */
+            display: inline-block;
+            background-position: center; /* Keeps the square flag centered in its box */
+            background-size: contain;
+        }
+
+
         .map-popup-stats {
             display: flex;
             justify-content: space-around;

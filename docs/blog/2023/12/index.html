@@ -1,0 +1,1810 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Wenyu Liu">
+<meta name="author" content="Salima Khabthani">
+<meta name="author" content="Shaotian Wu">
+<meta name="author" content="Shiyi Huang">
+<meta name="author" content="Weiqi Chen">
+<meta name="description" content="A data story about COVID-19 pandemic &amp; green energy transition in Europe countries, delivery of course CS-401 Applied Data Analysis.">
+
+<title>COVID-19 Pandemic &amp; Green Energy Transition</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../.././files/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-e19f81c97bc45f6835df6be9cce9fdc9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-cb36341b52adc86602364164efda7458.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MT7VY85R43"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-MT7VY85R43', { 'anonymize_ip': true});
+</script>
+<style>
+
+      .quarto-title-block .quarto-title-banner {
+        background: #373a3c;
+      }
+</style>
+
+
+</head>
+
+<body class="floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../.././files/wenyu.svg" alt="" class="navbar-logo light-content">
+    <img src="../../.././files/wenyu.svg" alt="" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../CV/index.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../journey/index.html"> 
+<span class="menu-text">Journey</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../toolkit/index.html"> 
+<span class="menu-text">Toolkit</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://people.epfl.ch/wenyu.liu/?lang=en" rel="me"> 
+<span class="menu-text"><i class="bi bi-person-circle" title="EPFL Directory"></i></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../#" rel="me"> 
+<span class="menu-text"><i class="bi-envelope" title="E-mail"></i></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/LWYohann" rel="me"> 
+<span class="menu-text"><i class="bi-github" title="GitHub"></i></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.linkedin.com/in/wenyu-liu-epfl" rel="me"> 
+<span class="menu-text"><i class="bi-linkedin" title="LinkedIn"></i></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.instagram.com/lwyohann/?igsh=dmU1aTR6dW41MXFq" rel="me"> 
+<span class="menu-text"><i class="bi-instagram" title="Instagram"></i></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default blog-post page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <div class="quarto-title-block"><div><h1 class="title">COVID-19 Pandemic &amp; Green Energy Transition</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+                  <div>
+        <div class="description">
+          A data story about COVID-19 pandemic &amp; green energy transition in Europe countries, delivery of course CS-401 Applied Data Analysis.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Renewable Energy</div>
+                <div class="quarto-category">Data Analysis</div>
+                <div class="quarto-category">EPFL</div>
+                <div class="quarto-category">COVID-19</div>
+                <div class="quarto-category">Python</div>
+                <div class="quarto-category">Plotly</div>
+                <div class="quarto-category">Data Visualization</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Authors</div>
+      <div class="quarto-title-meta-contents">
+               <p><a href="https://wenyuliu.ch/">Wenyu Liu</a> </p>
+               <p>Salima Khabthani </p>
+               <p>Shaotian Wu </p>
+               <p>Shiyi Huang </p>
+               <p>Weiqi Chen </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">Friday, December 22, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#context" id="toc-context" class="nav-link active" data-scroll-target="#context">Context</a></li>
+  <li><a href="#data-glimpse" id="toc-data-glimpse" class="nav-link" data-scroll-target="#data-glimpse">Data Glimpse</a>
+  <ul class="collapse">
+  <li><a href="#electricity-generation-dataset" id="toc-electricity-generation-dataset" class="nav-link" data-scroll-target="#electricity-generation-dataset">Electricity Generation Dataset</a></li>
+  <li><a href="#aggragated-topics" id="toc-aggragated-topics" class="nav-link" data-scroll-target="#aggragated-topics">Aggragated Topics</a></li>
+  <li><a href="#wikipedia-pageviews" id="toc-wikipedia-pageviews" class="nav-link" data-scroll-target="#wikipedia-pageviews">Wikipedia Pageviews</a></li>
+  <li><a href="#intervention" id="toc-intervention" class="nav-link" data-scroll-target="#intervention">Intervention</a></li>
+  <li><a href="#containment-index" id="toc-containment-index" class="nav-link" data-scroll-target="#containment-index">Containment Index</a></li>
+  <li><a href="#mobility" id="toc-mobility" class="nav-link" data-scroll-target="#mobility">Mobility</a></li>
+  </ul></li>
+  <li><a href="#data-exploration" id="toc-data-exploration" class="nav-link" data-scroll-target="#data-exploration">Data Exploration</a>
+  <ul class="collapse">
+  <li><a href="#energy-transition-awareness-and-pageviews" id="toc-energy-transition-awareness-and-pageviews" class="nav-link" data-scroll-target="#energy-transition-awareness-and-pageviews">Energy Transition Awareness and Pageviews</a></li>
+  <li><a href="#time-series-analysis" id="toc-time-series-analysis" class="nav-link" data-scroll-target="#time-series-analysis">Time Series Analysis</a></li>
+  <li><a href="#electricity-generation-and-interventions" id="toc-electricity-generation-and-interventions" class="nav-link" data-scroll-target="#electricity-generation-and-interventions">Electricity generation and Interventions</a></li>
+  <li><a href="#the-ripple-effect-of-interventions-mobility-and-electricity-generation-during-the-pandemic" id="toc-the-ripple-effect-of-interventions-mobility-and-electricity-generation-during-the-pandemic" class="nav-link" data-scroll-target="#the-ripple-effect-of-interventions-mobility-and-electricity-generation-during-the-pandemic">The Ripple Effect of Interventions: Mobility and Electricity Generation during the Pandemic</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#power-off" id="toc-power-off" class="nav-link" data-scroll-target="#power-off">Power Off</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+<script>
+    function getWindIcon(windspeed) {
+
+        baseURL = "https://cdn.meteocons.com/3.0.0-next.10/svg/flat/"
+        if (windspeed < 3) {
+            return baseURL + "windsock-calm.svg";
+        } else if (windspeed < 10) {
+            return baseURL + "windsock-weak.svg";
+        } else if (windspeed < 25) {
+            return baseURL + "windsock-moderate.svg";
+        } else {
+            return baseURL + "windsock.svg";
+        }
+    }
+
+    async function getWeather() {
+        // Get approximate location from IP
+        // Example
+        // const lat = 46.515848;
+        // const lon = 6.563157;
+        // const city = "Ecublens";
+
+        const locRes = await fetch("https://ip-check-perf.radar.cloudflare.com/api/info");
+        const locData = await locRes.json();
+
+        const { latitude, longitude, city } = locData;
+
+
+        // Fetch weather
+        const weatherRes = await fetch(
+            `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`
+        );
+
+
+        const weatherData = await weatherRes.json();
+        if (weatherData.current_weather) {
+            const { temperature, weathercode, is_day, windspeed } = weatherData.current_weather;
+
+            const day_night = is_day ? "day" : "night";
+
+            
+
+            const weatherCodeSheet = await fetch("/html/weather/descriptions.json");
+            const weatherCodeData = await weatherCodeSheet.json();
+
+
+            const weatherDescription = weatherCodeData[weathercode][day_night]['description'] || "Unknown weather condition";
+            const weatherIcon = weatherCodeData[weathercode][day_night]['image'] || "unknown.png";
+            document.getElementById("local-weather").innerHTML = `
+                <img class="weather-icon" src=${weatherIcon}> ${city}, ${weatherDescription}, ${temperature}°C  <img class="weather-icon" src="${getWindIcon(windspeed)}">
+            `;
+        } else {
+            console.log("Could not fetch weather data of location");
+
+        }
+    }
+
+    getWeather();
+</script>
+
+
+
+
+
+<section id="context" class="level2">
+<h2 class="anchored" data-anchor-id="context">Context</h2>
+<p>Welcome to our data-driven journey through the ebbs and flows of electricity generation in the times of COVID-19. As the world hit the pause button and streets emptied, power plants continued humming—but the tune was a little different. From the bustling cities of France to the serene landscapes of Finland, we saw changes that made us rethink our relationship with energy. Think of this report not just as a collection of stats and graphs but as a story of resilience, adaptation, and the occasional surprise. So grab a cup of your favorite beverage, get comfy, and let’s dive into the electrifying narrative of how life’s unexpected turns can light up the grid in ways we never imagined.</p>
+<p>This data story delves into the fascinating interplay between the COVID-19 pandemic and the transition to green energy in Finland, France, Germany Netherlands, Serbia and Spain. By analyzing various datasets, we uncover how the pandemic impacted electricity generation, consumption, and awareness of renewable energy sources. Our exploration also includes machine learning predictions based on historical data and pandemic interventions. Key questions we address include:</p>
+<ul>
+<li>Public Awareness and Interest: How did the pandemic influence public engagement with green energy topics?</li>
+<li>Electricity Patterns: What changes occurred in electricity generation and consumption across different countries and energy sources during the pandemic?</li>
+<li>Pandemic Interventions: How did lockdowns and mobility restrictions affect the energy sector?</li>
+<li>Forecasting the Future: Can we predict future electricity generation using past data and pandemic measures?</li>
+</ul>
+</section>
+<section id="data-glimpse" class="level2">
+<h2 class="anchored" data-anchor-id="data-glimpse">Data Glimpse</h2>
+<p>Before we analysis further and answer our questions, we first need have a glimpse of our datas.</p>
+<section id="electricity-generation-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="electricity-generation-dataset">Electricity Generation Dataset</h3>
+<p><a href="https://transparency.entsoe.eu/dashboard/show">Actual Electricity Generation per Production Type in Europe Countries (2019~2022)</a>: This dataset contains changes in the electricity generated by different energy sources(eg. biomass, nuclear, marine.) in europe countries, which is recorded hourly or every 15-minutes.</p>
+<div style="text-align: center;">
+<iframe src="./images/Generation Mix.html" width="1110" height="500" style="border: none;" scrolling="no">
+</iframe>
+</div>
+<p>The figure above provides a comprehensive overview of the composition and trends in electricity generation over a period of approximately three and a half years in selected countries. We can discover that:</p>
+<ul>
+<li>Across countries, there is a seasonal pattern in overall electricity generation data, with less generation in the summer and more in the winter. For solar energy, the opposite is true, with less output in winter and more output in summer. This means that we need to try to filter out this seasonal pattern in subsequent analyses!</li>
+<li>There are obvious differences in the total power generation and power generation structure of each country. For example, Germany and France have the highest total power generation. France is highly dependent on nuclear power, while Serbia has less energy diversity.</li>
+<li>Sources like nuclear and coal provide a consistent baseline level of generation, which doesn’t show as much fluctuation as renewables, suggesting they are used as a reliable base-load power. This is obvious for nuclear generation in Finland (almost flat during the period) but it shows different pattern in France.</li>
+</ul>
+</section>
+<section id="aggragated-topics" class="level3">
+<h3 class="anchored" data-anchor-id="aggragated-topics">Aggragated Topics</h3>
+<p>This is a dataset of the evolution of views aggregated by topic, across a variety of languages. The most relevant topic for our analysis was the Stem Earth and Environment. In an overall idea, the increase of visiting a certain topic means the increase of awareness for that topic. However, when analyzing this, we will have to take the increase and decrease of the background visit. In other words, if the whole website has an increasing visit, it is hard to say that which topic is gaining more awareness. As a result, it is necessary to consider the overall visit frequency when trying to understand the topic visit frequency.</p>
+</section>
+<section id="wikipedia-pageviews" class="level3">
+<h3 class="anchored" data-anchor-id="wikipedia-pageviews">Wikipedia Pageviews</h3>
+<p>This is the Wikipedia pageviews in different languages.</p>
+<p>These additional datasets are pageviews of:</p>
+<ul>
+<li>Energy Storage</li>
+<li>Electric Vehicle</li>
+<li>Electricity Generation</li>
+<li>Renewable Energy</li>
+<li>Sustainable Energy</li>
+<li>Wind Turbine</li>
+<li>Photovoltaics</li>
+<li>Climate Change</li>
+</ul>
+</section>
+<section id="intervention" class="level3">
+<h3 class="anchored" data-anchor-id="intervention">Intervention</h3>
+<p>This dataset shows the time of six countries to take actions towards COVID, including the time of reporting the first case and the first death due to COVID, the time that school is closed and public events banned and the time that the country is in lockdown. Also, it shows the time of the country taking normalcy. Some countries didn’t announce the national lockdown or national normalcy, so some time in this table is missing. When analyzing the trend of energy transition, the time listed in the table will be an important reference to when COVID started attacking and when COVID stopped.</p>
+<div style="text-align: center;">
+<iframe src="./images/Interventions.html" width="1110" height="310" style="border: none;" scrolling="no">
+</iframe>
+</div>
+</section>
+<section id="containment-index" class="level3">
+<h3 class="anchored" data-anchor-id="containment-index">Containment Index</h3>
+<p>The Oxford COVID-19 Government Response Tracker (<a href="https://github.com/OxCGRT/covid-policy-dataset/tree/main/data">OxCGRT</a>) database : This dataset contains the strictness of lockdown policies for nearly all countries. We focus on eight containment indicators (C1~C8) in the OxCGRT database:</p>
+<ul>
+<li>C1 - School Closures</li>
+<li>C2 - Workplace closing</li>
+<li>C3 - Cancel Public Events</li>
+<li>C4 - Restrictions on gatherings</li>
+<li>C5 - Public Transportation</li>
+<li>C6 - Stay at Home Order</li>
+<li>C7 - Restrictions on Internal Movement</li>
+<li>C8 - International Travel Controls</li>
+</ul>
+<p>According to the <a href="https://github.com/OxCGRT/covid-policy-dataset/blob/main/documentation_and_codebook.md#calculation-of-policy-indices">guidelines</a> of this data set, we calculated the <code>Containment Index</code> of six countries using C1 to C8. It ranges from 0 to 100, with 100 representing the strictest lockdown intensity. The evolution of lockdown intensity in selected countries is shown in the chart below.</p>
+<div style="text-align: center;">
+<iframe src="./images/Containment Index.html" width="1110" height="500" style="border: none;" scrolling="no">
+</iframe>
+</div>
+<p>Thanks to OxCGRT, which furnishes extensive and scientific data about governments’ diverse policy responses in 2020, 2021, and 2022. This data assesses the degree of governmental action on a scale. The resulting scores were combined to construct a series of policy indices, summarizing the collective impact of these measures.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Contries</th>
+<th style="text-align: center;">CI (mean)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Finland</td>
+<td style="text-align: center;">29.221927</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">France</td>
+<td style="text-align: center;">35.373300</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Germany</td>
+<td style="text-align: center;">40.314003</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Netherlands</td>
+<td style="text-align: center;">38.458093</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Serbia</td>
+<td style="text-align: center;">33.245152</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Spain</td>
+<td style="text-align: center;">44.206023</td>
+</tr>
+</tbody>
+</table>
+<p>The average CI in different countries are listed in the table above, we can discover that: - Spain has the highest mean CI at 44.21, suggesting that it implemented the most stringent lockdown measures among these countries. This might reflect a response to a severe outbreak or a proactive approach to prevent the spread of the virus. - Finland displays the lowest mean CI at 29.22, which indicate that it had the least stringent lockdown measures. This could reflect a less restrictive approach to containment or a lower incidence of COVID-19 cases necessitating such measures.</p>
+</section>
+<section id="mobility" class="level3">
+<h3 class="anchored" data-anchor-id="mobility">Mobility</h3>
+<p>This data set contains Google Mobility Report and Apple Mobility Trends, these two datasets are extended to 2022.</p>
+<p>This figure comes from Google Mobility Report. It divides mobility to some different categories according to their goal and shows the trend of mobility. The higher the curve come, the more mobility there is at the time. The overall trend of COVID is that it strikes a lot at winter, but in summer the power of COVID will be reduced. As a result, we can see from the figure that the mobility gets the highest during summer (mainly from late May to early September), but gets the lowest during winter (mainly late November to early March). For different activities, the mobility also varies a lot. The activity that is necessary has less fluctuation from time to time, such as grocery &amp; pharmacy and residential. The mobility of entertaining places and workplaces, on the opposite, has a big fluctuation from time to time. We also find that the mobility of workplaces comes low during Janurary every year.</p>
+<div style="text-align: center;">
+<iframe src="./images/Google_Mobility.html" width="100%" height="200px" style="border: none;" scrolling="no">
+</iframe>
+</div>
+</section>
+</section>
+<section id="data-exploration" class="level2">
+<h2 class="anchored" data-anchor-id="data-exploration">Data Exploration</h2>
+<section id="energy-transition-awareness-and-pageviews" class="level3">
+<h3 class="anchored" data-anchor-id="energy-transition-awareness-and-pageviews">Energy Transition Awareness and Pageviews</h3>
+<section id="aggregated-dataset-analysis" class="level4">
+<h4 class="anchored" data-anchor-id="aggregated-dataset-analysis">Aggregated DataSet Analysis</h4>
+<p>In our exploration of the impact of COVID on the green transition, we first started by the analysis of the aggregated_timeseries dataset. The most relevant topic for our analysis was the Stem Earth and Environment and we focused on it’s distributions of pageview counts pre and post COVID periods. The histogram help vizualizing the pre and post distributions which doesn’t match our expected conclusion, as we see that the mean count of the pre-COVID is higher that the post-COVID one.</p>
+<div style="text-align: center;">
+<iframe src="./images/Total Pageviews in StemEarth.html" width="910" height="610" style="border: none;" scrolling="no">
+</iframe>
+</div>
+<p>To statistically validate the observed difference, we use the z-score test. By converting our pageview counts into z-scores, we standardize the data, allowing us to assess the number of standard deviations each data point lies from the mean. This normalization is crucial for unbiased comparisons.</p>
+<p>We have obtained a p-value of 0.016 &lt; significance level of 0.05 , which suggests that the difference is statistically significant, the z-score quantify this difference and shows that the post-COVID mean is 2.407 standard deviations below the pre-COVID mean. This is a substantial deviation and suggests that there is a significant decrease in pageviews for Stem Earth and Environment content post-COVID compared to pre-COVID.</p>
+<p>Here, as we have pageview counts for different languages, a <strong>Simpson’s Paradox</strong> can occur, where a trend appears in several different groups of data but disappears or reverses when these groups are combined, suggesting that the observed overall decrease in pageviews post-COVID might not apply uniformly across all languages.</p>
+<p>Therefore, to fully understand the dynamics and to avoid potentially misleading conclusions, we will proceed with a language-wise analysis.</p>
+<p>Initial visual assessment of differences between pageview counts accross languages</p>
+<div style="text-align: center;">
+<iframe src="./images/Language Distributions.html" width="1010" height="910" style="border: none;" scrolling="no">
+</iframe>
+</div>
+<p>Our first visual conclusions are for the English (en) and Danish (da) language where the histograms show a pronounced shift towards the left in the post-COVID period. The density of the distributions in the Italian (it) and Finnish (fi) segments, however, shifts right, suggesting an increase in pageviews post-COVID. The histogram for Turkish (tr) content shows an extreme skew towards the post-COVID period, with a very high peak.</p>
+<div style="text-align: center;">
+<iframe src="./images/Z and P for Each Language.html" width="810" height="810" style="border: none;" scrolling="no">
+</iframe>
+</div>
+<p>Again, we need to statistically validate the observed difference:</p>
+<p>Upon analyzing the z-scores and p-values, we find that:</p>
+<ul>
+<li>The English and Danish segments, with high positive z-scores and very low p-values, indicate a significant drop in engagement.</li>
+<li>The Italian, Finnish, and Catalan segments show a significant increase in interest post-COVID, with the Turkish segment displaying the most substantial increase.</li>
+<li>However, for German (de), Japanese (ja), and Korean (ko) segments, the p-values exceed the significance threshold, indicating that any observed changes in pageviews are not statistically significant.</li>
+</ul>
+<p>This detailed breakdown demonstrates the varied impact of COVID-19 on online engagement with the STEM Earth and Environment content across different linguistic audiences.</p>
+</section>
+<section id="added-datasets-analysis" class="level4">
+<h4 class="anchored" data-anchor-id="added-datasets-analysis">Added datasets Analysis</h4>
+<p>In the second part of our analysis, we expanded the dataset to include pageview counts from a range of topics directly relevant to our investigation. These additional datasets are:</p>
+<ul>
+<li>Energy Storage</li>
+<li>Electric Vehicle</li>
+<li>Electricity Generation</li>
+<li>Renewable Energy</li>
+<li>Sustainable Energy</li>
+<li>Wind Turbine</li>
+<li>Photovoltaics</li>
+<li>Climate Change</li>
+</ul>
+<p>We start by the visualization of the pre and post distribution of page views count for each dataset:</p>
+<div style="text-align: center;">
+<iframe src="./images/Distributions for different terms.html" width="910" height="510" style="border: none;" scrolling="no">
+</iframe>
+</div>
+<ul>
+<li>Significant Increase in Pageviews:
+<ul>
+<li>Electric Vehicle: Experienced a substantial increase, as indicated by a high z-score of -5.3561 and a p-value close to zero 1.009e-7.</li>
+</ul></li>
+<li>Significant Decrease in Pageviews:
+<ul>
+<li>Electricity Generation: Experienced a significant decrease with a z-score of 4.64 and a p-value of 3.76e-6。</li>
+<li>Renewable Energy: Significant decrease, with a z-score of 3.80 and a p-value of 1.5e-5.</li>
+<li>Photovoltaics: Significant decrease with a z-score of 5.13 and a p-value of 3.22e-7.</li>
+<li>Climate Change: Significant moderate decrease with a z-score of 2.08 and a p-value of 0.03.</li>
+</ul></li>
+<li>No Significant Change in Pageviews: Energy Storage, Sustainable Energy and Wind Turbine.</li>
+</ul>
+<p>As we can face again the Simpson Paradox, we will the analysis language wise, we have chosen another set of languages for this analysis that covers a wider range of native speakers. The languages considered in these datasets are: - zh: Chinese - en: English - fr: French - es: Spanish - ar: Arabic - da: Danish - fa: Persian - pt: Portuguese - tr: Turkish - vi: Vietnamese</p>
+<div style="text-align: center;">
+<iframe src="./images/ZandP for different articles.html" width="810" height="810" style="border: none;" scrolling="no">
+</iframe>
+</div>
+<div style="text-align: center;">
+<iframe src="./images/Significant Changes Heatmap.html" width="910" height="710" style="border: none;" scrolling="no">
+</iframe>
+</div>
+<p>The heatmap illustrates the z-scores associated with changes in pageviews for various environmental topics post-COVID, categorized by language. The shades of red and green represent the magnitude of decrease or increase in engagement, respectively.</p>
+<p>For the upper half, particularly, the topics of “Electricity Generation” and “Energy Storage” exhibit some of the most pronounced decreases across multiple languages.</p>
+<p>Conversely, the lower half of the heatmap shows significant increases post-COVID. It’s especially apparent for “Renewable Energy,” “Photovoltaics,” and “Electric Vehicle” topics, where certain languages like Portuguese (pt) and Vietnamese (vi) display substantial growth in interest.</p>
+<p>While some areas have seen a surge in public attention, others have experienced a decline. Some of this conclusions can only be validated by other cross analysis. For example, we cannot access that the COVID is responsible of the increase in terms of search in the topic Electric Vehicle. To assess this with certainty, we need to perform a causal analysis taking into account the trend of the later years on this topic, the EU reglementations and the exploding prices of gas.</p>
+</section>
+</section>
+<section id="time-series-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="time-series-analysis">Time Series Analysis</h3>
+<section id="the-natural-rhythm-of-electricity-use" class="level4">
+<h4 class="anchored" data-anchor-id="the-natural-rhythm-of-electricity-use">The Natural Rhythm of Electricity Use</h4>
+<p>In the real world, there are obvious cyclical patterns in power generation and consumption.</p>
+<p>The first figure presents a box plot distribution of electricity generation measured in gigawatt-hours (GWh) across the days of the week. A discernible trend is observed where weekdays exhibit a higher median generation compared to weekends, reflecting the conventional demand cycle influenced by industrial and commercial activities. The presence of outliers, particularly on weekdays, could indicate exceptional demand or supply events.</p>
+<div style="text-align: center;">
+<iframe src="./images/Weekly.html" width="910" height="610" style="border: none;" scrolling="no">
+</iframe>
+</div>
+<p>The second figure shifts the focus to a monthly overview, revealing the seasonality in electricity generation. The box plots indicate a significant variation between months, with the winter months showing elevated levels of generation, which could be attributed to increased heating demand and shorter daylight hours. Notably, December stands out with the highest median generation and the largest interquartile range, suggesting a potential increase in both baseline and peak demand during the holiday season.</p>
+<div style="text-align: center;">
+<iframe src="./images/Monthly.html" width="910" height="610" style="border: none;" scrolling="no">
+</iframe>
+</div>
+<p>These figures underscore the variability in electricity generation that aligns with human activity patterns and natural cycles. By understanding these trends, we further clarified the need to filter out these differences (cofounders) in subsequent analyses.</p>
+<p>Before we move on, one thing we need to mention is that nuclear,coal, oil, and gas are non-renewable energy while others(hydro, biomass, wind, and waste) are considered renewable energy sources.</p>
+</section>
+<section id="with-different-events-what-happened" class="level4">
+<h4 class="anchored" data-anchor-id="with-different-events-what-happened">With Different Events, What Happened?</h4>
+<p>In order to overcome the impact of differences between weekdays and weekends, in our analysis, the total electricity generation and renewable electricity generation are taken as a 7-day average before and after all events.</p>
+<p>It can be seen that in most countries, with the advent of the epidemic, total power generation has declined, and a slowing down trend can be seen after Normalcy.</p>
+<p>In the figure below, figure shows the trend of energy generated and renewable electricity generated in different countries, trying to find out what impact it will have to different energy generation methods. We can see in most countries, with the advent of the epidemic, total power generation has shown a decline pattern, with a slowing down trend after Normalcy.</p>
+<div style="text-align: center;">
+<iframe src="./images/interactive_energy_analysis.html" width="1110" height="610" style="border: none;" scrolling="no">
+</iframe>
+</div>
+<p>Then, A t-test was performed on the average total electricity generation and renewable electricity generation in the 7 days before and after important events.</p>
+<p>The heatmap for total electricity generation depicts a general pattern of significant change in response to the onset of COVID-19 and the ensuing governmental measures. Most countries registered statistically significant shifts in electricity generation patterns during key events. However, the imposition of mobility restrictions did not correspond with significant changes in electricity generation in countries like France and Spain, as evidenced by p-values of 0.994 and 0.679, respectively.</p>
+<div style="text-align: center;">
+<iframe src="./images/Total Electricity Generation Before and After Events.html" width="910" height="510" style="border: none;" scrolling="no">
+</iframe>
+</div>
+<p>Similarly, in the heatmap for renewable electricity generation, it appears that renewable sources were impacted by the pandemic measures in most countries. Notable exceptions include Finland and the Netherlands, where ‘1st case’ and ‘Normalcy’ led to a larger p-value, indicating there is no significant change in renewable electricity generation. This could reflect the inherent variability in renewable sources or potential shifts in energy policy or market dynamics in response to the pandemic.</p>
+<div style="text-align: center;">
+<iframe src="./images/Renewable Electricity Generation Before and After Events.html" width="910" height="510" style="border: none;" scrolling="no">
+</iframe>
+</div>
+</section>
+</section>
+<section id="electricity-generation-and-interventions" class="level3">
+<h3 class="anchored" data-anchor-id="electricity-generation-and-interventions">Electricity generation and Interventions</h3>
+<section id="has-the-electricity-generation-structure-changed" class="level4">
+<h4 class="anchored" data-anchor-id="has-the-electricity-generation-structure-changed">Has the Electricity Generation Structure Changed?</h4>
+<p>First, let’s take a look at the electricity generation structure amongs six countries before, during and after the pandemic respectively.</p>
+<p>Before we show you the visualization, let me introduce how we define before, during and after.</p>
+<p>In our analysis, we define the “epidemic period” as the time frame beginning with the first confirmed case and extending until the point of return to normalcy((Spanish normalcy is missing, we took the average to fill it in)). This period encompasses the entire duration of the epidemic’s impact, starting from its initial emergence and concluding when conditions have stabilized and daily life has resumed its usual rhythm. This definition allows for a comprehensive understanding of the epidemic’s full scope and duration, capturing both the onset and the eventual subsiding of its effects.</p>
+<p>To mitigate the impact of natural rhythms or seasonal fluctuations, we adopt a comparative approach in our data analysis. Specifically, for the periods before and after our focal “during” phase, we align the data based on the same months and days, but adjust the years, either by decreasing or increasing them by one year. This method allows us to closely mirror the temporal context of the “during” phase while effectively isolating and minimizing seasonal or cyclical variations. By comparing these analogous time periods across different years, we aim to gain a clearer understanding of any changes or trends that are not merely attributable to regular seasonal patterns.</p>
+<div style="text-align: center;">
+<iframe src="./images/Pie.html" width="1110" height="510" style="border: none;" scrolling="no">
+</iframe>
+</div>
+<p>Based on pie chart, we can get some basic observations: - The majority sources of most countries are nuclear, hydro, coal and gas. - In most of countries, transition towards renewable sources increased during the epidemic, with higher hydro and coal and lower nuclear contributions except for the Serbia with higher coal and lower hydro contributions - After the epidemic, most countries displayed a partial reversion in the renewable trend, notably in hydroelectric and gas power. - Among all the countries, biomass, oil, and waste have made little contributions and remained relatively consistent.</p>
+<p>These observations reflect the dynamic nature of energy consumption and production patterns in response to global events such as an epidemic. They also highlight the varying degrees of adaptability and resilience in different countries’ energy sectors.</p>
+<p>Let’s conduct an analysis of variance (ANOVA) for these energy sources to assess whether there are statistically significant differences between them in terms of their effects or contributions. This analysis will help us determine if there are notable variations among these sources and which sources might significantly differ from the rest in their impact or significance.</p>
+<div style="text-align: center;">
+<iframe src="./images/ANOVA.html" width="810" height="610" style="border: none;" scrolling="no">
+</iframe>
+</div>
+<p>The bar chart visualizes the -log10 transformed p-values from the ANOVA results for each energy source. Red Dashed Line: This line represents the -log10 transformed significance level (typically p = 0.05). Bars that extend above this line are considered statistically significant.</p>
+<p>Well, it is obvious that the key sources we mentioned previously are all in greater significance. So there might be some main factors that affect the trend of the key sources.</p>
+<p>Interestingly, for most countries (except France), the p-value of nuclear power is not very high, which is consistent with the fact that nuclear power acts as base load in reality.</p>
+</section>
+</section>
+<section id="the-ripple-effect-of-interventions-mobility-and-electricity-generation-during-the-pandemic" class="level3">
+<h3 class="anchored" data-anchor-id="the-ripple-effect-of-interventions-mobility-and-electricity-generation-during-the-pandemic">The Ripple Effect of Interventions: Mobility and Electricity Generation during the Pandemic</h3>
+<p>In order to answer these questions, we need to explore the mobility data: apple_mobility which contains the intensity score of the region in three transportation types(driving, walking and transit) of each day from 2020-01-13 to 2022-04-12. Please notice that the transit data of Serbia is missing.</p>
+<p>The intensity score refer to relative mobility strength based on first day(2020-01-13, which intensity score is 100). The higher intensity score, the more people choosing the transportation types.</p>
+<p>Review the data we all have now, mobility, intervention and energy generation. It is time to combine then together!</p>
+<div style="text-align: center;">
+<iframe src="./images/Total Electricity Generation_Mobility.html" width="1110" height="510" style="border: none;" scrolling="no">
+</iframe>
+</div>
+<div style="text-align: center;">
+<iframe src="./images/Renewable Generation Percent_Mobility.html" width="1110" height="510" style="border: none;" scrolling="no">
+</iframe>
+</div>
+<p>At the onset of lockdowns, a sharp decline in mobility was observed across all countries. The once-bustling avenues of movement—captured in metrics of driving, walking, and transit—saw a sudden plunge. This drop in human activity was mirrored by a corresponding decrease in energy consumption. The graphs show a synchrony between the fall in mobility and a dip in energy usage, suggesting a direct correlation between the two.</p>
+<p>While the reduction in mobility was somewhat uniform, the impact on energy consumption varied. In Finland, energy generation closely tracked reductions in mobility, indicating a direct dependency of energy usage on population movement. In contrast, countries like Germany displayed resilience in energy consumption despite decreased mobility, hinting at a robust energy infrastructure possibly catering to essential services that remained operational.</p>
+<p>Gradually, as restrictions lifted, there was a cautious uptick in mobility. This return to movement, however, was not always matched by a proportional increase in energy consumption, suggesting a lasting change in energy use patterns, perhaps due to a sustained shift towards remote work and more conscious energy utilization.</p>
+<p>While we’ve established a foundational perspective on how interventions influence mobility and energy consumption, to truly grasp the depth of these impacts, we require a more systematic assessment of the intervention strictness implemented by these countries. By quantifying the degrees of lockdown measures, we can disentangle the nuanced effects they have had on the day-to-day activities and energy usage patterns. This will enable us to paint a clearer picture of the relationship between policy strictness and its real-world repercussions</p>
+<section id="spearman-correlation" class="level4">
+<h4 class="anchored" data-anchor-id="spearman-correlation">Spearman Correlation</h4>
+<p>Acknowledging the myriad of elements that could potentially affect energy consumption and its distribution, it becomes crucial to dissect and understand these intricacies. To achieve this, we are set to embark on a correlation analysis, complemented by an examination of p-values. This statistical approach will assist us in uncovering the degree to which these factors are related to energy consumption—whether they move in tandem or in opposition to each other. By deciphering the significance, directionality of these correlations, and the p-values, we can gauge the statistical significance of our findings. The inclusion of p-value analysis ensures that our conclusions are not just based on observed trends but are also statistically robust. This comprehensive analysis will illuminate how various influences interplay to shape energy usage patterns, particularly during the unique circumstances brought by the pandemic.</p>
+<div style="text-align: center;">
+<iframe src="./images/Total_corr.html" width="910" height="610" style="border: none;" scrolling="no">
+</iframe>
+</div>
+<div style="text-align: center;">
+<iframe src="./images/Total_p-value.html" width="910" height="610" style="border: none;" scrolling="no">
+</iframe>
+</div>
+<div style="text-align: center;">
+<iframe src="./images/Resource Use_corr.html" width="910" height="610" style="border: none;" scrolling="no">
+</iframe>
+</div>
+<div style="text-align: center;">
+<iframe src="./images/Resource Use_p.html" width="910" height="610" style="border: none;" scrolling="no">
+</iframe>
+</div>
+<p>Let’s analyze the result one by one:</p>
+<ul>
+<li><p>Finland: A notable observation is the strong negative correlation between walking and total energy generation (-0.611). However, the p-value (0.935) suggests that this correlation is not statistically significant, which means we cannot confidently attribute changes in energy generation to changes in walking activity.</p></li>
+<li><p>France: The negative correlation between renewable energy percentage and total energy generation (-0.351) is not statistically significant either, given its p-value (0.306). Thus, while there is an observed association, we cannot reliably infer a causal link between these variables.</p></li>
+<li><p>Germany: The correlation between parks and total energy generation is slightly negative (-0.507), and the p-value (0.040) indicates that this correlation could be statistically significant. This suggests a potential inverse relationship between leisure activity and energy production, possibly worth further investigation.</p></li>
+<li><p>The Netherlands: There’s a strong negative correlation with the day of the week (-0.431), with a significant p-value (0.030), implying a consistent pattern where the day within the week might be influencing energy generation significantly, potentially reflecting operational cycles in energy usage.</p></li>
+<li><p>Serbia: While there is a moderate negative correlation between grocery/pharmacy activity and energy generation (-0.362), the p-value (0.689) suggests that this correlation is not statistically significant.</p></li>
+<li><p>Spain: A positive correlation with the year (0.379) suggests an increasing trend in energy generation over time, but the p-value (0.349) indicates that this trend is not statistically significant.</p></li>
+</ul>
+<p>Across all countries, correlations vary in strength, but many lack statistical significance based on their p-values. This suggests that while some factors may appear to influence energy generation, these influences are not consistently strong enough to exclude the possibility that they are due to random chance.</p>
+<p>With the insights from the correlation and significance analysis, we can now transition to predictive modeling using machine learning. The goal is to use the identified relationships that are both strong and statistically significant as features in our model.</p>
+</section>
+<section id="so-how-about-forecast-by-machine-learning" class="level4">
+<h4 class="anchored" data-anchor-id="so-how-about-forecast-by-machine-learning">So How about Forecast by Machine Learning?</h4>
+<p>From the Spearman correlation analysis above, we excluded the features of ‘DayofMonth’ , ‘transit’ and ‘Workplaces’, which shows a relatively high p-value in most countries.</p>
+<p>Before we start, let us first introduce the datasets we use to do analysis and forecasting. Based on the correlation and p-value analysis</p>
+<p><code>Total</code> representing the total electricity consumption as the label.</p>
+<p>Based on the correlation and p-value analysis, we select out the following features:</p>
+<p><code>DayOfWeek</code> If this factor has consistently low p-values across multiple countries, it indicates a significant weekly pattern in energy generation that could be predictive regardless of the country. Energy consumption patterns can significantly differ between weekdays and weekends.</p>
+<p><code>Renewable_percent</code>: Even though the p-values vary, if the correlation is consistently strong across countries, this feature may capture the influence of renewable energy production on the total energy generation, which is a crucial aspect of modern energy systems.</p>
+<p><code>Parks</code>: If the recreational activity, as represented by the usage of parks, shows consistent correlations with energy generation, it might reflect broader societal behavior patterns that affect energy usage, such as reduced industrial activity on days with higher recreational activity.</p>
+<p><code>Transit Stations</code>: The use of transit stations could be a proxy for overall economic activity, including commuting patterns and industrial activity. If it correlates with energy generation across several countries, it could be a relevant predictor.</p>
+<p><code>CI (Containment Index)</code>: This could be a particularly relevant feature if the lockdown measures significantly impacted energy consumption patterns. The CI might capture the effects of reduced industrial, commercial, and personal activity on energy demand.</p>
+<p><code>Walking</code>: The activity level of the population, as indicated by walking, if correlated with energy generation, might reflect changes in daily routines that could impact energy consumption, such as increased remote work or shifts in commercial activity.</p>
+<p><code>Month</code>, <code>Year</code>, <code>driving</code>, <code>Retail &amp; Recreation</code>, <code>Residential</code> are included as well.</p>
+<div style="text-align: center;">
+<iframe src="./images/Feature Importance.html" width="810" height="610" style="border: none;" scrolling="no">
+</iframe>
+</div>
+<section id="split-the-train-and-test-datasets" class="level5">
+<h5 class="anchored" data-anchor-id="split-the-train-and-test-datasets">Split the train and test datasets</h5>
+<p>To ensure our model’s reliability, we’ll split the dataset into training and test sets. This division enables us to train the model on historical data and then assess its performance on unseen data, a crucial step before proceeding with analysis and forecasting.</p>
+<p>Specifically, we select all the data from 2020 to 2021 as the training set while the test set contains data from ‘2022’ onwards.</p>
+</section>
+<section id="model-setup" class="level5">
+<h5 class="anchored" data-anchor-id="model-setup">Model setup</h5>
+<p>Now that we’ve completed the preparatory work, let’s proceed to train the model - base_score=0.5: The initial prediction score of the model. - booster=‘gbtree’: Specifies the type of booster used, which in this case is a tree-based model. - n_estimators=1500: The number of trees (estimators) to build in the boosting process. - early_stopping_rounds=50: Determines the number of rounds (iterations) without improvement on the validation metric before stopping training. - objective=‘reg:linear’: The objective function set to linear regression, indicating the model will predict continuous numeric values. - max_depth=4: Sets the maximum depth of the trees in the boosting process. - learning_rate=0.01: Controls the step size at each iteration during training, preventing overfitting by making the model learning slower.</p>
+<p>Utilizing the XGBoost library, we construct an XGBoostRegressor model, a highly regarded gradient boosting algorithm recognized for its proficiency in time series forecasting. Fitting the model involves training it on the provided dataset. Subsequently, we assess its performance on both the training and test sets by employing the root mean squared error (RMSE) metric.</p>
+</section>
+<section id="predictions" class="level5">
+<h5 class="anchored" data-anchor-id="predictions">Predictions</h5>
+<p>Now, it is time to utilize our trained model to make predictions on the test set and then create visualizations to represent the results.</p>
+<div style="text-align: center;">
+<iframe src="./images/Total Electricity Generation.html" width="1110" height="610" style="border: none;" scrolling="no">
+</iframe>
+</div>
+<p>Well, from a direct visual standpoint, it hard to point out which country the model fits well since the y-axis scale is different, we need further information.</p>
+</section>
+<section id="evaluation" class="level5">
+<h5 class="anchored" data-anchor-id="evaluation">Evaluation</h5>
+<p>As data analysts, we can not rely solely on intuition. So let’s take a look at their root mean squared error scores(RMSE) and relative error(RE). We can find that the model performs better in France and Spain while the model doesn’t fit Serbia well.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Countries</th>
+<th style="text-align: center;">RMSE [GWh]</th>
+<th style="text-align: center;">RE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Finland</td>
+<td style="text-align: center;">15.81</td>
+<td style="text-align: center;">0.081</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">France</td>
+<td style="text-align: center;">113.36</td>
+<td style="text-align: center;">0.076</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Germany</td>
+<td style="text-align: center;">125.05</td>
+<td style="text-align: center;">0.081</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Netherlands</td>
+<td style="text-align: center;">31.78</td>
+<td style="text-align: center;">0.097</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Serbia</td>
+<td style="text-align: center;">11.52</td>
+<td style="text-align: center;">0.121</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Spain</td>
+<td style="text-align: center;">57.00</td>
+<td style="text-align: center;">0.079</td>
+</tr>
+</tbody>
+</table>
+<p>As we see, their RE are about 10% , which indicates the model is performing good.</p>
+<p>Within this section, we conducted an analysis of total energy consumption utilizing the integrated dataset. This comprehensive analysis not only offers valuable insights into the patterns of total energy consumption but also facilitates precise forecasting. By comprehending the trends in total energy consumption, informed decisions can be made concerning energy management and resource allocation in the future public health issues.</p>
+</section>
+</section>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Our findings shed light on the pandemic’s impact on green energy transition:</p>
+<ul>
+<li>Varied Awareness: Public interest in green energy topics fluctuated during the pandemic. While some languages and topics experienced increased pageviews on environmental content, others remained stable or declined. This suggests a nuanced response across linguistic and cultural contexts.</li>
+<li>Mixed Electricity Trends: Total electricity generation decreased globally due to lockdowns and economic slowdowns. However, renewable energy generation showed diverse patterns—some countries increased their share, while others remained unchanged. National policies, markets, and infrastructure played a crucial role.</li>
+<li>Direct Pandemic Influence: Mobility data revealed reduced movement during lockdowns, directly impacting energy consumption. The strictness of pandemic interventions correlated with energy usage. Yet, outcomes varied by country, reflecting unique contexts.</li>
+<li>Machine Learning Predictions: Our XGBoost-based model accurately forecasted future energy generation, capturing seasonal trends and pandemic effects. This tool can inform energy planning and management decisions.</li>
+</ul>
+<p>In summary, this data story underscores the pandemic’s complex implications for green energy transition and calls for further research and action in these critical areas.</p>
+</section>
+<section id="power-off" class="level2">
+<h2 class="anchored" data-anchor-id="power-off">Power Off</h2>
+<p>As we wrap up our storytelling session, let’s flick the switch off with some reflections. We’ve surfed through peaks and troughs of watts and volts, uncovering how each country danced to the pandemic’s peculiar rhythm. While traditional power generation often took a siesta, renewables kept the party going, showing us that they’re not just about green living but also about keeping the lights on when life throws a curveball.</p>
+<p>It’s been quite the ride—like a rollercoaster for electrons. As we move forward, this tale of energy in the time of a pandemic leaves us with a few nuggets of wisdom: diversity is key in our energy mix, and a bit of green can help keep the grid serene. So let’s toast to the power of data in shedding light on our world and helping us chart a course to a brighter, more sustainable future. Here’s to more stories, more data, and more insights.</p>
+<p>It’s NOW, Power offffffff !</p>
+
+
+<!-- -->
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{liu2023,
+  author = {Liu, Wenyu and Khabthani, Salima and Wu, Shaotian and Huang,
+    Shiyi and Chen, Weiqi},
+  title = {COVID-19 {Pandemic} \&amp; {Green} {Energy} {Transition}},
+  date = {2023-12-22},
+  url = {http://wenyuliu.ch/blog/2023/12/},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-liu2023" class="csl-entry quarto-appendix-citeas" role="listitem">
+Liu, Wenyu, Salima Khabthani, Shaotian Wu, Shiyi Huang, and Weiqi Chen.
+2023. <span>“COVID-19 Pandemic &amp; Green Energy Transition.”</span>
+December 22. <a href="http://wenyuliu.ch/blog/2023/12/">http://wenyuliu.ch/blog/2023/12/</a>.
+</div></div></section></div></main> <!-- /main -->
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function() {
+    // 1. Find the icon that has the title "E-mail"
+    const emailIcon = document.querySelector('i[title="E-mail"]');
+    
+    if (emailIcon) {
+      // 2. Climb up the DOM tree to find the nearest <a> parent
+      const emailLink = emailIcon.closest('a');
+      
+      if (emailLink) {
+        // 3. Assemble the email (split to stay hidden from simple bots)
+        const user = "wenyu.liu";
+        const domain = "epfl.ch";
+        const addr = user + "@" + domain;
+        
+        // 4. Set the href
+        emailLink.setAttribute("href", "mailto:" + addr);
+        
+        // Optional: Remove the "#" from the status bar on hover
+        emailLink.addEventListener('mouseenter', function() {
+          this.href = "mailto:" + addr;
+        });
+      }
+    }
+  });
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("http:\/\/wenyuliu\.ch\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "COVID-19 Pandemic &amp; Green Energy Transition"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "A data story about COVID-19 pandemic &amp; green energy transition in Europe countries, delivery of course CS-401 Applied Data Analysis."</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2023-12-22"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> </span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    - name: Wenyu Liu</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">      url: https://wenyuliu.ch/</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    - Salima Khabthani</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">    - Shaotian Wu</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">    - Shiyi Huang</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">    - Weiqi Chen</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> </span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">    - Renewable Energy</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">    - Data Analysis</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">    - EPFL</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">    - COVID-19</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">    - Python</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">    - Plotly</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">    - Data Visualization</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> "./images/logo.png"</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">    shift-heading-level-by: 1</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co">    lightbox: true</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="an">citation:</span><span class="co"> true</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="fu"># Context</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>Welcome to our data-driven journey through the ebbs and flows of electricity generation in the times of COVID-19. As the world hit the pause button and streets emptied, power plants continued humming—but the tune was a little different. From the bustling cities of France to the serene landscapes of Finland, we saw changes that made us rethink our relationship with energy. Think of this report not just as a collection of stats and graphs but as a story of resilience, adaptation, and the occasional surprise. So grab a cup of your favorite beverage, get comfy, and let's dive into the electrifying narrative of how life's unexpected turns can light up the grid in ways we never imagined.</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>This data story delves into the fascinating interplay between the COVID-19 pandemic and the transition to green energy in Finland, France, Germany Netherlands, Serbia and Spain. By analyzing various datasets, we uncover how the pandemic impacted electricity generation, consumption, and awareness of renewable energy sources. Our exploration also includes machine learning predictions based on historical data and pandemic interventions. Key questions we address include:</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Public Awareness and Interest: How did the pandemic influence public engagement with green energy topics?</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Electricity Patterns: What changes occurred in electricity generation and consumption across different countries and energy sources during the pandemic?</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pandemic Interventions: How did lockdowns and mobility restrictions affect the energy sector?</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Forecasting the Future: Can we predict future electricity generation using past data and pandemic measures?</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="fu"># Data Glimpse</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>Before we analysis further and answer our questions, we first need have a glimpse of our datas.</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="fu">## Electricity Generation Dataset</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Actual Electricity Generation per Production Type in Europe Countries (2019~2022)</span><span class="co">](https://transparency.entsoe.eu/dashboard/show)</span>: This dataset contains changes in the electricity generated by different energy sources(eg. biomass, nuclear, marine.) in europe countries, which is recorded hourly or every 15-minutes. </span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"text-align: center;"</span><span class="dt">&gt;</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./images/Generation Mix.html"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"1110"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"500"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: none;"</span><span class="ot"> scrolling</span><span class="op">=</span><span class="st">"no"</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>The figure above provides a comprehensive overview of the composition and trends in electricity generation over a period of approximately three and a half years in selected countries. We can discover that: </span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Across countries, there is a seasonal pattern in overall electricity generation data, with less generation in the summer and more in the winter. For solar energy, the opposite is true, with less output in winter and more output in summer. This means that we need to try to filter out this seasonal pattern in subsequent analyses!</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>There are obvious differences in the total power generation and power generation structure of each country. For example, Germany and France have the highest total power generation. France is highly dependent on nuclear power, while Serbia has less energy diversity.</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sources like nuclear and coal provide a consistent baseline level of generation, which doesn't show as much fluctuation as renewables, suggesting they are used as a reliable base-load power. This is obvious for nuclear generation in Finland (almost flat during the period) but it shows different pattern in France.</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="fu">## Aggragated Topics</span></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>This is a dataset of the evolution of views aggregated by topic, across a variety of languages. The most relevant topic for our analysis was the Stem Earth and Environment.</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>In an overall idea, the increase of visiting a certain topic means the increase of awareness for that topic. However, when analyzing this, we will have to take the increase and decrease of the background visit. In other words, if the whole website has an increasing visit, it is hard to say that which topic is gaining more awareness. As a result, it is necessary to consider the overall visit frequency when trying to understand the topic visit frequency.</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="fu">## Wikipedia Pageviews</span></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>This is the Wikipedia pageviews in different languages.  </span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>These additional datasets are pageviews of:</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Energy Storage</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Electric Vehicle</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Electricity Generation</span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Renewable Energy</span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sustainable Energy</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Wind Turbine</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Photovoltaics</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Climate Change</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="fu">## Intervention</span></span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>This dataset shows the time of six countries to take actions towards COVID, including the time of reporting the first case and the first death due to COVID, the time that school is closed and public events banned and the time that the country is in lockdown. Also, it shows the time of the country taking normalcy. Some countries didn't announce the national lockdown or national normalcy, so some time in this table is missing. When analyzing the trend of energy transition, the time listed in the table will be an important reference to when COVID started attacking and when COVID stopped.</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"text-align: center;"</span><span class="dt">&gt;</span></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./images/Interventions.html"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"1110"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"310"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: none;"</span><span class="ot"> scrolling</span><span class="op">=</span><span class="st">"no"</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="fu">## Containment Index</span></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>The Oxford COVID-19 Government Response Tracker (<span class="co">[</span><span class="ot">OxCGRT</span><span class="co">](https://github.com/OxCGRT/covid-policy-dataset/tree/main/data)</span>) database : This dataset contains the strictness of lockdown policies for nearly all countries. We focus on eight containment indicators (C1~C8) in the OxCGRT database:</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>C1 - School Closures</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>C2 - Workplace closing</span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>C3 - Cancel Public Events</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>C4 - Restrictions on gatherings</span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>C5 - Public Transportation</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>C6 - Stay at Home Order</span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>C7 - Restrictions on Internal Movement</span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>C8 - International Travel Controls</span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>According to the <span class="co">[</span><span class="ot">guidelines</span><span class="co">](https://github.com/OxCGRT/covid-policy-dataset/blob/main/documentation_and_codebook.md#calculation-of-policy-indices)</span> of this data set, we calculated the <span class="in">`Containment Index `</span> of six countries using C1 to C8.</span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>It ranges from 0 to 100, with 100 representing the strictest lockdown intensity. The evolution of lockdown intensity in selected countries is shown in the chart below.</span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"text-align: center;"</span><span class="dt">&gt;</span></span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./images/Containment Index.html"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"1110"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"500"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: none;"</span><span class="ot"> scrolling</span><span class="op">=</span><span class="st">"no"</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>Thanks to OxCGRT, which furnishes extensive and scientific data about governments' diverse policy responses in 2020, 2021, and 2022. This data assesses the degree of governmental action on a scale. The resulting scores were combined to construct a series of policy indices, summarizing the collective impact of these measures.</span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Contries <span class="pp">|</span> CI (mean) <span class="pp">|</span></span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a><span class="pp">|  :----:</span>  <span class="pp">| :----:</span>  <span class="pp">|</span></span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Finland <span class="pp">|</span> 29.221927  <span class="pp">|</span></span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> France  <span class="pp">|</span> 35.373300 <span class="pp">|</span></span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Germany  <span class="pp">|</span> 40.314003 <span class="pp">|</span></span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Netherlands <span class="pp">|</span> 38.458093 <span class="pp">|</span></span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Serbia  <span class="pp">|</span> 33.245152 <span class="pp">|</span></span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Spain  <span class="pp">|</span> 44.206023 <span class="pp">|</span></span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>The average CI in different countries are listed in the table above, we can discover that:</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Spain has the highest mean CI at 44.21, suggesting that it implemented the most stringent lockdown measures among these countries. This might reflect a response to a severe outbreak or a proactive approach to prevent the spread of the virus.</span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Finland displays the lowest mean CI at 29.22, which indicate that it had the least stringent lockdown measures. This could reflect a less restrictive approach to containment or a lower incidence of COVID-19 cases necessitating such measures.</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a><span class="fu">## Mobility</span></span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>This data set contains Google Mobility Report and Apple Mobility Trends, these two datasets are extended to 2022.</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>This figure comes from Google Mobility Report. It divides mobility to some different categories according to their goal and shows the trend of mobility. The higher the curve come, the more mobility there is at the time. The overall trend of COVID is that it strikes a lot at winter, but in summer the power of COVID will be reduced. As a result, we can see from the figure that the mobility gets the highest during summer (mainly from late May to early September), but gets the lowest during winter (mainly late November to early March). For different activities, the mobility also varies a lot. The activity that is necessary has less fluctuation from time to time, such as grocery &amp; pharmacy and residential. The mobility of entertaining places and workplaces, on the opposite, has a big fluctuation from time to time. We also find that the mobility of workplaces comes low during Janurary every year.</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"text-align: center;"</span><span class="dt">&gt;</span></span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./images/Google_Mobility.html"</span><span class="ot">  width</span><span class="op">=</span><span class="st">"100%"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"200px"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: none;"</span><span class="ot"> scrolling</span><span class="op">=</span><span class="st">"no"</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a><span class="fu"># Data Exploration</span></span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a><span class="fu">## Energy Transition Awareness and Pageviews</span></span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a><span class="fu">### Aggregated DataSet Analysis</span></span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>In our exploration of the impact of COVID on the green transition, we first started by the analysis of the aggregated_timeseries dataset. The most relevant topic for our analysis was the Stem Earth and Environment and we focused on it's distributions of pageview counts pre and post COVID periods. </span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>The histogram help vizualizing the pre and post distributions which doesn't match our expected conclusion, as we see that the mean count of the pre-COVID is higher that the post-COVID one.</span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"text-align: center;"</span><span class="dt">&gt;</span></span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./images/Total Pageviews in StemEarth.html"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"910"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"610"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: none;"</span><span class="ot"> scrolling</span><span class="op">=</span><span class="st">"no"</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>To statistically validate the observed difference, we use the z-score test. By converting our pageview counts into z-scores, we standardize the data, allowing us to assess the number of standard deviations each data point lies from the mean. This normalization is crucial for unbiased comparisons. </span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a>We have obtained a p-value of 0.016 &lt; significance level of 0.05 , which suggests that the difference is statistically significant, the z-score quantify this difference and shows that the post-COVID mean is 2.407 standard deviations below the pre-COVID mean. </span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>This is a substantial deviation and suggests that there is a significant decrease in pageviews for Stem Earth and Environment content post-COVID compared to pre-COVID.</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>Here, as we have pageview counts for different languages, a **Simpson's Paradox** can occur, where a trend appears in several different groups of data but disappears or reverses when these groups are combined, suggesting that the observed overall decrease in pageviews post-COVID might not apply uniformly across all languages. </span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>Therefore, to fully understand the dynamics and to avoid potentially misleading conclusions, we will proceed with a language-wise analysis. </span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>Initial visual assessment of differences between pageview counts accross languages</span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"text-align: center;"</span><span class="dt">&gt;</span></span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./images/Language Distributions.html"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"1010"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"910"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: none;"</span><span class="ot"> scrolling</span><span class="op">=</span><span class="st">"no"</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>Our first visual conclusions are for the English (en) and Danish (da) language where the histograms show a pronounced shift towards the left in the post-COVID period. The density of the distributions in the Italian (it) and Finnish (fi) segments, however, shifts right, suggesting an increase in pageviews post-COVID.</span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>The histogram for Turkish (tr) content shows an extreme skew towards the post-COVID period, with a very high peak.</span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"text-align: center;"</span><span class="dt">&gt;</span></span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./images/Z and P for Each Language.html"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"810"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"810"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: none;"</span><span class="ot"> scrolling</span><span class="op">=</span><span class="st">"no"</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>Again, we need to statistically validate the observed difference: </span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>Upon analyzing the z-scores and p-values, we find that:</span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>       </span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The English and Danish segments, with high positive z-scores and very low p-values, indicate a significant drop in engagement.</span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The Italian, Finnish, and Catalan segments show a significant increase in interest post-COVID, with the Turkish segment displaying the most substantial increase.</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>However, for German (de), Japanese (ja), and Korean (ko) segments, the p-values exceed the significance threshold, indicating that any observed changes in pageviews are not statistically significant.</span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>This detailed breakdown demonstrates the varied impact of COVID-19 on online engagement with the STEM Earth and Environment content across different linguistic audiences. </span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a><span class="fu">### Added datasets Analysis</span></span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>In the second part of our analysis, we expanded the dataset to include pageview counts from a range of topics directly relevant to our investigation. These additional datasets are:</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Energy Storage</span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Electric Vehicle</span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Electricity Generation</span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Renewable Energy</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sustainable Energy</span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Wind Turbine</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Photovoltaics</span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Climate Change</span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>We start by the visualization of the pre and post distribution of page views count for each dataset:</span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"text-align: center;"</span><span class="dt">&gt;</span></span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./images/Distributions for different terms.html"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"910"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"510"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: none;"</span><span class="ot"> scrolling</span><span class="op">=</span><span class="st">"no"</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Significant Increase in Pageviews:</span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Electric Vehicle: Experienced a substantial increase, as indicated by a high z-score of -5.3561 and a p-value close to zero 1.009e-7.</span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Significant Decrease in Pageviews:</span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Electricity Generation:  Experienced a significant decrease with a z-score of 4.64 and a p-value of 3.76e-6。</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Renewable Energy: Significant decrease, with a z-score of 3.80 and a p-value of 1.5e-5.</span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Photovoltaics: Significant decrease with a z-score of 5.13 and a p-value of 3.22e-7.</span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Climate Change: Significant moderate decrease with a z-score of 2.08 and a p-value of 0.03.</span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>No Significant Change in Pageviews: Energy Storage, Sustainable Energy and Wind Turbine.</span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>As we can face again the Simpson Paradox, we will the analysis language wise, we have chosen another set of languages for this analysis that covers a wider range of native speakers. The languages considered in these datasets are: </span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>zh: Chinese</span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>en: English</span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>fr: French</span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>es: Spanish</span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>ar: Arabic</span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>da: Danish</span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>fa: Persian </span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>pt: Portuguese</span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>tr: Turkish</span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>vi: Vietnamese</span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"text-align: center;"</span><span class="dt">&gt;</span></span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./images/ZandP for different articles.html"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"810"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"810"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: none;"</span><span class="ot"> scrolling</span><span class="op">=</span><span class="st">"no"</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"text-align: center;"</span><span class="dt">&gt;</span></span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./images/Significant Changes Heatmap.html"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"910"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"710"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: none;"</span><span class="ot"> scrolling</span><span class="op">=</span><span class="st">"no"</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>The heatmap illustrates the z-scores associated with changes in pageviews for various environmental topics post-COVID, categorized by language. The shades of red and green represent the magnitude of decrease or increase in engagement, respectively.</span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>For the upper half, particularly, the topics of "Electricity Generation" and "Energy Storage" exhibit some of the most pronounced decreases across multiple languages.</span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>Conversely, the lower half of the heatmap shows significant increases post-COVID. It's especially apparent for "Renewable Energy," "Photovoltaics," and "Electric Vehicle" topics, where certain languages like Portuguese (pt) and Vietnamese (vi) display substantial growth in interest.</span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>While some areas have seen a surge in public attention, others have experienced a decline. </span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>Some of this conclusions can only be validated by other cross analysis. For example, we cannot access that the COVID is responsible of the increase in terms of search in the topic Electric Vehicle. To assess this with certainty, we need to perform a causal analysis taking into account the trend of the later years on this topic, the EU reglementations and the exploding prices of gas.</span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a><span class="fu">## Time Series Analysis</span></span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Natural Rhythm of Electricity Use</span></span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a>In the real world, there are obvious cyclical patterns in power generation and consumption.</span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>The first figure presents a box plot distribution of electricity generation measured in gigawatt-hours (GWh) across the days of the week. A discernible trend is observed where weekdays exhibit a higher median generation compared to weekends, reflecting the conventional demand cycle influenced by industrial and commercial activities. The presence of outliers, particularly on weekdays, could indicate exceptional demand or supply events.</span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"text-align: center;"</span><span class="dt">&gt;</span></span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./images/Weekly.html"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"910"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"610"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: none;"</span><span class="ot"> scrolling</span><span class="op">=</span><span class="st">"no"</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>The second figure shifts the focus to a monthly overview, revealing the seasonality in electricity generation. The box plots indicate a significant variation between months, with the winter months showing elevated levels of generation, which could be attributed to increased heating demand and shorter daylight hours. Notably, December stands out with the highest median generation and the largest interquartile range, suggesting a potential increase in both baseline and peak demand during the holiday season.</span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"text-align: center;"</span><span class="dt">&gt;</span></span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./images/Monthly.html"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"910"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"610"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: none;"</span><span class="ot"> scrolling</span><span class="op">=</span><span class="st">"no"</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>These figures underscore the variability in electricity generation that aligns with human activity patterns and natural cycles. By understanding these trends, we further clarified the need to filter out these differences (cofounders) in subsequent analyses.</span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>Before we move on, one thing we need to mention is that nuclear,coal, oil, and gas are non-renewable energy while others(hydro, biomass, wind, and waste) are considered renewable energy sources.</span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a><span class="fu">### With Different Events, What Happened?</span></span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>In order to overcome the impact of differences between weekdays and weekends, in our analysis, the total electricity generation and renewable electricity generation are taken as a 7-day average before and after all events. </span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>It can be seen that in most countries, with the advent of the epidemic, total power generation has declined, and a slowing down trend can be seen after Normalcy.</span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a>In the figure below, figure shows the trend of energy generated and renewable electricity generated in different countries, trying to find out what impact it will have to different energy generation methods. We can see in most countries, with the advent of the epidemic, total power generation has shown a decline pattern, with a slowing down trend after Normalcy.</span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"text-align: center;"</span><span class="dt">&gt;</span></span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./images/interactive_energy_analysis.html"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"1110"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"610"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: none;"</span><span class="ot"> scrolling</span><span class="op">=</span><span class="st">"no"</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>Then, A t-test was performed on the average total electricity generation and renewable electricity generation in the 7 days before and after important events. </span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>The heatmap for total electricity generation depicts a general pattern of significant change in response to the onset of COVID-19 and the ensuing governmental measures. Most countries registered statistically significant shifts in electricity generation patterns during key events. However, the imposition of mobility restrictions did not correspond with significant changes in electricity generation in countries like France and Spain, as evidenced by p-values of 0.994 and 0.679, respectively.</span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"text-align: center;"</span><span class="dt">&gt;</span></span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./images/Total Electricity Generation Before and After Events.html"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"910"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"510"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: none;"</span><span class="ot"> scrolling</span><span class="op">=</span><span class="st">"no"</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>Similarly, in the heatmap for renewable electricity generation, it appears that renewable sources were impacted by the pandemic measures in most countries. Notable exceptions include Finland and the Netherlands, where '1st case' and 'Normalcy' led to a larger p-value, indicating there is no significant change in renewable electricity generation. This could reflect the inherent variability in renewable sources or potential shifts in energy policy or market dynamics in response to the pandemic.</span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"text-align: center;"</span><span class="dt">&gt;</span></span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./images/Renewable Electricity Generation Before and After Events.html"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"910"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"510"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: none;"</span><span class="ot"> scrolling</span><span class="op">=</span><span class="st">"no"</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a><span class="fu">## Electricity generation and Interventions</span></span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a><span class="fu">### Has the Electricity Generation Structure Changed?</span></span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a>First, let's take a look at the electricity generation structure amongs six countries before, during and after the pandemic respectively. </span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>Before we show you the visualization, let me introduce how we define before, during and after.</span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>In our analysis, we define the "epidemic period" as the time frame beginning with the first confirmed case and extending until the point of return to normalcy((Spanish normalcy is missing, we took the average to fill it in)). This period encompasses the entire duration of the epidemic's impact, starting from its initial emergence and concluding when conditions have stabilized and daily life has resumed its usual rhythm. This definition allows for a comprehensive understanding of the epidemic's full scope and duration, capturing both the onset and the eventual subsiding of its effects.</span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>To mitigate the impact of natural rhythms or seasonal fluctuations, we adopt a comparative approach in our data analysis. Specifically, for the periods before and after our focal "during" phase, we align the data based on the same months and days, but adjust the years, either by decreasing or increasing them by one year. This method allows us to closely mirror the temporal context of the "during" phase while effectively isolating and minimizing seasonal or cyclical variations. By comparing these analogous time periods across different years, we aim to gain a clearer understanding of any changes or trends that are not merely attributable to regular seasonal patterns.</span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"text-align: center;"</span><span class="dt">&gt;</span></span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./images/Pie.html"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"1110"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"510"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: none;"</span><span class="ot"> scrolling</span><span class="op">=</span><span class="st">"no"</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>Based on pie chart, we can get some basic observations:</span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The majority sources of most countries are nuclear, hydro, coal and gas.</span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>In most of countries, transition towards renewable sources increased during the epidemic, with higher hydro and coal and lower nuclear contributions except for the Serbia with higher coal and lower hydro contributions</span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>After the epidemic, most countries displayed a partial reversion in the renewable trend, notably in hydroelectric and gas power.</span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Among all the countries, biomass, oil, and waste have made little contributions and remained relatively consistent.</span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>These observations reflect the dynamic nature of energy consumption and production patterns in response to global events such as an epidemic. They also highlight the varying degrees of adaptability and resilience in different countries' energy sectors.</span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>Let's conduct an analysis of variance (ANOVA) for these energy sources to assess whether there are statistically significant differences between them in terms of their effects or contributions. This analysis will help us determine if there are notable variations among these sources and which sources might significantly differ from the rest in their impact or significance.</span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"text-align: center;"</span><span class="dt">&gt;</span></span>
+<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./images/ANOVA.html"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"810"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"610"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: none;"</span><span class="ot"> scrolling</span><span class="op">=</span><span class="st">"no"</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>The bar chart visualizes the -log10 transformed p-values from the ANOVA results for each energy source.</span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>Red Dashed Line: This line represents the -log10 transformed significance level (typically p = 0.05). Bars that extend above this line are considered statistically significant.</span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>Well, it is obvious that the key sources we mentioned previously are all in greater significance. So there might be some main factors that affect the trend of the key sources. </span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>Interestingly, for most countries (except France), the p-value of nuclear power is not very high, which is consistent with the fact that nuclear power acts as base load in reality.</span>
+<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Ripple Effect of Interventions: Mobility and Electricity Generation during the Pandemic</span></span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a>In order to answer these questions, we need to explore the mobility data: apple_mobility which contains the intensity score of the region in three transportation types(driving, walking and transit) of each day from 2020-01-13 to 2022-04-12. Please notice that the transit data of Serbia is missing.</span>
+<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>The intensity score refer to relative mobility strength based on first day(2020-01-13, which intensity score is 100). The higher intensity score, the more people choosing the transportation types.</span>
+<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a>Review the data we all have now, mobility, intervention and energy generation. It is time to combine then together!</span>
+<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"text-align: center;"</span><span class="dt">&gt;</span></span>
+<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./images/Total Electricity Generation_Mobility.html"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"1110"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"510"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: none;"</span><span class="ot"> scrolling</span><span class="op">=</span><span class="st">"no"</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"text-align: center;"</span><span class="dt">&gt;</span></span>
+<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./images/Renewable Generation Percent_Mobility.html"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"1110"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"510"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: none;"</span><span class="ot"> scrolling</span><span class="op">=</span><span class="st">"no"</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a>At the onset of lockdowns, a sharp decline in mobility was observed across all countries. The once-bustling avenues of movement—captured in metrics of driving, walking, and transit—saw a sudden plunge. This drop in human activity was mirrored by a corresponding decrease in energy consumption. The graphs show a synchrony between the fall in mobility and a dip in energy usage, suggesting a direct correlation between the two.</span>
+<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>While the reduction in mobility was somewhat uniform, the impact on energy consumption varied. In Finland, energy generation closely tracked reductions in mobility, indicating a direct dependency of energy usage on population movement. In contrast, countries like Germany displayed resilience in energy consumption despite decreased mobility, hinting at a robust energy infrastructure possibly catering to essential services that remained operational.</span>
+<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a>Gradually, as restrictions lifted, there was a cautious uptick in mobility. This return to movement, however, was not always matched by a proportional increase in energy consumption, suggesting a lasting change in energy use patterns, perhaps due to a sustained shift towards remote work and more conscious energy utilization.</span>
+<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a>While we've established a foundational perspective on how interventions influence mobility and energy consumption, to truly grasp the depth of these impacts, we require a more systematic assessment of the intervention strictness implemented by these countries. By quantifying the degrees of lockdown measures, we can disentangle the nuanced effects they have had on the day-to-day activities and energy usage patterns. This will enable us to paint a clearer picture of the relationship between policy strictness and its real-world repercussions</span>
+<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a><span class="fu">### Spearman Correlation</span></span>
+<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a>Acknowledging the myriad of elements that could potentially affect energy consumption and its distribution, it becomes crucial to dissect and understand these intricacies. To achieve this, we are set to embark on a correlation analysis, complemented by an examination of p-values. This statistical approach will assist us in uncovering the degree to which these factors are related to energy consumption—whether they move in tandem or in opposition to each other. By deciphering the significance, directionality of these correlations, and the p-values, we can gauge the statistical significance of our findings. The inclusion of p-value analysis ensures that our conclusions are not just based on observed trends but are also statistically robust. This comprehensive analysis will illuminate how various influences interplay to shape energy usage patterns, particularly during the unique circumstances brought by the pandemic.</span>
+<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"text-align: center;"</span><span class="dt">&gt;</span></span>
+<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./images/Total_corr.html"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"910"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"610"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: none;"</span><span class="ot"> scrolling</span><span class="op">=</span><span class="st">"no"</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"text-align: center;"</span><span class="dt">&gt;</span></span>
+<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./images/Total_p-value.html"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"910"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"610"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: none;"</span><span class="ot"> scrolling</span><span class="op">=</span><span class="st">"no"</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"text-align: center;"</span><span class="dt">&gt;</span></span>
+<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./images/Resource Use_corr.html"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"910"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"610"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: none;"</span><span class="ot"> scrolling</span><span class="op">=</span><span class="st">"no"</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"text-align: center;"</span><span class="dt">&gt;</span></span>
+<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./images/Resource Use_p.html"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"910"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"610"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: none;"</span><span class="ot"> scrolling</span><span class="op">=</span><span class="st">"no"</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a>Let's analyze the result one by one:</span>
+<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Finland: A notable observation is the strong negative correlation between walking and total energy generation (-0.611). However, the p-value (0.935) suggests that this correlation is not statistically significant, which means we cannot confidently attribute changes in energy generation to changes in walking activity.</span>
+<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>France: The negative correlation between renewable energy percentage and total energy generation (-0.351) is not statistically significant either, given its p-value (0.306). Thus, while there is an observed association, we cannot reliably infer a causal link between these variables.</span>
+<span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Germany: The correlation between parks and total energy generation is slightly negative (-0.507), and the p-value (0.040) indicates that this correlation could be statistically significant. This suggests a potential inverse relationship between leisure activity and energy production, possibly worth further investigation.</span>
+<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The Netherlands: There's a strong negative correlation with the day of the week (-0.431), with a significant p-value (0.030), implying a consistent pattern where the day within the week might be influencing energy generation significantly, potentially reflecting operational cycles in energy usage.</span>
+<span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Serbia: While there is a moderate negative correlation between grocery/pharmacy activity and energy generation (-0.362), the p-value (0.689) suggests that this correlation is not statistically significant.</span>
+<span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Spain: A positive correlation with the year (0.379) suggests an increasing trend in energy generation over time, but the p-value (0.349) indicates that this trend is not statistically significant.</span>
+<span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a>Across all countries, correlations vary in strength, but many lack statistical significance based on their p-values. This suggests that while some factors may appear to influence energy generation, these influences are not consistently strong enough to exclude the possibility that they are due to random chance.</span>
+<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a>With the insights from the correlation and significance analysis, we can now transition to predictive modeling using machine learning. The goal is to use the identified relationships that are both strong and statistically significant as features in our model. </span>
+<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a><span class="fu">### So How about Forecast by Machine Learning?</span></span>
+<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a>From the Spearman correlation analysis above, we excluded the features of 'DayofMonth' , 'transit' and 'Workplaces', which shows a relatively high p-value in most countries.</span>
+<span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a>Before we start, let us first introduce the datasets we use to do analysis and forecasting. Based on the correlation and p-value analysis </span>
+<span id="cb1-431"><a href="#cb1-431" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a><span class="in">`Total`</span> representing the total electricity consumption as the label.</span>
+<span id="cb1-433"><a href="#cb1-433" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-434"><a href="#cb1-434" aria-hidden="true" tabindex="-1"></a>Based on the correlation and p-value analysis, we select out the following features:</span>
+<span id="cb1-435"><a href="#cb1-435" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-436"><a href="#cb1-436" aria-hidden="true" tabindex="-1"></a><span class="in">`DayOfWeek`</span> If this factor has consistently low p-values across multiple countries, it indicates a significant weekly pattern in energy generation that could be predictive regardless of the country. Energy consumption patterns can significantly differ between weekdays and weekends.</span>
+<span id="cb1-437"><a href="#cb1-437" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-438"><a href="#cb1-438" aria-hidden="true" tabindex="-1"></a><span class="in">`Renewable_percent`</span>: Even though the p-values vary, if the correlation is consistently strong across countries, this feature may capture the influence of renewable energy production on the total energy generation, which is a crucial aspect of modern energy systems.</span>
+<span id="cb1-439"><a href="#cb1-439" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-440"><a href="#cb1-440" aria-hidden="true" tabindex="-1"></a><span class="in">`Parks`</span>: If the recreational activity, as represented by the usage of parks, shows consistent correlations with energy generation, it might reflect broader societal behavior patterns that affect energy usage, such as reduced industrial activity on days with higher recreational activity.</span>
+<span id="cb1-441"><a href="#cb1-441" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-442"><a href="#cb1-442" aria-hidden="true" tabindex="-1"></a><span class="in">`Transit Stations`</span>: The use of transit stations could be a proxy for overall economic activity, including commuting patterns and industrial activity. If it correlates with energy generation across several countries, it could be a relevant predictor.</span>
+<span id="cb1-443"><a href="#cb1-443" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-444"><a href="#cb1-444" aria-hidden="true" tabindex="-1"></a><span class="in">`CI (Containment Index)`</span>: This could be a particularly relevant feature if the lockdown measures significantly impacted energy consumption patterns. The CI might capture the effects of reduced industrial, commercial, and personal activity on energy demand.</span>
+<span id="cb1-445"><a href="#cb1-445" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-446"><a href="#cb1-446" aria-hidden="true" tabindex="-1"></a><span class="in">`Walking`</span>: The activity level of the population, as indicated by walking, if correlated with energy generation, might reflect changes in daily routines that could impact energy consumption, such as increased remote work or shifts in commercial activity.</span>
+<span id="cb1-447"><a href="#cb1-447" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-448"><a href="#cb1-448" aria-hidden="true" tabindex="-1"></a><span class="in">`Month`</span>, <span class="in">`Year`</span>, <span class="in">`driving`</span>, <span class="in">`Retail &amp; Recreation`</span>, <span class="in">`Residential`</span> are included as well.</span>
+<span id="cb1-449"><a href="#cb1-449" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-450"><a href="#cb1-450" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-451"><a href="#cb1-451" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-452"><a href="#cb1-452" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"text-align: center;"</span><span class="dt">&gt;</span></span>
+<span id="cb1-453"><a href="#cb1-453" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./images/Feature Importance.html"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"810"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"610"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: none;"</span><span class="ot"> scrolling</span><span class="op">=</span><span class="st">"no"</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb1-454"><a href="#cb1-454" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-455"><a href="#cb1-455" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-456"><a href="#cb1-456" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Split the train and test datasets</span></span>
+<span id="cb1-457"><a href="#cb1-457" aria-hidden="true" tabindex="-1"></a>To ensure our model's reliability, we'll split the dataset into training and test sets. This division enables us to train the model on historical data and then assess its performance on unseen data, a crucial step before proceeding with analysis and forecasting.</span>
+<span id="cb1-458"><a href="#cb1-458" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-459"><a href="#cb1-459" aria-hidden="true" tabindex="-1"></a>Specifically, we select all the data from 2020 to 2021 as the training set while the test set contains data from ‘2022’ onwards. </span>
+<span id="cb1-460"><a href="#cb1-460" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-461"><a href="#cb1-461" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-462"><a href="#cb1-462" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Model setup</span></span>
+<span id="cb1-463"><a href="#cb1-463" aria-hidden="true" tabindex="-1"></a>Now that we've completed the preparatory work, let's proceed to train the model</span>
+<span id="cb1-464"><a href="#cb1-464" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>base_score=0.5: The initial prediction score of the model.</span>
+<span id="cb1-465"><a href="#cb1-465" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>booster='gbtree': Specifies the type of booster used, which in this case is a tree-based model.</span>
+<span id="cb1-466"><a href="#cb1-466" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>n_estimators=1500: The number of trees (estimators) to build in the boosting process.</span>
+<span id="cb1-467"><a href="#cb1-467" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>early_stopping_rounds=50: Determines the number of rounds (iterations) without improvement on the validation metric before stopping training.</span>
+<span id="cb1-468"><a href="#cb1-468" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>objective='reg:linear': The objective function set to linear regression, indicating the model will predict continuous numeric values.</span>
+<span id="cb1-469"><a href="#cb1-469" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>max_depth=4: Sets the maximum depth of the trees in the boosting process.</span>
+<span id="cb1-470"><a href="#cb1-470" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>learning_rate=0.01: Controls the step size at each iteration during training, preventing overfitting by making the model learning slower.</span>
+<span id="cb1-471"><a href="#cb1-471" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-472"><a href="#cb1-472" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-473"><a href="#cb1-473" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-474"><a href="#cb1-474" aria-hidden="true" tabindex="-1"></a>Utilizing the XGBoost library, we construct an XGBoostRegressor model, a highly regarded gradient boosting algorithm recognized for its proficiency in time series forecasting. Fitting the model involves training it on the provided dataset. Subsequently, we assess its performance on both the training and test sets by employing the root mean squared error (RMSE) metric.</span>
+<span id="cb1-475"><a href="#cb1-475" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-476"><a href="#cb1-476" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Predictions</span></span>
+<span id="cb1-477"><a href="#cb1-477" aria-hidden="true" tabindex="-1"></a>Now, it is time to utilize our trained model to make predictions on the test set and then create visualizations to represent the results.</span>
+<span id="cb1-478"><a href="#cb1-478" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-479"><a href="#cb1-479" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"text-align: center;"</span><span class="dt">&gt;</span></span>
+<span id="cb1-480"><a href="#cb1-480" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"./images/Total Electricity Generation.html"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"1110"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"610"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"border: none;"</span><span class="ot"> scrolling</span><span class="op">=</span><span class="st">"no"</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb1-481"><a href="#cb1-481" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-482"><a href="#cb1-482" aria-hidden="true" tabindex="-1"></a>Well, from a direct visual standpoint, it hard to point out which country the model fits well since the y-axis scale is different, we need further information.</span>
+<span id="cb1-483"><a href="#cb1-483" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-484"><a href="#cb1-484" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Evaluation</span></span>
+<span id="cb1-485"><a href="#cb1-485" aria-hidden="true" tabindex="-1"></a>As data analysts, we can not rely solely on intuition. So let's take a look at their root mean squared error scores(RMSE) and relative error(RE). </span>
+<span id="cb1-486"><a href="#cb1-486" aria-hidden="true" tabindex="-1"></a>We can find that the model performs better in France and Spain while the model doesn't fit Serbia well.</span>
+<span id="cb1-487"><a href="#cb1-487" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-488"><a href="#cb1-488" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Countries <span class="pp">|</span> RMSE <span class="co">[</span><span class="ot">GWh</span><span class="co">]</span> <span class="pp">|</span> RE <span class="pp">|</span></span>
+<span id="cb1-489"><a href="#cb1-489" aria-hidden="true" tabindex="-1"></a><span class="pp">|  :----:</span>  <span class="pp">| :----:</span>  <span class="pp">| :----:</span>  <span class="pp">|</span></span>
+<span id="cb1-490"><a href="#cb1-490" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Finland <span class="pp">|</span> 15.81  <span class="pp">|</span> 0.081 <span class="pp">|</span></span>
+<span id="cb1-491"><a href="#cb1-491" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> France  <span class="pp">|</span> 113.36 <span class="pp">|</span> 0.076 <span class="pp">|</span></span>
+<span id="cb1-492"><a href="#cb1-492" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Germany  <span class="pp">|</span> 125.05 <span class="pp">|</span> 0.081 <span class="pp">|</span></span>
+<span id="cb1-493"><a href="#cb1-493" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Netherlands <span class="pp">|</span> 31.78 <span class="pp">|</span> 0.097 <span class="pp">|</span></span>
+<span id="cb1-494"><a href="#cb1-494" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Serbia  <span class="pp">|</span> 11.52 <span class="pp">|</span> 0.121 <span class="pp">|</span></span>
+<span id="cb1-495"><a href="#cb1-495" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Spain  <span class="pp">|</span> 57.00 <span class="pp">|</span> 0.079 <span class="pp">|</span></span>
+<span id="cb1-496"><a href="#cb1-496" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-497"><a href="#cb1-497" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-498"><a href="#cb1-498" aria-hidden="true" tabindex="-1"></a> As we see, their RE are about 10% , which indicates the model is performing good.</span>
+<span id="cb1-499"><a href="#cb1-499" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-500"><a href="#cb1-500" aria-hidden="true" tabindex="-1"></a>Within this section, we conducted an analysis of total energy consumption utilizing the integrated dataset. This comprehensive analysis not only offers valuable insights into the patterns of total energy consumption but also facilitates precise forecasting. By comprehending the trends in total energy consumption, informed decisions can be made concerning energy management and resource allocation in the future public health issues.</span>
+<span id="cb1-501"><a href="#cb1-501" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-502"><a href="#cb1-502" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-503"><a href="#cb1-503" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-504"><a href="#cb1-504" aria-hidden="true" tabindex="-1"></a><span class="fu"># Conclusion</span></span>
+<span id="cb1-505"><a href="#cb1-505" aria-hidden="true" tabindex="-1"></a>Our findings shed light on the pandemic’s impact on green energy transition:</span>
+<span id="cb1-506"><a href="#cb1-506" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-507"><a href="#cb1-507" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Varied Awareness: Public interest in green energy topics fluctuated during the pandemic. While some languages and topics experienced increased pageviews on environmental content, others remained stable or declined. This suggests a nuanced response across linguistic and cultural contexts.</span>
+<span id="cb1-508"><a href="#cb1-508" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mixed Electricity Trends: Total electricity generation decreased globally due to lockdowns and economic slowdowns. However, renewable energy generation showed diverse patterns—some countries increased their share, while others remained unchanged. National policies, markets, and infrastructure played a crucial role.</span>
+<span id="cb1-509"><a href="#cb1-509" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Direct Pandemic Influence: Mobility data revealed reduced movement during lockdowns, directly impacting energy consumption. The strictness of pandemic interventions correlated with energy usage. Yet, outcomes varied by country, reflecting unique contexts.</span>
+<span id="cb1-510"><a href="#cb1-510" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Machine Learning Predictions: Our XGBoost-based model accurately forecasted future energy generation, capturing seasonal trends and pandemic effects. This tool can inform energy planning and management decisions.</span>
+<span id="cb1-511"><a href="#cb1-511" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-512"><a href="#cb1-512" aria-hidden="true" tabindex="-1"></a>In summary, this data story underscores the pandemic’s complex implications for green energy transition and calls for further research and action in these critical areas.</span>
+<span id="cb1-513"><a href="#cb1-513" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-514"><a href="#cb1-514" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-515"><a href="#cb1-515" aria-hidden="true" tabindex="-1"></a><span class="fu"># Power Off</span></span>
+<span id="cb1-516"><a href="#cb1-516" aria-hidden="true" tabindex="-1"></a>As we wrap up our storytelling session, let's flick the switch off with some reflections. We've surfed through peaks and troughs of watts and volts, uncovering how each country danced to the pandemic's peculiar rhythm. While traditional power generation often took a siesta, renewables kept the party going, showing us that they're not just about green living but also about keeping the lights on when life throws a curveball.</span>
+<span id="cb1-517"><a href="#cb1-517" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-518"><a href="#cb1-518" aria-hidden="true" tabindex="-1"></a>It's been quite the ride—like a rollercoaster for electrons. As we move forward, this tale of energy in the time of a pandemic leaves us with a few nuggets of wisdom: diversity is key in our energy mix, and a bit of green can help keep the grid serene. So let's toast to the power of data in shedding light on our world and helping us chart a course to a brighter, more sustainable future. Here's to more stories, more data, and more insights. </span>
+<span id="cb1-519"><a href="#cb1-519" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-520"><a href="#cb1-520" aria-hidden="true" tabindex="-1"></a>It's NOW, Power offffffff !</span>
+<span id="cb1-521"><a href="#cb1-521" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p><span class="faux-block"> <i class="bi bi-c-circle"></i> 2025-2026 Wenyu Liu <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" class="inline-svg" viewbox="0 0 216 71.1" fill="currentColor"> <path fill="white" stroke="white" d="M21.87 5.98L21.87 5.98Q24.40 4.85 25.88 7.73L25.88 7.73Q25.80 8.02 23.63 9.49L23.63 9.49L20.81 10.62Q18.21 11.11 17.30 13.57L17.30 13.57Q16.73 16.17 17.09 20.18L17.09 20.18Q17.23 24.33 20.46 21.80L20.46 21.80Q23.34 20.53 21.73 18.42L21.73 18.42Q19.90 16.59 22.29 15.89L22.29 15.89Q24.40 16.24 25.95 17.51L25.95 17.51Q28.05 19.05 29.39 15.54L29.39 15.54Q29.67 14.84 30.23 14.13L30.23 14.13Q31.22 12.38 29.11 12.09L29.11 12.09Q27.77 12.09 27.07 10.69L27.07 10.69Q26.93 9.07 29.39 8.37L29.39 8.37Q32.77 7.66 35.65 8.65L35.65 8.65Q37.69 9.70 39.45 7.73L39.45 7.73Q41.98 7.66 42.82 10.97L42.82 10.97Q43.66 14.77 43.45 17.44L43.45 17.44Q42.82 22.78 40.22 25.10L40.22 25.10Q37.55 26.09 35.72 27.70L35.72 27.70Q33.82 28.27 33.33 25.80L33.33 25.80Q33.12 23.91 31.85 22.01L31.85 22.01Q32.13 21.80 34.24 22.08L34.24 22.08L35.16 22.08Q36.98 21.87 37.76 19.83L37.76 19.83Q38.67 16.73 37.90 11.95L37.90 11.95Q37.34 10.90 35.93 11.25L35.93 11.25Q34.66 11.32 34.24 12.59L34.24 12.59Q34.66 13.78 34.03 14.70L34.03 14.70Q32.20 17.16 30.87 19.62L30.87 19.62Q30.16 21.16 28.97 22.43L28.97 22.43Q26.02 24.96 29.04 26.44L29.04 26.44Q29.67 26.86 30.02 28.20L30.02 28.20Q29.81 28.76 30.73 29.60L30.73 29.60Q36.70 30.66 40.22 32.84L40.22 32.84Q41.91 33.54 42.75 36L42.75 36Q43.10 38.95 40.64 39.94L40.64 39.94Q40.29 39.87 38.88 38.95L38.88 38.95Q36.63 37.41 35.51 37.05L35.51 37.05Q34.66 36.77 34.17 38.18L34.17 38.18Q33.54 41.34 30.66 41.41L30.66 41.41Q28.13 42.26 29.32 44.86L29.32 44.86Q29.74 45.28 31.43 45.14L31.43 45.14L33.19 44.86Q34.80 44.65 35.86 45.35L35.86 45.35Q36.70 46.20 35.93 47.11L35.93 47.11Q34.38 49.08 30.59 49.43L30.59 49.43Q29.18 49.08 28.69 51.33L28.69 51.33Q28.69 52.80 28.97 54.49L28.97 54.49Q29.74 55.34 30.87 53.93L30.87 53.93Q34.03 50.63 36.91 49.92L36.91 49.92Q39.02 50.20 38.67 51.89L38.67 51.89Q38.04 52.95 36.28 53.72L36.28 53.72L30.66 56.25Q28.90 57.80 29.60 58.15L29.60 58.15Q32.06 58.29 37.97 57.09L37.97 57.09Q40.36 56.67 38.60 58.92L38.60 58.92Q36.63 61.31 33.82 62.09L33.82 62.09Q29.32 63.63 22.57 64.34L22.57 64.34Q19.27 64.62 15.19 65.74L15.19 65.74Q14.55 65.74 13.64 65.18L13.64 65.18Q11.25 63.28 12.59 61.10L12.59 61.10Q13.36 60.19 14.98 59.91L14.98 59.91Q18.42 59.70 16.52 56.95L16.52 56.95Q14.55 53.65 16.88 53.16L16.88 53.16Q20.25 54.07 20.04 57.02L20.04 57.02Q19.41 59.20 21.38 59.41L21.38 59.41Q22.85 59.63 23.55 58.22L23.55 58.22Q23.77 55.90 23.70 53.51L23.70 53.51Q24.05 49.71 20.74 51.05L20.74 51.05Q17.86 51.75 16.38 50.27L16.38 50.27Q14.70 48.23 17.02 47.11L17.02 47.11Q19.13 46.76 21.23 46.62L21.23 46.62Q23.63 46.83 23.77 44.58L23.77 44.58Q23.84 43.31 22.50 42.89L22.50 42.89Q20.32 43.10 18.98 41.70L18.98 41.70Q18.42 40.71 16.80 41.70L16.80 41.70Q13.43 45.14 8.93 48.30L8.93 48.30Q6.33 49.99 7.45 47.53L7.45 47.53Q11.46 39.30 21.73 29.39L21.73 29.39Q24.05 27.91 25.03 23.34L25.03 23.34Q23.91 20.32 22.01 22.36L22.01 22.36Q19.41 26.23 16.52 30.09L16.52 30.09Q14.06 32.06 11.88 29.32L11.88 29.32Q9.77 27.07 12.23 26.30L12.23 26.30Q13.22 25.80 13.43 25.24L13.43 25.24Q13.64 24.05 13.29 21.80L13.29 21.80Q12.66 16.17 13.99 10.55L13.99 10.55Q14.27 8.79 16.03 9.28L16.03 9.28Q17.51 9.98 19.05 7.88L19.05 7.88Q20.18 6.89 21.87 5.98ZM55.20 7.10L55.20 7.10Q56.39 5.70 59.27 6.89L59.27 6.89Q61.88 7.95 61.66 10.48L61.66 10.48Q63.42 33.05 63 55.90L63 55.90Q62.86 58.99 61.38 61.52L61.38 61.52Q60.12 62.86 59.41 63L59.41 63Q58.71 63.28 57.30 64.34L57.30 64.34Q53.44 68.70 52.17 62.72L52.17 62.72Q51.89 61.31 49.99 60.26L49.99 60.26Q47.81 58.36 50.27 58.57L50.27 58.57L52.45 58.36Q54.77 58.15 55.41 55.13L55.41 55.13Q56.11 52.73 55.97 48.94L55.97 48.94Q56.25 23.77 55.41 9.56L55.41 9.56Q54.98 7.45 55.20 7.10ZM45.28 25.52L45.28 25.52Q45.35 22.99 48.52 23.06L48.52 23.06Q49.78 22.85 50.27 24.40L50.27 24.40Q50.55 25.24 50.55 27.28L50.55 27.28Q50.63 32.63 50.98 37.97L50.98 37.97Q50.91 40.29 49.50 42.89L49.50 42.89Q48.16 45 47.88 45.14L47.88 45.14Q46.55 44.44 46.05 41.77L46.05 41.77Q45.84 35.09 45.84 28.34L45.84 28.34Q45.70 26.93 45.28 25.52ZM27.35 31.99L27.35 31.99Q25.59 32.34 22.50 35.79L22.50 35.79Q21.66 36.91 21.52 37.27L21.52 37.27Q21.66 38.53 23.55 37.90L23.55 37.90Q26.72 37.27 30.09 36.91L30.09 36.91Q31.92 36.56 32.13 36.14L32.13 36.14Q32.13 35.65 30.09 34.10L30.09 34.10L29.18 33.47Q27.77 31.99 27.35 31.99ZM110.11 17.02L121.08 14.13Q124.38 13.29 126 16.66L126 16.66Q126.77 19.55 122.84 21.59L122.84 21.59Q120.30 22.64 117.70 23.41L117.70 23.41Q115.88 23.91 115.52 24.40L115.52 24.40Q115.45 24.89 116.23 25.88L116.23 25.88Q117.98 26.65 117.21 28.05L117.21 28.05Q113.98 33.54 113.55 39.30L113.55 39.30Q113.48 41.34 112.64 44.30L112.64 44.30Q112.57 45.14 113.98 46.27L113.98 46.27Q120.02 50.13 125.23 52.38L125.23 52.38Q133.24 56.18 138.80 60.05L138.80 60.05Q140.48 62.37 138.09 62.09L138.09 62.09Q134.02 61.24 128.60 63.56L128.60 63.56Q125.37 63.70 122.70 62.23L122.70 62.23Q115.52 59.06 108.70 52.80L108.70 52.80Q107.02 51.47 104.48 53.51L104.48 53.51Q95.91 58.57 87.61 59.98L87.61 59.98Q84.09 60.47 80.58 61.24L80.58 61.24Q77.91 61.95 78.82 61.03L78.82 61.03Q79.38 60.47 81.14 59.84L81.14 59.84Q84.38 58.78 92.39 54.98L92.39 54.98Q97.31 53.16 102.23 48.59L102.23 48.59Q103.36 47.11 101.11 44.86L101.11 44.86Q97.95 41.55 95.06 40.29L95.06 40.29Q92.60 39.23 90.98 37.34L90.98 37.34Q89.23 35.09 91.69 33.19L91.69 33.19Q93.66 31.64 97.31 33.82L97.31 33.82Q100.83 35.58 105.75 39.66L105.75 39.66Q107.37 40.92 108.14 38.81L108.14 38.81Q109.55 32.34 113.27 25.88L113.27 25.88Q113.27 25.59 112.85 25.24L112.85 25.24Q111.80 25.17 109.62 25.73L109.62 25.73Q99.77 27.98 92.74 29.95L92.74 29.95Q86.84 31.64 84.59 25.73L84.59 25.73Q83.74 23.06 87.19 21.59L87.19 21.59Q95.20 20.67 101.81 19.13L101.81 19.13Q102.09 16.59 102.16 13.64L102.16 13.64Q102.09 11.60 101.25 9.63L101.25 9.63Q100.69 8.93 100.62 8.23L100.62 8.23Q100.41 5.91 101.88 5.55L101.88 5.55Q104.84 4.85 108.42 7.31L108.42 7.31Q111.38 10.34 110.74 12.80L110.74 12.80Q110.53 14.06 110.25 15.96L110.25 15.96Q110.18 16.31 110.11 17.02L110.11 17.02ZM173.74 3.16L173.74 3.16Q178.95 2.95 182.74 8.65L182.74 8.65Q183.38 10.13 184.57 10.20L184.57 10.20Q190.76 9.98 196.95 9.98L196.95 9.98Q198.21 9.91 199.76 8.79L199.76 8.79Q202.43 8.09 204.82 12.23L204.82 12.23Q206.37 14.48 206.79 16.45L206.79 16.45Q207.14 18.07 205.31 18.84L205.31 18.84Q203.06 19.41 199.69 18.63L199.69 18.63Q197.02 17.79 195.47 18.70L195.47 18.70Q192.45 20.04 194.27 17.93L194.27 17.93Q196.88 15.40 196.66 13.78L196.66 13.78Q195.75 12.94 193.78 13.22L193.78 13.22Q186.68 13.57 182.11 14.27L182.11 14.27Q181.41 14.48 180.70 15.26L180.70 15.26Q178.59 17.23 176.20 15.61L176.20 15.61Q175.08 14.77 173.67 15.12L173.67 15.12Q167.20 16.31 162.42 18.70L162.42 18.70Q160.73 20.18 160.80 23.63L160.80 23.63Q161.65 27.84 158.27 31.01L158.27 31.01Q156.30 33.96 154.69 31.08L154.69 31.08Q153.49 27.35 154.62 18.84L154.62 18.84Q155.25 13.92 157.64 10.13L157.64 10.13Q159.40 9.56 161.44 12.16L161.44 12.16Q162.42 13.01 164.25 12.80L164.25 12.80Q169.24 11.81 174.45 11.04L174.45 11.04Q175.43 10.13 174.16 8.72L174.16 8.72Q171.49 6.61 172.20 4.22L172.20 4.22Q172.55 3.38 173.74 3.16ZM181.48 19.20L181.48 19.20Q183.87 18.35 185.70 19.27L185.70 19.27Q189.56 21.38 187.59 24.61L187.59 24.61Q186.75 25.88 184.85 26.37L184.85 26.37Q183.23 27.70 183.23 29.39L183.23 29.39Q183.23 32.91 185.84 31.71L185.84 31.71Q190.05 30.09 194.27 32.20L194.27 32.20Q196.95 34.31 194.63 37.27L194.63 37.27Q193.57 38.39 191.39 38.95L191.39 38.95Q188.58 39.73 185.77 40.22L185.77 40.22Q184.78 40.29 184.15 41.48L184.15 41.48Q184.36 54.07 183.80 58.78L183.80 58.78Q183.09 62.79 180.70 63.77L180.70 63.77Q178.38 64.55 176.70 66.80L176.70 66.80Q173.39 69.75 172.05 65.39L172.05 65.39Q171.84 63.63 169.66 62.23L169.66 62.23Q167.55 60.54 169.80 60.75L169.80 60.75Q173.95 61.66 175.85 57.52L175.85 57.52Q177.33 53.37 176.91 44.16L176.91 44.16Q177.05 43.03 175.57 42.75L175.57 42.75Q172.05 43.38 169.10 45.42L169.10 45.42Q164.32 47.74 162.14 41.41L162.14 41.41Q160.66 38.60 163.97 37.27L163.97 37.27Q171.77 35.93 176.27 34.38L176.27 34.38Q177.12 33.47 176.84 31.71L176.84 31.71Q176.77 28.83 173.67 29.88L173.67 29.88Q167.20 29.74 168.96 24.26L168.96 24.26Q169.66 23.48 170.23 23.34L170.23 23.34Q176.70 20.67 181.48 19.20Z"></path> </svg></span> <span class="faux-block">All content licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0 <i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i></a></span></p>
+</div>   
+    <div class="nav-footer-center">
+<p><span class="faux-block"><i class="fa-brands fa-orcid" aria-label="orcid"></i> <strong>ORCID</strong> <a href="https://orcid.org/0009-0008-8368-4685">0009-0008-8368-4685</a></span> <span id="local-weather" class="faux-block"></span></p>
+</div>
+    <div class="nav-footer-right">
+<p><span class="faux-block"> “Swiss made website <svg fill="currentColor" class="icon-swiss" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewbox="0 0 260 169" enable-background="new 0 0 260 169" space="preserve"> <path d="M256.733,106.983l-3.508-11.521l3.337-7.112L258,73.028l-5.334-4.896L238.003,80.92l-14.542-7.648l-0.317-6.406
+    l-22.068-3.897l1.51-15.224l8.233-14.103L183.977,11.72l-18.926-0.049l-12.349-9.646l-9.767,1.705l-0.39,10.498l7.746-1.51
+    l-1.023,5.334l-22.701-1.949l-5.286,4.043l-20.631,1.145l-11.813-1.315l-2.119,5.432l-8.647,5.48L59.437,24.75l-6.601,8.598
+    l8.257,4.896L38.489,64.623l-13.08,6.138l-1.291,15.467L6.337,99.6L2,109.979l2.728,11.911l0.731,15.394l8.55-7.307l-6.114-5.286
+    l8.891-12.471l17.805-5.213l14.517,5.529l-0.39,4.75h-0.024l-4.555-0.341l3.191,23.992l12.057,19.973l17.44-1.096l10.693-6.26
+    l17.026,6.187l16.685-17.757l-2.095-10.742l18.488-16.442l3.483,3.215l-1.194,13.616l10.182,10.937l13.665,4.823l6.187,19.584
+    l7.064-3.995l-4.506-7.6l5.261-12.422l5.383-4.579l12.398-25.064l10.79,14.834l6.698,0.024l13.104-6.942l8.574,12.739l5.091-16.441
+    l-6.284-2.655l3.41-13.421L256.733,106.983z"></path> </svg>” </span> <span class="faux-block">Built with Quarto: <a href="https://github.com/LWYohann/wenyuliu-ch">Source <i class="bi bi-github"></i></a></span></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
