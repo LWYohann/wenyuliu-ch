@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
     function getWindIcon(windspeed) {
 
         baseURL = "https://cdn.meteocons.com/3.0.0-next.10/svg/flat/"
@@ -56,4 +56,113 @@
     }
 
     getWeather();
+</script> -->
+
+
+<script>
+    function getWindIcon(windspeed) {
+        const baseURL = "https://cdn.meteocons.com/3.0.0-next.10/svg/flat/";
+        if (windspeed < 3) return baseURL + "windsock-calm.svg";
+        if (windspeed < 10) return baseURL + "windsock-weak.svg";
+        if (windspeed < 25) return baseURL + "windsock-moderate.svg";
+        return baseURL + "windsock.svg";
+    }
+
+    // Fetches weather by coordinates and renders into #local-weather
+    async function updateWeatherByCoords(latitude, longitude, cityName = "Your Location") {
+        const weatherEl = document.getElementById("local-weather");
+        if (!weatherEl) return;
+
+        try {
+            const weatherRes = await fetch(
+                `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`
+            );
+            const weatherData = await weatherRes.json();
+
+            if (!weatherData.current_weather) {
+                console.error("Could not fetch weather data");
+                return;
+            }
+
+            const { temperature, weathercode, is_day, windspeed } = weatherData.current_weather;
+            const day_night = is_day ? "day" : "night";
+
+            // Descriptions lookup
+            const weatherCodeSheet = await fetch("/html/weather/descriptions.json");
+            const weatherCodeData = await weatherCodeSheet.json();
+
+            const descriptionInfo = weatherCodeData?.[weathercode]?.[day_night] || {};
+            const weatherDescription = descriptionInfo.description || "Unknown weather condition";
+            const weatherIcon = descriptionInfo.image || "unknown.png";
+
+            weatherEl.innerHTML = `
+                <img class="weather-icon" src="${weatherIcon}" alt="${weatherDescription}">
+                <span>${cityName}, ${weatherDescription}, ${temperature}°C</span>
+                <img class="weather-icon" src="${getWindIcon(windspeed)}" alt="Wind: ${windspeed} km/h">
+            `;
+        } catch (err) {
+            console.error("Error updating weather:", err);
+        }
+    }
+
+    // 1. Initial Load: IP-based coarse location
+    async function initWeatherFromIP() {
+        try {
+            const locRes = await fetch("https://ip-check-perf.radar.cloudflare.com/api/info");
+            const locData = await locRes.json();
+            const { latitude, longitude, city } = locData;
+
+            await updateWeatherByCoords(latitude, longitude, city || "Approximate Location");
+        } catch (err) {
+            console.error("Failed to fetch IP location:", err);
+        }
+    }
+
+    // Reverse geocode high-precision coordinates using Open-Meteo's geocoding API
+    async function getCityNameFromCoords(lat, lon) {
+        try {
+            const res = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`);
+            const data = await res.json();
+            console.log("Reverse geocode data:", data);
+            return data?.address?.city || data?.address?.town || data?.name || "Precise Location";
+        } catch {
+            return "Precise Location";
+        }
+    }
+
+    // 2. Click Handler: Precise browser geolocation
+    function handleElementClick() {
+        if (!navigator.geolocation) {
+            alert("Geolocation is not supported by your browser.");
+            return;
+        }
+
+        const weatherEl = document.getElementById("local-weather");
+        if (weatherEl) weatherEl.style.opacity = "0.6"; // Visual loading cue
+
+        navigator.geolocation.getCurrentPosition(
+            async (position) => {
+                const { latitude, longitude } = position.coords;
+                const city = await getCityNameFromCoords(latitude, longitude);
+                await updateWeatherByCoords(latitude, longitude, city);
+                if (weatherEl) weatherEl.style.opacity = "1";
+            },
+            (error) => {
+                console.warn("Precise location denied or unavailable:", error.message);
+                if (weatherEl) weatherEl.style.opacity = "1";
+            },
+            { enableHighAccuracy: true, timeout: 8000 }
+        );
+    }
+
+    // Bind event and trigger initial load on DOM ready
+    document.addEventListener("DOMContentLoaded", () => {
+        const weatherEl = document.getElementById("local-weather");
+        if (weatherEl) {
+            weatherEl.style.cursor = "pointer";
+            weatherEl.title = "Click to use precise location";
+            weatherEl.addEventListener("click", handleElementClick);
+        }
+        initWeatherFromIP();
+    });
 </script>

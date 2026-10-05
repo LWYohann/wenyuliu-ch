@@ -1,6 +1,6 @@
 ---
 title: Curriculum Vitæ
-description: "Last updated: Mar. 2026"
+description: "Last updated: Oct. 2026"
 title-block-banner: "#3093CF"
 format: html
 # page-layout: full
