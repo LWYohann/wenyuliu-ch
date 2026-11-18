@@ -1,7 +1,7 @@
 ---
 title: "Hey! Welcome to my website."
 pagetitle: "Wenyu Liu"
-description: "Last updated: Mar. 2026"
+description: "Last updated: Nov. 2026"
 main-photo: /files/profiles/profile.png
 main-photo-square: /files/profiles/profile.png
 title-block-banner: "#495057"
@@ -68,3 +68,14 @@ I speak Chinese, English and a little French. &ensp; 我说汉语，英语和一
 - **07.2024 - 09.2024** : Summer Internship in Charging System (100%) @ [SAIC Motor](https://www.saicmotor.com/chinese/)
 
 - **03.2022 - 09.2022** : Internship in Energy Storage Market (40%) @ [China Energy Storage Alliance](https://www.cnesa.org/)
+
+## Honors & Awards
+
+- **Prix de l'État de Vaud** (2026).
+
+- **Graduate with Honors** (2023), Qian Xuesen College, Xi'an Jiaotong University.
+
+- **First-Class Academic Scholarship** (2020), Xi’an Jiaotong University.
+
+- **Outstanding Student Award** (2020), Xi’an Jiaotong University.
+
